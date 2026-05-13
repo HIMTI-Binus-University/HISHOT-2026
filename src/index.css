@@ -20,11 +20,23 @@ body {
 
 .glow {
     color : white;
-    text-shadow:  0 0 20px var(--color-glow), 0 4px 4px rgba(0,0,0,0.25);
-    -webkit-text-stroke : 1px var(--color-glow);
+    text-shadow:  0 0 20px var(--color-glow), 0 0 5px var(--color-glow), 0 4px 4px rgba(0,0,0,0.25);
+    -webkit-text-stroke : 2px var(--color-glow);
+    paint-order: stroke fill;
 
     /*
     perlu tambahin ini agar dapat ganti var(--color-glow)
     style={{ '--color-glow': '#FF0000' }}
     */
 }
+
+.inverted-radius {
+    @apply rounded-tr-4xl border-2 border-[#F9FEFE] border-b-0
+    relative rounded-br-none;
+}
+
+/* .inverted-radius::before{
+    @apply absolute bg-transparent -right-12.5 bottom-0 h-12.5 w-12.5 rounded-tl-4xl;
+    content:"";
+    box-shadow: -20px -25px 0 0 #001f3f;
+} */
