@@ -1,1 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Days+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Chivo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 @import "tailwindcss";
+
+@theme {
+    --font-dela-gothic-one : "Dela Gothic One", sans-serif;
+    --font-days-one : "Days One", sans-serif;
+    --font-chivo : "Chivo", sans-serif;
+    --color-blue-info : #0F4A6D;
+    --color-card : #B2D9E7;
+    --color-glow : #18A18C;
+}
+
+body {
+    background-image : linear-gradient(to bottom, #124265 0%, #0B567A 26%, #43ACD2 74%);
+    background-repeat : no-repeat;
+}
+
+.glow {
+    color : white;
+    text-shadow:  0 0 20px var(--color-glow), 0 4px 4px rgba(0,0,0,0.25);
+    -webkit-text-stroke : 1px var(--color-glow);
+
+    /*
+    perlu tambahin ini agar dapat ganti var(--color-glow)
+    style={{ '--color-glow': '#FF0000' }}
+    */
+}
