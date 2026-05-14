@@ -413,7 +413,7 @@ export default function HiShotHero() {
               position:"absolute",
               bottom:"15%", right:"31%",
               width:"clamp(50px,9vw,130px)",
-              zIndex:5, pointerEvents:"none", opacity:0.9,
+              zIndex:4, pointerEvents:"none", opacity:0.9,
             }}
           />
 
