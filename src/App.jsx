@@ -1,13 +1,13 @@
-import './App.css';
+import HiShotHero from './components/HiShotHero'
 import Trailer from './components/trailer';
 
 function App() {
-
   return (
     <>
-      <Trailer/>
+      <HiShotHero />
+      <Trailer />
     </>
-  );
+  )
 }
 
 export default App;
