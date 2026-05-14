@@ -16,6 +16,7 @@
 body {
     background-image : linear-gradient(to bottom, #124265 0%, #0B567A 26%, #43ACD2 74%);
     background-repeat : no-repeat;
+    @apply min-h-full overflow-x-hidden;
 }
 
 .glow {
