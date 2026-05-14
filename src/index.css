@@ -79,7 +79,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ body {
 }
 
 .inverted-radius {
-    @apply rounded-tr-4xl border-t-2 border-r-2 border-[#F9FEFE] relative rounded-br-none;
+    @apply rounded-tr-3xl border-t-2 border-r-2 border-[#F9FEFE] relative rounded-br-none;
     @apply md:border-0;
 }
 
