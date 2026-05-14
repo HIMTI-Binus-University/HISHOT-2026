@@ -1,7 +1,13 @@
-import HiShotHero from './HiShotHero'
+import HiShotHero from './components/HiShotHero'
+import Trailer from './components/trailer';
 
 function App() {
-  return <HiShotHero />
+  return (
+    <>
+      <HiShotHero />
+      <Trailer />
+    </>
+  )
 }
 
-export default App
+export default App;
