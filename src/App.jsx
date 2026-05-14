@@ -1,13 +1,7 @@
-import './App.css';
-import Trailer from './components/trailer';
+import HiShotHero from './HiShotHero'
 
 function App() {
-
-  return (
-    <>
-      <Trailer/>
-    </>
-  );
+  return <HiShotHero />
 }
 
 export default App
