@@ -16,6 +16,7 @@
 body {
     background-image : linear-gradient(to bottom, #124265 0%, #0B567A 26%, #43ACD2 74%);
     background-repeat : no-repeat;
+    background-attachment: fixed;
     @apply min-h-full overflow-x-hidden;
 }
 
@@ -32,13 +33,31 @@ body {
 }
 
 .inverted-radius {
-    @apply rounded-tr-4xl border-t-2 border-r-2 border-[#F9FEFE] relative rounded-br-none;
+    @apply relative rounded-tr-4xl border-t-2 border-r-2 border-[#F9FEFE] rounded-br-none;
     @apply md:border-0;
 }
 
-/* .inverted-radius::before{
-    @apply absolute bg-transparent -right-16 -bottom-2 h-20 w-12.5 rounded-tl-4xl border-l-2 border-card;
+.inverted-radius::before{
+    @apply absolute bg-transparent -right-16.5 -bottom-3.25 -z-10 h-20 w-12.5 rounded-tl-4xl border-l-2 border-[#F9FEFE] shadow-[-20px_-4px_0_var(--color-card)];
+    @apply md:hidden;
     content:"";
-    box-shadow: -20px 0 0 #000;
-    transform: rotate(270deg)
-} */
+    transform: rotate(270deg);
+}
+
+.inverted-radius-card {
+    @apply relative;
+}
+
+.inverted-radius-card::before{
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-12.5 border-0 rounded-tl-4xl border-[#F9FEFE];
+    @apply border-l-2 md:-right-15.75 md:-top-6.75 md:w-13.5 md:shadow-[-30px_-20px_0_var(--color-card)] ;
+    content:"";
+    transform: rotate(270deg);
+}
+
+.inverted-radius-card::after{
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-12.5 border-0 rounded-tl-4xl border-[#F9FEFE];
+    @apply border-l-2 md:right-3 md:-bottom-16.75 md:w-13.5 md:shadow-[-30px_-20px_0_var(--color-card)] ;
+    content:"";
+    transform: rotate(90deg);
+}
