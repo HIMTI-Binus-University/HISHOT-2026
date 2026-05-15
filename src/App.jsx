@@ -1,15 +1,17 @@
-import HiShotHero from './components/HiShotHero'
+// import HiShotHero from './components/HiShotHero'
 import Trailer from './components/trailer';
 import SpecialThanks from './components/specialThanks';
 import SecureOpportunity from './components/secureOppurtunity';
+import Background from './components/background';
 
 function App() {
   return (
     <>
-      <HiShotHero />
-      <Trailer />
-      <SpecialThanks />
-      <SecureOpportunity />
+      {/* <HiShotHero /> */}
+          <Trailer />
+          <SpecialThanks />
+          <SecureOpportunity />
+      
     </>
   )
 }
