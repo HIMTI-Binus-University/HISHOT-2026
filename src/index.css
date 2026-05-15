@@ -50,7 +50,7 @@ body {
   /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
   /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
@@ -69,7 +69,6 @@ body {
     @apply md:border-0;
 }
 
-/* ✅ FIX: Gunakan @apply standard Tailwind untuk custom class */
 .inverted-radius {
     @apply relative rounded-tr-[2.25rem] border-t-2 border-r-2 border-[#F9FEFE] rounded-br-none md:border-0;
 }
