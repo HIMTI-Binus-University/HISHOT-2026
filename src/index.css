@@ -49,14 +49,14 @@ body {
 }
 
 .inverted-radius-card::before{
-    @apply hidden md:block absolute bg-transparent z-10 h-20 w-12.5 border-0 rounded-tl-4xl border-[#F9FEFE];
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-12.5 border-0 rounded-tl-3xl border-[#F9FEFE];
     @apply border-l-2 md:-right-15.75 md:-top-6.75 md:w-13.5 md:shadow-[-30px_-20px_0_var(--color-card)] ;
     content:"";
     transform: rotate(270deg);
 }
 
 .inverted-radius-card::after{
-    @apply hidden md:block absolute bg-transparent z-10 h-20 w-12.5 border-0 rounded-tl-4xl border-[#F9FEFE];
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-12.5 border-0 rounded-tl-3xl border-[#F9FEFE];
     @apply border-l-2 md:right-3 md:-bottom-16.75 md:w-13.5 md:shadow-[-30px_-20px_0_var(--color-card)] ;
     content:"";
     transform: rotate(90deg);
