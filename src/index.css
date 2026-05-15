@@ -2,17 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Days+One:regular);
 @import url(https://fonts.googleapis.com/css?family=Chivo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 @theme {
-    --font-dela-gothic-one : "Dela Gothic One", sans-serif;
-    --font-days-one : "Days One", sans-serif;
-    --font-chivo : "Chivo", sans-serif;
-    --color-blue-info : #0F4A6D;
-    --color-card : #B2D9E7;
-    --color-glow : #18A18C;
 }
 
 :root {
@@ -24,79 +16,76 @@
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --color-card : #B2D9E7;
+
+  --font-dela-gothic-one : "Dela Gothic One", sans-serif;
+  --font-days-one : "Days One", sans-serif;
+  --font-chivo : "Chivo", sans-serif;
+  --color-blue-info : #0F4A6D;
+  --color-glow : #18A18C;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
 }
 
 body {
     background-image : linear-gradient(to bottom, #124265 0%, #0B567A 26%, #43ACD2 74%);
     background-repeat : no-repeat;
-    @apply min-h-full overflow-x-hidden;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
     margin: 0;
 }
 
+/* ✅ FIX #root: Ubah jadi full width standar aplikasi modern */
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
-.inverted-radius {
+.glow {
+    color : white;
+    text-shadow: 0 0 20px var(--color-glow), 0 0 5px var(--color-glow), 0 4px 4px rgba(0,0,0,0.25);
+    -webkit-text-stroke : 2px var(--color-glow);
+    paint-order: stroke fill;
 }
 
-/* .inverted-radius::before{
-    @apply absolute bg-transparent -right-16 -bottom-2 h-20 w-12.5 rounded-tl-4xl border-l-2 border-card;
+/* ✅ FIX: Gunakan @apply standard Tailwind untuk custom class */
+.inverted-radius {
+    @apply relative rounded-tr-[2.25rem] border-t-2 border-r-2 border-[#F9FEFE] rounded-br-none md:border-0;
+}
+
+.inverted-radius::before{
     content:"";
-    box-shadow: -20px 0 0 #000;
-    transform: rotate(270deg)
-} */
- 
-h1,
+    transform: rotate(270deg);
+    @apply absolute bg-transparent -right-[4rem] -bottom-[0.8125rem] -z-10 h-20 w-[3.125rem] rounded-tl-[2.25rem] border-l-2 border-[#F9FEFE] shadow-[-20px_-4px_0_var(--color-card)] md:hidden;
+}
+
+.inverted-radius-card {
+    @apply relative;
+}
+
+.inverted-radius-card::before{
+    content:"";
+    transform: rotate(270deg);
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-[3.125rem] border-0 rounded-tl-3xl border-[#F9FEFE] border-l-2 md:-right-[3.9375rem] md:-top-[1.6875rem] md:w-[3.375rem] md:shadow-[-30px_-20px_0_var(--color-card)];
+}
+
+.inverted-radius-card::after{
+    content:"";
+    transform: rotate(90deg);
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-[3.125rem] border-0 rounded-tl-3xl border-[#F9FEFE] border-l-2 md:right-3 md:-bottom-[4.1875rem] md:w-[3.375rem] md:shadow-[-30px_-20px_0_var(--color-card)];
+}
+/* h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
@@ -138,4 +127,4 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
-}
+} */

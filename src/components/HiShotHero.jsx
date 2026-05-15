@@ -34,23 +34,25 @@ export default function HiShotHero() {
           padding: 0 !important;
           width: 100%;
           overflow-x: hidden;
+          @apply max-w-full;
         }
 
         /* ✅ FIX: Root wrapper & hero section harus full viewport width */
         .hishot-root {
           width: 100%;
+          overflow-x:hidden;
           min-width: 0;
         }
 
         .hero-section {
-          width: 100vw;
+          width: 100%;
           margin-left: calc(-50vw + 50%); /* centering trick agar selalu full-bleed */
         }
 
         /* ── nav links ── */
         .nav-link {
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
+          font-family: var(--font-days-one);
+          font-weight: 400;
           font-size: 0.85rem;
           color: #1D7397;
           text-decoration: none;
@@ -58,22 +60,25 @@ export default function HiShotHero() {
           text-shadow: 0 4px 4px rgba(0,0,0,0.25);
           letter-spacing: 0.01em;
         }
-        .nav-link:hover { opacity: 0.75; }
+        .nav-link:hover {color: #6CB4D0}
 
         /* ── register button ── */
         .reg-btn {
-          background: #1aaa8c;
+          background: #158080E5;
           color: white;
-          border: 2px solid white;
+          border: 2px solid #F9FEFE;
           padding: 0.4rem 1.2rem;
           border-radius: 9999px;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
+          font-family: var(--font-days-one);
+          font-weight: 400;
           font-size: 0.8rem;
           cursor: pointer;
           letter-spacing: 0.04em;
           box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-          text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 16px rgba(100,255,200,0.4);
+          -webkit-text-stroke : 1px #6CB4D0;
+          paint-order: stroke fill;
+          text-shadow: 6px 6px 4.89px rgba(0,0,0,0.30), 0 0 20.6px #6CB4D0;
+          // text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 16px rgba(100,255,200,0.4);
           transition: transform 0.2s, box-shadow 0.2s;
         }
         .reg-btn:hover {
@@ -280,7 +285,7 @@ export default function HiShotHero() {
       <section
         className="hero-section"
         style={{
-          background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
+          // background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
           // ✅ FIX full-bleed: stretch ke tepi viewport
           width: "100vw",
           marginLeft: "calc(-50vw + 50%)",
