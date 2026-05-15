@@ -4,15 +4,19 @@ import SpecialThanks from './components/specialThanks';
 import SecureOpportunity from './components/secureOppurtunity';
 import Background from './components/background';
 
-function App() {
+function App() {  
   return (
-    <>
-      {/* <HiShotHero /> */}
+    <Background>
+      <main className="flex min-h-screen flex-col items-center justify-center px-4">
+          {/* <HiShotHero /> */}
           <Trailer />
           <SpecialThanks />
           <SecureOpportunity />
+      </main>
+    </Background>
       
-    </>
+      
+
   )
 }
 
