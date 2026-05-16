@@ -14,19 +14,19 @@ const Events = () => {
   const currentTheme = themes[activeTab];
 
   return (
-    <div className="min-h-screen p-4 md:p-10 flex justify-center items-start overflow-x-hidden font-sans">
+    <div className=" mt-16 min-h-screen p-4 md:p-10 flex justify-center items-start overflow-x-hidden font-sans">
       
       {/* ================= MAIN CONTAINER ================= */}
       <div 
-        className={`relative w-full max-w-[1700px] bg-[#B2D9E7] border-[2px] border-[#F9FEFE] rounded-[30px] xl:rounded-[50px] px-4 xl:px-14 pt-[70px] xl:pt-[110px] pb-10 xl:pb-16 mt-[50px] xl:mt-[80px] mx-auto flex flex-col shadow-[0px_4px_4px_0px_#00000040]
+        className={`relative w-full max-w-[1700px] bg-[#B2D9E7] border-[2px] border-[#F9FEFE] border-solid rounded-[30px] xl:rounded-[50px] px-4 xl:px-14 pt-[70px] xl:pt-[110px] pb-10 xl:pb-16 mt-[50px] xl:mt-[80px] mx-auto flex flex-col shadow-[0px_4px_4px_0px_#00000040]
           ${activeTab === 'workshop' || activeTab === 'global' ? 'min-h-[1800px]' : 'min-h-[1100px]'}`}
         style={{ '--glow': currentTheme.glow }}
       >
 
         {/* Logo Event yang diatas */}
-        <div className="absolute -top-[35px] xl:-top-[75px] left-1/2 transform -translate-x-1/2 z-20">
-          <div className="flex items-center justify-center w-[160px] h-[60px] xl:w-[339px] xl:h-[141px] bg-[#158080E5] border-[3px] xl:border-[4px] border-[#F9FEFE] rounded-[20px] xl:rounded-[40px] shadow-lg relative">
-            <span className="text-[#FFFFFF] text-[32px] xl:text-[64px] leading-none [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]" style={{ fontFamily: "'Days One', sans-serif" }}>
+        <div className="absolute -top-[35px] xl:-top-[75px] transform self-center z-20">
+          <div className="flex items-center justify-center w-[160px] h-[60px] xl:w-[300px] xl:h-[120px] bg-[#158080E5] border-[3px] xl:border-[4px] border-[#F9FEFE] border-solid rounded-[20px] xl:rounded-[40px] shadow-lg relative">
+            <span className="text-[#FFFFFF] text-[32px] xl:text-[56px] leading-none [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]" style={{ fontFamily: "'Days One', sans-serif" }}>
               Events
             </span>
           </div>
@@ -43,7 +43,7 @@ const Events = () => {
             <div 
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex flex-col items-center justify-center w-[130px] h-[130px] xl:w-[240px] xl:h-[240px] rounded-[20px] xl:rounded-[40px] border-[2px] xl:border-[4px] border-[#F9FEFE] gap-[2px] xl:gap-[5px] transition-all duration-300 cursor-pointer pt-1 xl:pt-2 hover:scale-105 active:scale-95
+              className={`flex flex-col items-center justify-center w-[130px] h-[130px] xl:w-[240px] xl:h-[240px] rounded-[20px] xl:rounded-[40px] border-[2px] xl:border-[4px] border-[#F9FEFE] border-solid gap-[2px] xl:gap-[5px] transition-all duration-300 cursor-pointer pt-1 xl:pt-2 hover:scale-105 active:scale-95
                 ${activeTab === tab.id ? 'opacity-100 shadow-[0px_4px_4px_0px_#00000040,0px_0px_15px_0px_#FFFFFF] xl:shadow-[0px_4px_4px_0px_#00000040,0px_0px_30px_0px_#FFFFFF] z-10' : 'opacity-60 hover:opacity-100'}`}
               style={{ backgroundColor: tab.col }}
             >
@@ -66,9 +66,9 @@ const Events = () => {
           
           {/* ======================= SEMINAR ======================= */}
           {activeTab === 'seminar' && (
-            <div className="w-full flex flex-col">
+            <div className="w-full max-w-full flex flex-col px-6">
               <div className="w-full max-w-[1525px] mx-auto mb-6 xl:mb-10 px-0 xl:px-4 overflow-visible">
-                <h2 className="text-[#FFFFFF] text-[32px] xl:text-[48px] font-normal leading-tight xl:leading-none tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
+                <h2 className="text-[#FFFFFF] text-[32px] xl:text-[40px] font-normal leading-tight xl:leading-none tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
                     style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
                   Within the Clouds:<br className="xl:hidden"/> AI-Driven Interaction
                 </h2>
@@ -79,7 +79,7 @@ const Events = () => {
                 <div className="flex flex-col flex-1 max-w-[800px] w-full pt-0 xl:pt-4 order-1">
                   <div className="mb-2 xl:mb-8 relative pl-0 xl:pl-2">
                     <div className="flex items-center gap-2 xl:gap-4 mb-2 xl:mb-4">
-                      <img src="/Star.png" alt="Star" className="w-[20px] h-[28px] xl:w-[45.7px] xl:h-[63.17px]" />
+                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] xl:w-[45.7px] xl:h-[63.17px]" />
                       <h3 className="text-[20px] xl:text-[36px]" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                     </div>
                     <p className="pl-[28px] xl:pl-[59px] pr-0 xl:pr-4 text-[#0F4A6D] text-[14px] leading-[20px] xl:text-[24px] xl:leading-[32px] font-light tracking-normal mb-6 xl:mb-8 max-w-[634px] w-full" style={{ fontFamily: "'Chivo', sans-serif" }}>
@@ -95,8 +95,8 @@ const Events = () => {
 
                   <div className="hidden xl:block mt-8 mb-8 pl-2">
                     <div className="flex items-center gap-4">
-                      <img src="/Star.png" alt="Star" className="w-[45.7px] h-[63.17px]" />
-                      <h3 className="text-[36px]" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
+                      <img src="/StarInfo.svg" alt="Star" className="w-[45.7px] h-[63.17px]" />
+                      <h3 className="text-[36px] leading-8" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
                     </div>
                     <div className="flex gap-[20px] pl-[59px] mt-8">
                       {['More info', 'Guidebook'].map((text) => (
@@ -378,13 +378,13 @@ const Events = () => {
               {/* Bagian pertama Global */}
               <div className="w-full flex flex-col">
                 <div className="w-full max-w-[1525px] mx-auto mb-6 xl:mb-10 px-0 xl:px-4 overflow-visible">
-                  <h2 className="text-[#FFFFFF] text-[32px] xl:text-[48px] font-normal leading-tight xl:leading-none tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
+                  <h2 className="text-[#FFFFFF] text-center text-[32px] xl:text-[48px] font-normal leading-tight xl:leading-none tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
                       style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
                     To be Announced
                   </h2>
                 </div>
                 
-                <div className="flex flex-col xl:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-6 xl:gap-8 text-[#0F4A6D]">
+                {/* <div className="flex flex-col xl:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-6 xl:gap-8 text-[#0F4A6D]">
                   <div className="flex flex-col flex-1 max-w-[800px] w-full pt-0 xl:pt-4 order-1">
                     <div className="mb-2 xl:mb-8 relative pl-0 xl:pl-2">
                       <div className="flex items-center gap-2 xl:gap-4 mb-2 xl:mb-4">
@@ -407,12 +407,12 @@ const Events = () => {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </div> 
 
-                  <div className="flex flex-row justify-center gap-[15px] xl:gap-[30px] w-full xl:w-auto shrink-0 pt-0 xl:pt-2 order-2">
+                  {/* <div className="flex flex-row justify-center gap-[15px] xl:gap-[30px] w-full xl:w-auto shrink-0 pt-0 xl:pt-2 order-2"> */}
                     
                     {/* Place 1 */}
-                    <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
+                    {/* <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[135px] h-[190px] xl:w-[300px] xl:h-[420px] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                         <img src="/Meow.jpg" alt="Place 1" className="w-full h-full object-cover" />
                       </div>
@@ -420,10 +420,10 @@ const Events = () => {
                         <h4 className="text-white text-[14px] xl:text-[36px] font-normal leading-none tracking-[0.12em] text-center mb-1 xl:mb-3 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Place</h4>
                         <p className="text-white text-[9px] xl:text-[24px] font-normal leading-tight xl:leading-none tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB Job Job Job Job</p>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Place 2 */}
-                    <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
+                    {/* <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[135px] h-[190px] xl:w-[300px] xl:h-[420px] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                         <img src="/Meow.jpg" alt="Place 2" className="w-full h-full object-cover" />
                       </div>
@@ -433,9 +433,9 @@ const Events = () => {
                       </div>
                     </div>
 
-                  </div>
+                  </div> */}
 
-                  <div className="flex flex-col xl:hidden w-full order-3 mt-8">
+                  {/* <div className="flex flex-col xl:hidden w-full order-3 mt-8">
                     <div className="flex items-start gap-2 mb-4">
                       <img src="/Star.png" alt="Star" className="w-[20px] h-[28px] mt-1" />
                       <h3 className="text-[20px] leading-[26px] max-w-[250px]" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details deatails</h3>
@@ -446,14 +446,14 @@ const Events = () => {
                       ))}
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Garis */}
-                <div className="w-[90%] xl:w-full max-w-[1525px] mx-auto h-[3px] xl:h-[4px] bg-[#F9FEFE] my-10 xl:my-16 shadow-md opacity-50 rounded-full"></div>
-              </div>
+                {/* <div className="w-[90%] xl:w-full max-w-[1525px] mx-auto h-[3px] xl:h-[4px] bg-[#F9FEFE] my-10 xl:my-16 shadow-md opacity-50 rounded-full"></div>
+              </div> */}
 
               {/* Bagian kedua Global */}
-              <div className="w-full flex flex-col">
+              {/* <div className="w-full flex flex-col">
                 <div className="w-full max-w-[1525px] mx-auto mb-6 xl:mb-10 px-0 xl:px-4 overflow-visible">
                   <h2 className="text-[#FFFFFF] text-[32px] xl:text-[48px] font-normal leading-tight xl:leading-none tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
                       style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
@@ -484,12 +484,12 @@ const Events = () => {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="flex flex-row justify-center gap-[15px] xl:gap-[30px] w-full xl:w-auto shrink-0 pt-0 xl:pt-2 order-2">
+                  {/* <div className="flex flex-row justify-center gap-[15px] xl:gap-[30px] w-full xl:w-auto shrink-0 pt-0 xl:pt-2 order-2">
                     
                     {/* Place */}
-                    <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
+                    {/* <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[135px] h-[190px] xl:w-[300px] xl:h-[420px] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                         <img src="/Meow.jpg" alt="Place" className="w-full h-full object-cover" />
                       </div>
@@ -497,10 +497,10 @@ const Events = () => {
                         <h4 className="text-white text-[14px] xl:text-[36px] font-normal leading-none tracking-[0.12em] text-center mb-1 xl:mb-3 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Place</h4>
                         <p className="text-white text-[9px] xl:text-[24px] font-normal leading-tight xl:leading-none tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB Job Job Job Job</p>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Speaker */}
-                    <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
+                    {/* <div className="relative w-[150px] h-[230px] xl:w-[335px] xl:h-[514px]">
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[135px] h-[190px] xl:w-[300px] xl:h-[420px] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                         <img src="/Meow.jpg" alt="Speaker" className="w-full h-full object-cover" />
                       </div>
@@ -508,11 +508,11 @@ const Events = () => {
                         <h4 className="text-white text-[14px] xl:text-[36px] font-normal leading-none tracking-[0.12em] text-center mb-1 xl:mb-3 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Speaker</h4>
                         <p className="text-white text-[9px] xl:text-[24px] font-normal leading-tight xl:leading-none tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB Job Job Job Job</p>
                       </div>
-                    </div>
+                    </div> */}
 
-                  </div>
+                  {/* </div> */}
 
-                  <div className="flex flex-col xl:hidden w-full order-3 mt-8">
+                  {/* <div className="flex flex-col xl:hidden w-full order-3 mt-8">
                     <div className="flex items-start gap-2 mb-4">
                       <img src="/Star.png" alt="Star" className="w-[20px] h-[28px] mt-1" />
                       <h3 className="text-[20px] leading-[26px] max-w-[250px]" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details deatails</h3>
@@ -522,8 +522,8 @@ const Events = () => {
                         <button key={text} className="w-[100px] h-[30px] rounded-[15px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                       ))}
                     </div>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div> */}
               </div>
 
             </div>

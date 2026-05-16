@@ -184,7 +184,7 @@ export default function HishotFAQ() {
   return (
     <section
       id="faq"
-      className="min-h-screen overflow-hidden relative items-center justify-center px-4 pt-24 pb-32 font-['Chivo']"
+      className="min-h-screen overflow-hidden relative items-center justify-center md:px-4 pt-24 pb-32 font-['Chivo']"
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Chivo:wght@300;400;700&display=swap');
@@ -219,16 +219,19 @@ export default function HishotFAQ() {
 
         /* title badge */
         .faq-badge {
-          background: linear-gradient(135deg, #cc3d8f, #b82d80);
-          border-radius: 9999px;
+          background-color: #CC61A5E5;
+          // background: linear-gradient(135deg, #cc3d8f, #b82d80);
+          border-radius: 20px;
           padding: 0.55rem 2.2rem;
           display: inline-block;
-          box-shadow: 0 4px 22px rgba(180,40,120,0.45);
+          border: 2px solid #F9FEFE;
+          box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+          // box-shadow: 0 4px 22px rgba(180,40,120,0.45);
           font-family: 'Days One', sans-serif;
           font-size: clamp(0.95rem, 2vw, 1.15rem);
           color: white;
           letter-spacing: 0.02em;
-          text-shadow: 0 1px 8px rgba(140,30,90,0.3);
+          text-shadow: 0 4px 4px rgba(0,0,0,0.25);
         }
 
         /* sparkle twinkle */
@@ -256,7 +259,8 @@ export default function HishotFAQ() {
       src="/Cloud3_Shadow.png"
       alt=""
       aria-hidden="true"
-      className="absolute bottom-[12%] md:top-[26%] lg:top-[36%] left-[-8%] md:left-[-1%] w-[220px] sm:w-[280px] md:w-[clamp(340px,30vw,320px)] z-[2] pointer-events-none"
+      className="absolute hidden md:block top-[10rem] -left-[3rem] pointer-events-none w-[25rem]"
+      // className="absolute bottom-[12%] md:top-[26%] lg:top-[36%] left-[-8%] md:left-[-1%] w-[220px] sm:w-[280px] md:w-[clamp(340px,30vw,320px)] z-[2] pointer-events-none"
     />
 
     {/* Cloud3_Blue — kiri tengah-bawah */}
@@ -264,7 +268,8 @@ export default function HishotFAQ() {
       src="/Cloud2_Blue.png"
       alt=""
       aria-hidden="true"
-      className="absolute bottom-[8%] md:bottom-[12%] lg:bottom-[12%] left-[-12%] sm:left-[-6%] md:left-[0%] w-[260px] sm:w-[360px] md:w-[clamp(530px,28vw,200px)] z-[2] pointer-events-none"
+      className="absolute hidden md:block bottom-[5rem] -left-[2rem] pointer-events-none w-[30rem]"
+      // className="absolute bottom-[8%] md:bottom-[12%] lg:bottom-[12%] left-[-12%] sm:left-[-6%] md:left-[0%] w-[260px] sm:w-[360px] md:w-[clamp(530px,28vw,200px)] z-[2] pointer-events-none"
     />
 
     {/* Moon — kiri tengah-bawah */}
@@ -272,14 +277,15 @@ export default function HishotFAQ() {
       src="/Moon.png"
       alt=""
       aria-hidden="true"
-      className="absolute bottom-[20%] md:bottom-[38%] lg:bottom-[38%] left-[2%] w-[70px] sm:w-[100px] md:w-[clamp(130px,28vw,100px)] z-[2] pointer-events-none"
+      className=" w-[8rem] absolute hidden md:block bottom-[18rem] left-[4rem] pointer-events-none"
+      // className="absolute bottom-[20%] md:bottom-[38%] lg:bottom-[38%] left-[2%] w-[70px] sm:w-[100px] md:w-[clamp(130px,28vw,100px)] z-[2] pointer-events-none"
     />
 
     <img
       src="/Star.png"
       alt=""
       aria-hidden="true"
-      className="tw-1 absolute top-[32%] md:top-[35%] left-[18%] md:left-[20%] w-[18px] sm:w-[22px] md:w-[26px] pointer-events-none z-[3]"
+      className="tw-1 absolute top-[32%] md:top-[35%] left-[13%] md:left-[15%] w-[18px] sm:w-[22px] md:w-[26px] pointer-events-none z-[3]"
     />
 
     {/* ══════ RIGHT ══════ */}
@@ -288,7 +294,8 @@ export default function HishotFAQ() {
       src="/Cloud2_Shadow.png"
       alt=""
       aria-hidden="true"
-      className="absolute top-[14%] md:top-[18%] right-[0%] w-[240px] sm:w-[320px] md:w-[clamp(430px,30vw,320px)] z-[2] pointer-events-none"
+      className=" w-[23rem] absolute hidden md:block top-[2rem] right-0 pointer-events-none"
+      // className="absolute top-[14%] md:top-[18%] right-[0%] w-[240px] sm:w-[320px] md:w-[clamp(430px,30vw,320px)] z-[2] pointer-events-none"
     />
 
     {/* ── Decoration: bottom cloud right ── */}
@@ -296,13 +303,15 @@ export default function HishotFAQ() {
       src="/Cloud2_Yellow-2.png"
       alt=""
       aria-hidden="true"
-      className="absolute top-[10%] md:top-[12%] right-[0%] w-[140px] sm:w-[180px] md:w-[clamp(230px,28vw,200px)] z-[2] pointer-events-none"
+      className=" w-[12rem] absolute hidden md:block top-0 right-0 pointer-events-none"
+      // className="absolute top-[10%] md:top-[12%] right-[0%] w-[140px] sm:w-[180px] md:w-[clamp(230px,28vw,200px)] z-[2] pointer-events-none"
     />
 
     <img
       src="/Beurt_Float.png"
       alt="HiShot mascot"
-      className="absolute right-[2%] sm:right-[8%] md:right-[18%] bottom-[1%] md:bottom-[3%] w-[180px] sm:w-[240px] md:w-[clamp(330px,47vw,130px)] z-[5] pointer-events-none select-none"
+      className=" w-[15rem] absolute hidden md:block bottom-0 md:-right-[4.5rem] lg:w-[18rem] lg:right-[9rem] pointer-events-none"
+      // className="absolute right-[2%] sm:right-[8%] md:right-[18%] bottom-[1%] md:bottom-[3%] w-[180px] sm:w-[240px] md:w-[clamp(330px,47vw,130px)] z-[5] pointer-events-none select-none"
     />
 
     <img
@@ -314,16 +323,18 @@ export default function HishotFAQ() {
 
       {/* ══════════ FAQ CARD ══════════ */}
       <div
-        className="relative z-[10] max-w-[min(680px,92vw)] mx-auto"
+        className="relative z-[10] md:max-w-[min(800px,80vw)] max-lg:max-w-[min(900px,100vw)] w-full md:mx-auto"
       >
         {/* Badge */}
-        <div className="text-center mb-8">
-          <span className="faq-badge">Frequently Asked Questions</span>
+        <div className="flex w-full justify-center">
+          <div className="absolute self-center text-center">
+            <span className="faq-badge">Frequently Asked Questions</span>
+          </div>
         </div>
 
         {/* Card */}
           <div
-            className="faq-card bg-[rgba(178,217,231,1)] backdrop-blur-[18px] border-2 border-[rgba(249,254,254,1)] rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[2.4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)]"
+            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)] over"
           >
 
           <div className="flex flex-col gap-[0.6rem]">
@@ -340,10 +351,11 @@ export default function HishotFAQ() {
                   <button
                     onClick={() => toggle(i)}
                     aria-expanded={isOpen}
-                    className="w-full flex items-center justify-between gap-4 py-4 bg-none border-none cursor-pointer text-left"
+                    className="w-full flex items-center justify-between gap-4 py-4 bg-none cursor-pointer border-0 text-left bg-transparent"
                   >
                     <span
-                      className="font-['Chivo'] font-bold text-[clamp(0.85rem,1.8vw,0.97rem)] text-[rgba(15,74,109,1)] leading-[1.4] tracking-[0.01em] drop-shadow-[0_0px_4px_rgba(0,0,0,0.25)]"
+                      className="font-['Chivo'] font-semibold text-[clamp(0.85rem,1.8vw,1.5rem)] text-[#0F4A6D] leading-[1.4] tracking-[0.01em]"
+                      style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
                     >
                       {faq.question}
                     </span>
@@ -364,6 +376,7 @@ export default function HishotFAQ() {
                       />
                     </svg>
                   </button>
+                  <div className="w-full bg-[#0F4A6D] h-[2px] -mt-4 mb-[1.5px]"></div>
 
                   {/* Answer */}
                   <div className={`faq-answer-hshot${isOpen ? " open" : ""}`}>
@@ -373,7 +386,7 @@ export default function HishotFAQ() {
                           <EventTimeline />
                         </div>
                       ) : (
-                        <p className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 m-0 text-justify whitespace-pre-line">
+                        <p className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4  text-justify whitespace-pre-line mt-2">
                           {faq.answer}
                         </p>
                       )}

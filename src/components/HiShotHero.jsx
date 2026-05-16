@@ -296,8 +296,9 @@ export default function HiShotHero() {
               </button>
               {regOpen && (
                 <div className="reg-dropdown">
-                  <a href="#">Seminar</a>
-                  <a href="#">Workshop</a>
+                  <a href="#">Seminar & Workshop</a>
+                  <a href="#">Local Study Tour</a>
+                  <a href="#">Global Study Tour</a>
                 </div>
               )}
             </div>
