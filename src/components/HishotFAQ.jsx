@@ -1,5 +1,15 @@
 import { useState } from "react";
 
+{/* ══════ TIMELINE EVENTS ══════ */}
+const timelineEvents = [
+  { id: 1, label: "Onsite Seminar",    date: "June 12th 2026",           position: "top",    filled: true  },
+  { id: 2, label: "Online Workshop 1", date: "July 27th 2026",           position: "bottom", filled: false },
+  { id: 3, label: "Online Workshop 2", date: "August 10th 2026",         position: "top",    filled: false },
+  { id: 4, label: "Local Study Tour",  date: "October 10th, 2026",       position: "bottom", filled: false },
+  { id: 5, label: "Global Study Tour", date: "December 3rd – 6th, 2026", position: "top",    filled: false },
+];
+
+{/* ══════ FAQ ══════ */}
 const faqs = [
   {
     question: "What is HISHOT?",
@@ -13,8 +23,7 @@ const faqs = [
   },
   {
     question: "When will the events be held?",
-    answer:
-      "The series of events will be held from June to December 2026, with details as follows.\n\nSeminar (onsite):\n1. First Session: Rising Through Interactions for The Future  - June 12th 2026\n2. Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow - June 12th 2026\n\nWorkshop (online):\n1. Defending the Sky: AI-Driven Cloud Security & Leaky Buckets  - July 27th 2026 \n2. Modern AI Deployment: Build & Deploy ML Models on Cloud  - August 10th 2026\n\nStudy Tour:\n1. STDN - October 10th, 2026\n2. STLN - December 3rd – 6th, 2026",
+    answer: null,
   },
   {
     question: "Is HISHOT open for public?",
@@ -32,6 +41,140 @@ const faqs = [
       "HISHOT 2026 offers an exciting opportunity to explore cloud technology and digital infrastructure through interactive sessions and practical experiences. Throughout the event, you’ll have the chance to learn from industry professionals, connect with others who share the same interests, and gain valuable knowledge to support your future in tech.\n\nOn top of that, participants will receive an e-certificate, and BINUS students can earn SAT points making HISHOT 2026 not just a learning experience, but a valuable step toward your digital future.",
   },
 ];
+
+{/* ══════ TIMELINE COMPONENT ══════ */}
+function EventTimeline() {
+  return (
+    <div className="w-full pt-1 pb-3">
+      {/* Intro sentence */}
+      <p className="font-['Chivo'] font-light text-[clamp(0.78rem,1.5vw,0.88rem)] text-[rgba(15,74,109,1)] leading-[1.6] mb-[1.4rem]">
+        The series of events will be held from June to December 2026, with details as follows :
+      </p>
+
+      {/* ── DESKTOP / TABLET (≥ 520 px) ── */}
+      <div className="hidden sm:block select-none">
+
+        {/* TOP labels */}
+        <div className="flex mb-[6px]">
+          {timelineEvents.map((ev) =>
+            ev.position === "top" ? (
+              <div
+                key={ev.id}
+                className="flex-1 flex flex-col items-center text-center min-w-0 px-2"
+              >
+                <span className="font-['Chivo'] font-bold text-[clamp(0.68rem,1.3vw,0.82rem)] text-[rgba(15,74,109,1)] leading-[1.25]">
+                  {ev.label}
+                </span>
+
+                <span className="font-['Chivo'] font-light text-[clamp(0.62rem,1.1vw,0.75rem)] text-[rgba(15,74,109,0.82)] mt-[2px]">
+                  {ev.date}
+                </span>
+              </div>
+            ) : (
+              <div key={ev.id} className="flex-1" />
+            )
+          )}
+        </div>
+
+        {/* LINE + DOTS */}
+        <div className="relative flex items-center h-[28px]">
+
+          {/* horizontal rule */}
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[2.5px] bg-[rgba(15,74,109,0.8)] rounded-[2px]" />
+
+          {/* dots */}
+          <div className="relative flex w-full">
+            {timelineEvents.map((ev) => (
+              <div
+                key={ev.id}
+                className="flex-1 flex justify-center items-center"
+              >
+                <div
+                  className={`
+                    rounded-full
+                    border-[2.5px]
+                    border-[rgba(15,74,109,1)]
+                    relative
+                    z-[2]
+                    shrink-0
+                    ${ev.filled
+                      ? "w-[22px] h-[22px] bg-[rgba(15,74,109,1)]"
+                      : "w-[18px] h-[18px] bg-transparent"}
+                  `}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* BOTTOM labels */}
+        <div className="flex mt-[6px]">
+          {timelineEvents.map((ev) =>
+            ev.position === "bottom" ? (
+              <div
+                key={ev.id}
+                className="flex-1 flex flex-col items-center text-center px-1"
+              >
+                <span className="font-['Chivo'] font-bold text-[clamp(0.68rem,1.3vw,0.82rem)] text-[rgba(15,74,109,1)] leading-[1.25]">
+                  {ev.label}
+                </span>
+
+                <span className="font-['Chivo'] font-light text-[clamp(0.62rem,1.1vw,0.75rem)] text-[rgba(15,74,109,0.82)] mt-[2px]">
+                  {ev.date}
+                </span>
+              </div>
+            ) : (
+              <div key={ev.id} className="flex-1" />
+            )
+          )}
+        </div>
+      </div>
+
+      {/* ── MOBILE vertical timeline (< 520 px) ── */}
+      <div className="sm:hidden relative pl-8">
+
+        {/* vertical line */}
+        <div className="absolute left-[13px] top-1 bottom-1 w-[2.5px] bg-[rgba(15,74,109,0.75)] rounded-[2px]" />
+
+        {timelineEvents.map((ev) => (
+          <div
+            key={ev.id}
+            className="relative flex items-start py-3"
+          >
+
+            {/* dot */}
+            <div
+              className={`
+                absolute
+                top-[24px]
+                rounded-full
+                border-[2.5px]
+                border-[rgba(15,74,109,1)]
+                z-[2]
+                box-border
+                shrink-0
+                ${ev.filled
+                  ? "left-[-9px] w-[22px] h-[22px] bg-[rgba(15,74,109,1)]"
+                  : "left-[-7px] w-[17px] h-[17px] bg-transparent"}
+              `}
+            />
+
+            {/* text */}
+            <div className="ml-4 text-left">
+              <p className="font-['Chivo'] font-bold text-[0.82rem] text-[rgba(15,74,109,1)] m-0 leading-[1.3]">
+                {ev.label}
+              </p>
+
+              <p className="font-['Chivo'] font-light text-[0.74rem] text-[rgba(15,74,109,0.85)] mt-[3px] mb-0">
+                {ev.date}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function HishotFAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -186,6 +329,8 @@ export default function HishotFAQ() {
           <div className="flex flex-col gap-[0.6rem]">
             {faqs.map((faq, i) => {
               const isOpen = openIndex === i;
+              const isTimeline = faq.answer === null;
+
               return (
                 <div
                   key={i}
@@ -223,11 +368,15 @@ export default function HishotFAQ() {
                   {/* Answer */}
                   <div className={`faq-answer-hshot${isOpen ? " open" : ""}`}>
                     <div className="faq-answer-inner whitespace-pre-line">
-                      <p
-                        className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 m-0 text-justify"
-                      >
-                        {faq.answer}
-                      </p>
+                      {isTimeline ? (
+                        <div className="pb-2">
+                          <EventTimeline />
+                        </div>
+                      ) : (
+                        <p className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 m-0 text-justify whitespace-pre-line">
+                          {faq.answer}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
