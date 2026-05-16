@@ -3,17 +3,27 @@ import { useState, useEffect, useRef } from "react";
 export default function HiShotHero() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [regOpen, setRegOpen] = useState(false);
+  const regRef = useRef(null);
 
   useEffect(() => {
-    // ✅ FIX: Listen ke window scroll biasa, bukan scroll wrapper custom
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Tutup dropdown saat klik di luar
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (regRef.current && !regRef.current.contains(e.target)) {
+        setRegOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    // ✅ FIX: Hapus position:fixed & overflow:hidden dari root.
-    // Root sekarang flow normal agar section Trailer bisa render tanpa overlay bug.
     <div
       className="hishot-root"
       style={{
@@ -27,32 +37,27 @@ export default function HiShotHero() {
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* ✅ FIX: Pastikan html & body tidak ada margin/padding bawaan browser
-           dan tidak ada overflow-x yang memunculkan scrollbar horizontal */
         html, body {
           margin: 0 !important;
           padding: 0 !important;
           width: 100%;
           overflow-x: hidden;
-          @apply max-w-full;
         }
 
-        /* ✅ FIX: Root wrapper & hero section harus full viewport width */
         .hishot-root {
           width: 100%;
-          overflow-x:hidden;
           min-width: 0;
         }
 
         .hero-section {
-          width: 100%;
-          margin-left: calc(-50vw + 50%); /* centering trick agar selalu full-bleed */
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
         }
 
         /* ── nav links ── */
         .nav-link {
-          font-family: var(--font-days-one);
-          font-weight: 400;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 700;
           font-size: 0.85rem;
           color: #1D7397;
           text-decoration: none;
@@ -60,31 +65,78 @@ export default function HiShotHero() {
           text-shadow: 0 4px 4px rgba(0,0,0,0.25);
           letter-spacing: 0.01em;
         }
-        .nav-link:hover {color: #6CB4D0}
+        .nav-link:hover { opacity: 0.75; }
 
         /* ── register button ── */
         .reg-btn {
-          background: #158080E5;
+          background: #1aaa8c;
           color: white;
-          border: 2px solid #F9FEFE;
+          border: 2px solid white;
           padding: 0.4rem 1.2rem;
           border-radius: 9999px;
-          font-family: var(--font-days-one);
-          font-weight: 400;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 700;
           font-size: 0.8rem;
           cursor: pointer;
           letter-spacing: 0.04em;
           box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-          -webkit-text-stroke : 1px #6CB4D0;
-          paint-order: stroke fill;
-          text-shadow: 6px 6px 4.89px rgba(0,0,0,0.30), 0 0 20.6px #6CB4D0;
-          // text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 16px rgba(100,255,200,0.4);
+          text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 16px rgba(100,255,200,0.4);
           transition: transform 0.2s, box-shadow 0.2s;
+          display: flex;
+          align-items: center;
+          gap: 0.35rem;
         }
         .reg-btn:hover {
           transform: translateY(-2px);
           box-shadow: 0 8px 22px rgba(0,0,0,0.4);
         }
+
+        /* ── dropdown wrapper ── */
+        .reg-wrapper {
+          position: relative;
+        }
+        .reg-dropdown {
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+          overflow: hidden;
+          min-width: 150px;
+          z-index: 200;
+          animation: dropIn 0.18s ease;
+        }
+        @keyframes dropIn {
+          from { opacity: 0; transform: translateY(-6px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .reg-dropdown a {
+          display: block;
+          padding: 0.72rem 1.2rem;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: 0.85rem;
+          color: #1D7397;
+          text-decoration: none;
+          transition: background 0.15s;
+        }
+        .reg-dropdown a:hover {
+          background: #e8f6f8;
+          color: #0f5272;
+        }
+        .reg-dropdown a + a {
+          border-top: 1px solid #e0f0f5;
+        }
+
+        /* chevron */
+        .chevron {
+          width: 12px;
+          height: 12px;
+          transition: transform 0.2s;
+          flex-shrink: 0;
+        }
+        .chevron.open { transform: rotate(180deg); }
 
         /* ── hero CTA buttons ── */
         .btn-start {
@@ -120,22 +172,16 @@ export default function HiShotHero() {
           transition: transform 0.25s, opacity 0.25s, width 0.25s;
         }
 
-        /* ✅ FIX: Hero section full viewport height dalam flow normal */
         .hero-section {
           min-height: 100vh;
           position: relative;
-          overflow: hidden;       /* clip dekorasi hanya di dalam hero */
+          overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;
           padding-top: 4rem;
-          /* full-bleed trick: width + marginLeft di-set via inline style */
         }
-        /* Pastikan margin negatif tidak bikin horizontal scrollbar */
         .hishot-root { overflow-x: hidden; }
-
-        /* ✅ FIX: Kelas hero-section sudah dapat inline style full-bleed & isolation */
-        /* isolation dan width di-set via inline style langsung */
 
         @media(max-width:768px){
           .d-nav { display:none!important; }
@@ -191,7 +237,6 @@ export default function HiShotHero() {
           .m-menu { display:none!important; }
         }
 
-        /* Tablet (769px – 1024px) */
         @media(min-width:769px) and (max-width:1024px){
           .hero-panel {
             max-width: 75vw !important;
@@ -204,7 +249,6 @@ export default function HiShotHero() {
       `}</style>
 
       {/* ══════════ NAVBAR ══════════ */}
-      {/* ✅ FIX: Navbar sticky terhadap window scroll biasa — bukan scroll wrapper */}
       <nav style={{
         position: "sticky",
         top: 0,
@@ -236,7 +280,27 @@ export default function HiShotHero() {
             {["Home", "About", "Event", "FAQ"].map(l => (
               <a key={l} href="#" className="nav-link">{l}</a>
             ))}
-            <button className="reg-btn">Register Now</button>
+
+            {/* ── Register Dropdown ── */}
+            <div className="reg-wrapper" ref={regRef}>
+              <button className="reg-btn" onClick={() => setRegOpen(o => !o)}>
+                Register Now
+                <svg
+                  className={`chevron${regOpen ? " open" : ""}`}
+                  viewBox="0 0 10 6"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0L5 6L10 0H0Z"/>
+                </svg>
+              </button>
+              {regOpen && (
+                <div className="reg-dropdown">
+                  <a href="#">Seminar</a>
+                  <a href="#">Workshop</a>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Hamburger */}
@@ -270,23 +334,20 @@ export default function HiShotHero() {
           {["Home", "About", "Event", "FAQ"].map(l => (
             <a key={l} href="#" className="nav-link" style={{ fontSize: "1rem" }}>{l}</a>
           ))}
-          <button className="reg-btn" style={{ alignSelf: "flex-start", marginTop: 4 }}>
-            Register Now
-          </button>
+          {/* Mobile: Register expand */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
+            <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
+            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
+            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop</a>
+          </div>
         </div>
       </nav>
 
       {/* ══════════ HERO SECTION ══════════ */}
-      {/*
-        ✅ FIX: Hero pakai min-height:100vh dalam flow normal.
-        overflow:hidden + isolation:isolate memastikan semua dekorasi absolutnya
-        ter-clip & ter-isolate di dalam hero — tidak bocor ke section Trailer.
-      */}
       <section
         className="hero-section"
         style={{
-          // background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
-          // ✅ FIX full-bleed: stretch ke tepi viewport
+          background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
           width: "100vw",
           marginLeft: "calc(-50vw + 50%)",
           isolation: "isolate",
@@ -329,7 +390,7 @@ export default function HiShotHero() {
         />
         <img src="/Cloud2_Yellow.png" alt="" aria-hidden="true"
           className="cloud-left-bottom"
-          style={{ position:"absolute", bottom:"-4%", left:"-5%", width:"clamp(160px,36vw,400px)", zIndex:3, pointerEvents:"none" }}
+          style={{ position:"absolute", bottom:"-1%", left:"-5%", width:"clamp(160px,36vw,400px)", zIndex:3, pointerEvents:"none" }}
         />
         <img src="/TechDetail1.png" alt="" aria-hidden="true"
           className="deco-hide-xs"
@@ -340,14 +401,14 @@ export default function HiShotHero() {
           style={{ position:"absolute", bottom:"10%", left:"30%", width:"clamp(70px,15vw,210px)", zIndex:1, pointerEvents:"none", opacity:0.9 }}
         />
         <img src="/Cloud1_Outline.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", bottom:"-4%", right:"10%", width:"clamp(120px,30vw,280px)", zIndex:1, pointerEvents:"none" }}
+          style={{ position:"absolute", bottom:"-1%", right:"10%", width:"clamp(120px,30vw,280px)", zIndex:1, pointerEvents:"none" }}
         />
         <img src="/Cloud2_Green.png" alt="" aria-hidden="true"
           className="cloud-right-bottom"
           style={{ position:"absolute", bottom:"10%", right:"-5%", width:"clamp(150px,34vw,380px)", zIndex:3, pointerEvents:"none" }}
         />
         <img src="/Cloud1_Blue.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", bottom:"-4%", right:"-5%", width:"clamp(120px,26vw,280px)", zIndex:4, pointerEvents:"none" }}
+          style={{ position:"absolute", bottom:"-1%", right:"-5%", width:"clamp(120px,26vw,280px)", zIndex:4, pointerEvents:"none" }}
         />
         <img src="/TechDetail3-1.png" alt="" aria-hidden="true"
           className="deco-hide-xs"
@@ -399,19 +460,6 @@ export default function HiShotHero() {
           </div>
         </div>
       </section>
-
-      {/*
-        ══════════════════════════════════════════════
-        KONTEN DI BAWAH HERO
-        ✅ Section Trailer & section lain diletakkan di sini,
-        di luar hero-section, dalam flow normal.
-        Tidak ada lagi overlay bug dari dekorasi hero.
-        ══════════════════════════════════════════════
-      */}
-      {/* <Trailer /> */}
-      {/* <SectionAbout /> */}
-      {/* <SectionEvent /> */}
-      {/* <SectionFAQ /> */}
 
     </div>
   );
