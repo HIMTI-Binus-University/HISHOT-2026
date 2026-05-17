@@ -6,7 +6,7 @@ const Footer = () => {
                 background: 'radial-gradient(276.97% 87.89% at 50% 114.85%, #F1E6CD 0%, #B2D9E7 65%)' 
             }}
         >            
-            <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between py-5">
                 
                 <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
                     <img

@@ -230,11 +230,17 @@ export default function HishotFAQ() {
         }
         .faq-question-text.active {
           color: #f4f8fb;
-          -webkit-text-stroke: 1px #4b6f8c;
+          // -webkit-text-stroke: 1px #4b6f8c;
+          -webkit-text-stroke: 1px #0F4A6D;
           text-shadow:
-            0 1px 0 #ffffff,
-            0 2px 0 #9bb5c7,
-            0 3px 4px rgba(0,0,0,0.35);
+              0 4px 4px rgba(0,0,0,0.25),
+              0 0 20px #0F4A6DBF;
+          }
+          paint-order: stroke fill;
+          // text-shadow:
+          //   0 1px 0 #ffffff,
+          //   0 2px 0 #9bb5c7,
+          //   0 3px 4px rgba(0,0,0,0.35);
         }
  
         .faq-chevron-path {
@@ -378,7 +384,7 @@ export default function HishotFAQ() {
                     className="w-full flex items-center justify-between gap-4 py-4 bg-none cursor-pointer border-0 text-left bg-transparent"
                   >
                     <span
-                      className={`faq-question-text font-['Chivo'] font-semibold text-[clamp(0.85rem,1.8vw,1.5rem)] leading-[1.4] tracking-[0.01em]${isOpen ? " active" : ""}`}
+                      className={`faq-question-text font-['Chivo'] font-semibold text-[clamp(1.2rem,2vw,1.7rem)] leading-[1.4] tracking-[0.01em]${isOpen ? " active" : ""}`}
                       style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
                     >
                       {faq.question}
@@ -410,7 +416,7 @@ export default function HishotFAQ() {
                           <EventTimeline />
                         </div>
                       ) : (
-                        <p className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4  text-justify whitespace-pre-line mt-2">
+                        <p className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 text-justify whitespace-pre-line mt-2">
                           {faq.answer}
                         </p>
                       )}

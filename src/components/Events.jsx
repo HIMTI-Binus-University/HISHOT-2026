@@ -86,7 +86,7 @@ const Events = () => {
               </div>
 
               {/* Timeline */}
-              <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+              <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 lg:gap-8 px-2 xl:px-4 ml-4 md:ml-8 text-[#0F4A6D] min-w-0">
               
                 <div className="flex flex-col flex-1 w-full pt-0 lg:pt-4 min-w-0">
                   <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
@@ -118,7 +118,7 @@ const Events = () => {
                       <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[26px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
                         Yonathan Handoyo
                       </h4>
-                      <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
+                      <p className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
                         Job Job Job JOB JOB
                       </p>
                     </div>
@@ -133,7 +133,7 @@ const Events = () => {
                       <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[26px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
                         William G.
                       </h4>
-                      <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
+                      <p className="text-white  text-[10px] md:text-[12px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
                         Job Job Job JOB JOB
                       </p>
                     </div>
@@ -204,7 +204,7 @@ const Events = () => {
                       </div>
                       <div className="absolute bottom-0 left-0 w-full h-[25%] xl:h-[30%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
                         <h4 className="text-white text-[12px] md:text-[16px] lg:text-[20px] xl:text-[32px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Wahyu Hidayat</h4>
-                        <p className="text-white text-[8px] md:text-[10px] lg:text-[12px] xl:text-[20px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>details details</p>
+                        <p className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>details details</p>
                       </div>
                     </div>
                   </div>
@@ -218,7 +218,7 @@ const Events = () => {
                   </div>
                   <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[46px]">
                     {['More info', 'Guidebook'].map((text) => (
-                      <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] md:text-[14px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                      <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[12px] md:text-[16px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                     ))}
                   </div>
                 </div>
@@ -270,7 +270,7 @@ const Events = () => {
                       </div>
                       <div className="absolute bottom-0 left-0 w-full h-[25%] xl:h-[30%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
                         <h4 className="text-white text-[12px] md:text-[16px] lg:text-[20px] xl:text-[32px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Adrianus B. Kurnadi</h4>
-                        <p className="text-white text-[8px] md:text-[10px] lg:text-[12px] xl:text-[20px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>details details</p>
+                        <p className="text-white  text-[10px] md:text-[12px] lg:text-[14px] xl:text-[22px]  font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>details details</p>
                       </div>
                     </div>
                   </div>
@@ -284,7 +284,7 @@ const Events = () => {
                   </div>
                   <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[46px]">
                     {['More info', 'Guidebook'].map((text) => (
-                      <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] md:text-[14px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                      <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[12px] md:text-[16px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                     ))}
                   </div>
                 </div>

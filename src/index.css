@@ -67,21 +67,6 @@ body::before {
     pointer-events: none;
 }
 
-/* body::after {
-  content: "";
-    position: fixed;
-    top: 31px;
-    left: 31px;
-    right: 31px;
-    bottom: 3px;
-    
-    border: 5px solid #C3E4E8;
-    
-    box-shadow: 0 0 15px 2px #F9FEFE; 
-    
-    pointer-events: none;
-} */
-
 /* ✅ FIX #root: Ubah jadi full width standar aplikasi modern */
 #root {
   width: 100%;
