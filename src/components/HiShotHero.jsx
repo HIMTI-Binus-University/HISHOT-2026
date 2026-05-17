@@ -34,30 +34,18 @@ export default function HiShotHero() {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        html, body {
-          margin: 0 !important;
-          padding: 0 !important;
-          width: 100%;
-          overflow-x: hidden;
-        }
-
         .hishot-root {
           width: 100%;
           min-width: 0;
         }
 
         .hero-section {
-          width: 100vw;
-          margin-left: calc(-50vw + 50%);
+          width: 100%;
         }
 
         /* ── nav links ── */
         .nav-link {
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
+          font-family: var(--font-days-one);
           font-size: 0.85rem;
           color: #1D7397;
           text-decoration: none;
@@ -69,26 +57,26 @@ export default function HiShotHero() {
 
         /* ── register button ── */
         .reg-btn {
-          background: #1aaa8c;
+          background: #158080E5;
           color: white;
-          border: 2px solid white;
+          border: 2px solid #F9FEFE;
           padding: 0.4rem 1.2rem;
           border-radius: 9999px;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
+          font-family: var(--font-days-one);
           font-size: 0.8rem;
           cursor: pointer;
           letter-spacing: 0.04em;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-          text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 16px rgba(100,255,200,0.4);
+          box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+          text-shadow: 0 0 20.6px #6CB4D0, 6px 6px 4.89px #0000004D;
           transition: transform 0.2s, box-shadow 0.2s;
           display: flex;
           align-items: center;
           gap: 0.35rem;
+          -webkit-text-stroke:2px #6CB4D0;
+          paint-order:stroke fill;
         }
         .reg-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 22px rgba(0,0,0,0.4);
         }
 
         /* ── dropdown wrapper ── */
@@ -280,8 +268,9 @@ export default function HiShotHero() {
             {["Home", "About", "Event", "FAQ"].map(l => (
               <a key={l} href="#" className="nav-link">{l}</a>
             ))}
+        </div>
 
-            {/* ── Register Dropdown ── */}
+        {/* ── Register Dropdown ── */}
             <div className="reg-wrapper" ref={regRef}>
               <button className="reg-btn" onClick={() => setRegOpen(o => !o)}>
                 Register Now
@@ -318,7 +307,6 @@ export default function HiShotHero() {
             <span className="hb-line" style={{ width: menuOpen ? 24 : 18 }} />
             <span className="hb-line" style={{ width: 24 }} />
           </button>
-        </div>
 
         {/* Mobile menu */}
         <div
@@ -338,8 +326,9 @@ export default function HiShotHero() {
           {/* Mobile: Register expand */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
             <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
-            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
-            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop</a>
+            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
+            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
           </div>
         </div>
       </nav>
@@ -348,10 +337,11 @@ export default function HiShotHero() {
       <section
         className="hero-section"
         style={{
-          background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
-          width: "100vw",
-          marginLeft: "calc(-50vw + 50%)",
-          isolation: "isolate",
+          width: "100%"
+          // background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
+          // width: "100vw",
+          // marginLeft: "calc(-50vw + 50%)",
+          // isolation: "isolate",
         }}
       >
 
@@ -361,7 +351,7 @@ export default function HiShotHero() {
         />
         <img src="/TechCircleHollow.png" alt="" aria-hidden="true"
           className="sparkle-hide-xs"
-          style={{ position:"absolute", top:"22%", left:"20%", width:20, height:20, opacity:0.7, zIndex:3, pointerEvents:"none" }}
+          style={{position:"absolute", top:"22%", left:"20%", width:20, height:20, opacity:0.7, zIndex:3, pointerEvents:"none" }}
         />
         <img src="/TechCircleFilled.png" alt="" aria-hidden="true"
           style={{ position:"absolute", top:"20%", left:"15%", width:10, height:10, opacity:0.9, zIndex:3, pointerEvents:"none" }}
@@ -432,14 +422,12 @@ export default function HiShotHero() {
 
         {/* ══ HERO PANEL ══ */}
         <div
-          className="hero-panel"
+          className="hero-panel
+          sm:min-w-[20rem] md:max-w-[min(680px,88vw)] w-full"
           style={{
             position: "relative", zIndex: 5,
             marginBottom: "10rem",
-            border: "2px solid #C3E4E8",
             borderRadius: 32,
-            padding: "clamp(1.5rem,4vw,2.8rem) clamp(2rem,6vw,4rem) clamp(2rem,4vw,3rem)",
-            maxWidth: "min(680px,88vw)", width: "100%",
             display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center",
           }}
         >
@@ -448,8 +436,8 @@ export default function HiShotHero() {
             alt="HiShot 2026:ORBIT"
             className="hero-logo"
             style={{
-              width: "clamp(180px,52vw,640px)",
-              maxWidth: "60%",
+              width: "clamp(300px,80vw,900px)",
+              // maxWidth: "60%",
               pointerEvents: "none", userSelect: "none",
               marginBottom: "1rem",
               mixBlendMode: "multiply",

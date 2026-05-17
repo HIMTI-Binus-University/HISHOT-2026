@@ -7,13 +7,9 @@ export default function SecureOpportunity(){
         drop-shadow-[3px_7px_4px_rgba(0,0,0,0.25)] bg-[#124466E5]" 
         >
         <h1 
-          className="font-days-one text-center text-[clamp(40px,6vw,60px)]  tracking-[0.12em] text-white leading-tight [text-shadow:0_0_20.6px_#6CB4D0,6px_6px_4.89px_rgba(0,0,0,0.30)] 
+          className="font-days-one text-center text-[clamp(30px,6vw,60px)]  tracking-[0.12em] text-white leading-tight [text-shadow:0_0_20.6px_#6CB4D0,6px_6px_4.89px_rgba(0,0,0,0.30)] font-bold;
             [-webkit-text-stroke:2px_#6CB4D0] 
             [paint-order:stroke_fill]"
-        //   style={{
-        //     WebkitTextStroke: '1px rgba(108,180,208,1)',
-        //     textShadow: '0 0 15.6px rgba(108,180,208,1), 6px 6px 4.89px rgba(0,0,0,0.8)',
-        //   }}  
         >
           Secure Your Opportunity Now!
         </h1>
@@ -21,7 +17,7 @@ export default function SecureOpportunity(){
 
       <div className="flex flex-row items-center justify-center gap-7">
         <h2 
-          className="font-days-one text-center text-[clamp(20px,3vw,32px)] border-white border-[3px] rounded-[40px] px-7 py-4 text-white
+          className="font-days-one text-center text-[clamp(18px,3vw,32px)] border-white border-[3px] rounded-[40px] px-7 py-2 md:py-4 text-white
             drop-shadow-[3px_7px_1.92px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-105 cursor-pointer 
             [text-shadow:0_0_20.6px_#BD67A8,6px_6px_4.89px_rgba(0,0,0,0.30)] 
             [-webkit-text-stroke:2px_#BD67A8] 
@@ -36,7 +32,7 @@ export default function SecureOpportunity(){
   className="hover:scale-105 transition-all duration-300"
         >
           <h2
-            className="font-days-one text-center text-[clamp(20px,3vw,32px)] border-[#F9FEFE] border-[3px] rounded-[40px] px-7 py-4 text-white
+            className="font-days-one text-center text-[clamp(18px,3vw,32px)] border-white border-[3px] rounded-[40px] px-7 py-2 md:py-4 text-white
             drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-105 cursor-pointer 
             [text-shadow:0_0_20.6px_#198387,6px_6px_4.89px_rgba(0,0,0,0.30)] 
             [-webkit-text-stroke:2px_#198387] 

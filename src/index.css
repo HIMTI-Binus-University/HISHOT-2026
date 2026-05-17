@@ -52,7 +52,7 @@ body {
 body::before {
   content: "";
   position: absolute;
-  top: 50px;
+  top: 90px;
   left: 30px;
   right: 30px;
   bottom: 30px;
@@ -65,7 +65,7 @@ body::before {
     /* Shadow tepat di bawah border */
     /* 0 0 15px = blur, 2px = spread (mempertebal) */
   @apply shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-[5px]; 
-  @apply md:shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE]; 
+  @apply md:shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-none; 
   /* box-shadow: 0 0 10px 2px #F9FEFE, inset 0 0 10px 2px #F9FEFE;  */
   pointer-events: none;
 }
