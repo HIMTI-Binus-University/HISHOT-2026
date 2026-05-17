@@ -51,20 +51,23 @@ body {
 
 body::before {
   content: "";
-    position: absolute;
-    top: 50px;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 40px;
     
     /* Border utama */
-    border: 5px solid #C3E4E8;
+  @apply md:border-[5px] md:border-solid md:border-[#C3E4E8];
+  /* border: 5px solid #C3E4E8; */
     
     /* Shadow tepat di bawah border */
     /* 0 0 15px = blur, 2px = spread (mempertebal) */
-    box-shadow: 0 0 10px 2px #F9FEFE, inset 0 0 10px 2px #F9FEFE; 
-    
-    pointer-events: none;
+  @apply shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-[5px]; 
+  @apply md:shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE]; 
+  /* box-shadow: 0 0 10px 2px #F9FEFE, inset 0 0 10px 2px #F9FEFE;  */
+  pointer-events: none;
 }
 
 /* ✅ FIX #root: Ubah jadi full width standar aplikasi modern */

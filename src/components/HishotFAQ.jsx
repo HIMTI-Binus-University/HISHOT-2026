@@ -258,7 +258,7 @@ export default function HishotFAQ() {
           box-shadow: 0 4px 4px rgba(0,0,0,0.25);
           // box-shadow: 0 4px 22px rgba(180,40,120,0.45);
           font-family: 'Days One', sans-serif;
-          font-size: clamp(0.95rem, 2vw, 1.15rem);
+          font-size: clamp(1.4rem, 2.5vw, 1.8rem);
           color: white;
           letter-spacing: 0.02em;
           text-shadow: 0 4px 4px rgba(0,0,0,0.25);

@@ -14,11 +14,11 @@ const Events = () => {
   const currentTheme = themes[activeTab];
 
   return (
-    <div className="mt-16 min-h-screen p-4 md:p-10 flex justify-center items-start overflow-x-hidden font-sans flex-col">
+    <div className="mt-16 min-h-screen p-0 md:p-10 flex justify-center items-start overflow-x-hidden font-sans flex-col">
       
       {/* ================= MAIN CONTAINER ================= */}
       <div 
-        className={`relative w-full max-w-[1700px] bg-[#B2D9E7] border-[2px] border-[#F9FEFE] border-solid rounded-[30px] xl:rounded-[50px] px-4 md:px-10 xl:px-14 pt-[70px] xl:pt-[110px] pb-10 xl:pb-16 mt-[50px] xl:mt-[80px] mx-auto flex flex-col shadow-[0px_4px_4px_0px_#00000040] h-fit`}
+        className={`relative w-full max-w-[1700px] bg-[#B2D9E7] border-[2px] border-[#F9FEFE] border-solid rounded-[30px] xl:rounded-[50px] px-4 md:px-10 xl:px-14 pt-[70px] xl:pt-[110px] pb-10 xl:pb-16 mt-[50px] xl:mt-[80px] md:mx-auto flex flex-col shadow-[0px_4px_4px_0px_#00000040] h-fit`}
         style={{ '--glow': currentTheme.glow }}
       >
 
