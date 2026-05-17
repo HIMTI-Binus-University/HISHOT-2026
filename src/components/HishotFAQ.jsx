@@ -177,9 +177,15 @@ function EventTimeline() {
 }
 
 export default function HishotFAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
+  const [openSet, setOpenSet] = useState(new Set());
+ 
+  const toggle = (i) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev);
+      next.has(i) ? next.delete(i) : next.add(i);
+      return next;
+    });
+  };
 
   return (
     <section
@@ -215,6 +221,24 @@ export default function HishotFAQ() {
         }
         .faq-chevron.open {
           transform: rotate(180deg);
+        }
+
+        .faq-question-text {
+          color: #0F4A6D;
+          transition: color 0.25s ease, text-shadow 0.25s ease;
+          text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+        }
+        .faq-question-text.active {
+          color: #f4f8fb;
+          -webkit-text-stroke: 1px #4b6f8c;
+          text-shadow:
+            0 1px 0 #ffffff,
+            0 2px 0 #9bb5c7,
+            0 3px 4px rgba(0,0,0,0.35);
+        }
+ 
+        .faq-chevron-path {
+          transition: stroke 0.25s ease;
         }
 
         /* title badge */
@@ -339,7 +363,7 @@ export default function HishotFAQ() {
 
           <div className="flex flex-col gap-[0.6rem]">
             {faqs.map((faq, i) => {
-              const isOpen = openIndex === i;
+              const isOpen = openSet.has(i);
               const isTimeline = faq.answer === null;
 
               return (
@@ -354,7 +378,7 @@ export default function HishotFAQ() {
                     className="w-full flex items-center justify-between gap-4 py-4 bg-none cursor-pointer border-0 text-left bg-transparent"
                   >
                     <span
-                      className="font-['Chivo'] font-semibold text-[clamp(0.85rem,1.8vw,1.5rem)] text-[#0F4A6D] leading-[1.4] tracking-[0.01em]"
+                      className={`faq-question-text font-['Chivo'] font-semibold text-[clamp(0.85rem,1.8vw,1.5rem)] leading-[1.4] tracking-[0.01em]${isOpen ? " active" : ""}`}
                       style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
                     >
                       {faq.question}
