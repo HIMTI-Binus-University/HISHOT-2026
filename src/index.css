@@ -44,9 +44,6 @@ body {
     overflow-x: hidden;
     margin: 0;
     position: relative;
-    /* outline: 5px solid #C3E4E8;
-    outline-offset: -30px; */
-    /* box-shadow: inset 0 0 0 30px transparent, inset 0 0 10px 34px #F9FEFE; */
 }
 
 body::before {
@@ -58,27 +55,18 @@ body::before {
   bottom: 30px;
   border-radius: 40px;
     
-    /* Border utama */
   @apply md:border-[5px] md:border-solid md:border-[#C3E4E8];
-  /* border: 5px solid #C3E4E8; */
     
-    /* Shadow tepat di bawah border */
-    /* 0 0 15px = blur, 2px = spread (mempertebal) */
   @apply shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-[5px]; 
   @apply md:shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-none; 
-  /* box-shadow: 0 0 10px 2px #F9FEFE, inset 0 0 10px 2px #F9FEFE;  */
   pointer-events: none;
 }
 
-/* ✅ FIX #root: Ubah jadi full width standar aplikasi modern */
 #root {
   width: 100%;
   min-height: 100vh;
-  /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
-  /* text-align: center; */
-  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -121,46 +109,3 @@ body::before {
     transform: rotate(90deg);
     @apply hidden md:block absolute bg-transparent z-10 h-20 w-[3.125rem] border-0 rounded-tl-3xl border-[#F9FEFE] border-l-2 md:right-3 md:-bottom-[4.1875rem] md:w-[3.375rem] md:shadow-[-30px_-20px_0_var(--color-card)];
 }
-/* h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-} */

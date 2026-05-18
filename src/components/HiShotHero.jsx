@@ -250,97 +250,92 @@ export default function HiShotHero() {
         position: "sticky",
         top: 0,
         zIndex: 100,
-        background: scrolled ? "rgba(225,242,250,0.98)" : "rgba(225,242,250,0.93)",
-        backdropFilter: "blur(16px)",
+        background: "#ECFFFF",
         borderBottom: "1px solid rgba(140,200,225,0.25)",
         boxShadow: scrolled ? "0 4px 24px rgba(20,70,120,0.1)" : "none",
         transition: "all 0.3s",
       }}>
-        <div style={{
-          maxWidth: 1280, margin: "0 auto",
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between" style={{
+          maxWidth: "100%", margin: "0 auto",
           padding: "0.35rem 1.5rem",
-          display: "flex", alignItems: "center", justifyContent: "space-between",
         }}>
-          <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-            <img
-              src="/logo-title.jpeg"
-              alt="HiShot logo"
+          
+          <div style={{ 
+            display: "flex", 
+            justifyContent: "space-between", 
+            alignItems: "center", 
+            width: "100%", 
+            flex: 1 
+          }} className="md:w-auto">
+            
+            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+              <img
+                src="/logo-title.jpeg"
+                alt="HiShot logo"
+                style={{
+                  height: "38px", width: "auto", objectFit: "contain",
+                  mixBlendMode: "multiply",
+                }}
+              />
+            </div>
+
+            <button
+              className="m-btn"
+              onClick={() => setMenuOpen(o => !o)}
               style={{
-                height: "38px", width: "auto", objectFit: "contain",
-                objectPosition: "top left", pointerEvents: "none",
-                userSelect: "none", mixBlendMode: "multiply",
+                display: "none", flexDirection: "column", gap: 5,
+                background: "none", border: "none", cursor: "pointer", padding: 6,
               }}
-            />
+            >
+              <span className="hb-line" style={{ width: 24 }} />
+              <span className="hb-line" style={{ width: menuOpen ? 24 : 18 }} />
+              <span className="hb-line" style={{ width: 24 }} />
+            </button>
           </div>
 
-          <div className="d-nav" style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
+          <div className="d-nav" style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent:"space-between"}}>
             {["Home", "About", "Event", "FAQ"].map(l => (
               <a key={l} href="#" className="nav-link">{l}</a>
             ))}
-        </div>
-
-        {/* perlu kasih div yang kelasnya itu d-nav biar dia ilang pas ga ada */}
-        {/* ── Register Dropdown ── */}
-            <div className="d-nav">
-              <div className="reg-wrapper" ref={regRef}>
-                <button className="reg-btn" onClick={() => setRegOpen(o => !o)}>
-                  Register Now
-                  <svg
-                    className={`chevron${regOpen ? " open" : ""}`}
-                    viewBox="0 0 10 6"
-                    fill="white"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M0 0L5 6L10 0H0Z"/>
-                  </svg>
-                </button>
-                {regOpen && (
-                  <div className="reg-dropdown">
-                    <a href="#">Seminar & Workshop</a>
-                    <a href="#">Local Study Tour</a>
-                    <a href="#">Global Study Tour</a>
-                  </div>
-                )}
-              </div>
+            
+            <div className="reg-wrapper" ref={regRef}>
+              <button className="reg-btn" onClick={() => setRegOpen(o => !o)}>
+                Register Now
+                <svg className={`chevron${regOpen ? " open" : ""}`} viewBox="0 0 10 6" fill="white" width="12">
+                  <path d="M0 0L5 6L10 0H0Z"/>
+                </svg>
+              </button>
+              {regOpen && (
+                <div className="reg-dropdown">
+                  <a href="#">Seminar & Workshop</a>
+                  <a href="#">Local Study Tour</a>
+                  <a href="#">Global Study Tour</a>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Hamburger */}
-          <button
-            className="m-btn"
-            aria-label="Toggle menu"
-            onClick={() => setMenuOpen(o => !o)}
+          <div
+            className="m-menu"
             style={{
-              display: "none", flexDirection: "column", gap: 5,
-              background: "none", border: "none", cursor: "pointer", padding: 6,
+              display: menuOpen ? "flex" : "none",
+              flexDirection: "column",
+              padding: "1rem 0",
+              gap: "0.75rem",
+              width: "100%",
+              borderTop: "1px solid rgba(140,200,225,0.2)",
+              marginTop: "0.5rem"
             }}
           >
-            <span className="hb-line" style={{ width: 24 }} />
-            <span className="hb-line" style={{ width: menuOpen ? 24 : 18 }} />
-            <span className="hb-line" style={{ width: 24 }} />
-          </button>
-
-        {/* Mobile menu */}
-        <div
-          className="m-menu"
-          style={{
-            display: menuOpen ? "flex" : "none",
-            flexDirection: "column",
-            padding: "0.75rem 1.5rem 1rem",
-            gap: "0.75rem",
-            background: "rgba(225,242,250,0.98)",
-            borderTop: "1px solid rgba(140,200,225,0.2)",
-          }}
-        >
-          {["Home", "About", "Event", "FAQ"].map(l => (
-            <a key={l} href="#" className="nav-link" style={{ fontSize: "1rem" }}>{l}</a>
-          ))}
-          {/* Mobile: Register expand */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
-            <span className="--font-days-one" style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
-            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
-            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
-            <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
+            {["Home", "About", "Event", "FAQ"].map(l => (
+              <a key={l} href="#" className="nav-link" style={{ fontSize: "1rem" }}>{l}</a>
+            ))}
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
+              <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
+              <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+              <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
+              <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -350,10 +345,6 @@ export default function HiShotHero() {
         className="hero-section"
         style={{
           width: "100%"
-          // background: "linear-gradient(180deg, #0a2d42 0%, #0d3d58 25%, #0f5272 50%, #1478a0 75%, #1a9ec8 100%)",
-          // width: "100vw",
-          // marginLeft: "calc(-50vw + 50%)",
-          // isolation: "isolate",
         }}
       >
 
