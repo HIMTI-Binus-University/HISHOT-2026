@@ -128,28 +128,37 @@ export default function HiShotHero() {
 
         /* ── hero CTA buttons ── */
         .btn-start {
-          background: linear-gradient(135deg,#cc3d8f,#b82d80);
-          color: white; border: none;
+          background: #CC61A5E5;
+          color: white;
+          border: 2px solid #F9FEFE;
           padding: 0.85rem 2.6rem; border-radius: 9999px;
-          font-family: 'Poppins',sans-serif; font-weight: 700; font-size: 1.05rem;
+          font-family: var(--font-days-one); font-weight: 700; font-size: 1.05rem;
           cursor: pointer;
-          box-shadow: 0 6px 22px rgba(180,40,120,0.45);
+          box-shadow: 0 4px 4px #00000040;
           transition: transform 0.2s, box-shadow 0.2s;
           letter-spacing: 0.03em;
+          text-shadow: 6px 6px 4.89px #0000004D;
+          -webkit-text-stroke : 2px #B95FA0;
+          paint-order: stroke fill;
         }
-        .btn-start:hover { transform:translateY(-3px); box-shadow:0 12px 34px rgba(180,40,120,0.6); }
+        .btn-start:hover { transform:translateY(-3px);}
 
         .btn-learn {
-          background: rgba(255,255,255,0.12);
+          background: #6CB4D0E5;
           color: white;
-          border: 2px solid rgba(255,255,255,0.6);
+          border: 2px solid #F9FEFE;
           padding: 0.85rem 2.6rem; border-radius: 9999px;
-          font-family: 'Poppins',sans-serif; font-weight: 700; font-size: 1.05rem;
-          cursor: pointer; backdrop-filter: blur(6px);
+          font-family: var(--font-days-one); font-weight: 700; font-size: 1.05rem;
+          cursor: pointer;
           transition: transform 0.2s, background 0.2s;
           letter-spacing: 0.03em;
+          box-shadow: 0 4px 4px #00000040;
+          text-shadow: 6px 6px 4.89px #0000004D, 0 0 20.6px #6CB4D0;
+          -webkit-text-stroke : 2px #6CB4D0;
+          paint-order: stroke fill;
+
         }
-        .btn-learn:hover { background: rgba(255,255,255,0.22); transform: translateY(-3px); }
+        .btn-learn:hover { transform: translateY(-3px); }
 
         /* ── hamburger line ── */
         .hb-line {
@@ -270,26 +279,29 @@ export default function HiShotHero() {
             ))}
         </div>
 
+        {/* perlu kasih div yang kelasnya itu d-nav biar dia ilang pas ga ada */}
         {/* ── Register Dropdown ── */}
-            <div className="reg-wrapper" ref={regRef}>
-              <button className="reg-btn" onClick={() => setRegOpen(o => !o)}>
-                Register Now
-                <svg
-                  className={`chevron${regOpen ? " open" : ""}`}
-                  viewBox="0 0 10 6"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 0L5 6L10 0H0Z"/>
-                </svg>
-              </button>
-              {regOpen && (
-                <div className="reg-dropdown">
-                  <a href="#">Seminar & Workshop</a>
-                  <a href="#">Local Study Tour</a>
-                  <a href="#">Global Study Tour</a>
-                </div>
-              )}
+            <div className="d-nav">
+              <div className="reg-wrapper" ref={regRef}>
+                <button className="reg-btn" onClick={() => setRegOpen(o => !o)}>
+                  Register Now
+                  <svg
+                    className={`chevron${regOpen ? " open" : ""}`}
+                    viewBox="0 0 10 6"
+                    fill="white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0L5 6L10 0H0Z"/>
+                  </svg>
+                </button>
+                {regOpen && (
+                  <div className="reg-dropdown">
+                    <a href="#">Seminar & Workshop</a>
+                    <a href="#">Local Study Tour</a>
+                    <a href="#">Global Study Tour</a>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -325,7 +337,7 @@ export default function HiShotHero() {
           ))}
           {/* Mobile: Register expand */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
-            <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
+            <span className="--font-days-one" style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
             <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
             <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
             <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>

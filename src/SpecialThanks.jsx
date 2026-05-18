@@ -96,7 +96,7 @@ export default function SpecialThanks() {
         className="mb-12 px-8 py-4 flex flex-col items-center justify-center border-white border-[3px] rounded-[20px] z-10 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
         style={{ background: "#198387E5" }}
       >
-        <p className="font-days-one text-center text-[25px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white">
+        <p className="font-[family:var(--font-days-one)] text-center text-[25px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white">
           Special Thanks To
         </p>
       </div>
