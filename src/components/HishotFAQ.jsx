@@ -230,17 +230,13 @@ export default function HishotFAQ() {
         }
         .faq-question-text.active {
           color: #f4f8fb;
-          // -webkit-text-stroke: 1px #4b6f8c;
-          -webkit-text-stroke: 1px #0F4A6D;
+          font-weight: 600;
+          -webkit-text-stroke: 2px #0F4A6D;
+          paint-order: stroke fill;
           text-shadow:
               0 4px 4px rgba(0,0,0,0.25),
               0 0 20px #0F4A6DBF;
-          }
-          paint-order: stroke fill;
-          // text-shadow:
-          //   0 1px 0 #ffffff,
-          //   0 2px 0 #9bb5c7,
-          //   0 3px 4px rgba(0,0,0,0.35);
+          paint-order: stroke fill
         }
  
         .faq-chevron-path {
@@ -355,17 +351,17 @@ export default function HishotFAQ() {
       >
         {/* Badge */}
         <div className="flex w-full justify-center">
-          <div className="absolute self-center text-center">
+          <div className="absolute self-center text-center pb">
             <span className="faq-badge">Frequently Asked Questions</span>
           </div>
         </div>
 
         {/* Card */}
           <div
-            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)] over"
+            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)]"
           >
 
-          <div className="flex flex-col gap-[0.6rem]">
+          <div className="flex pt-6 md:pt-0 flex-col gap-[0.6rem] overflow-y-scroll scrollbar">
             {faqs.map((faq, i) => {
               const isOpen = openSet.has(i);
               const isTimeline = faq.answer === null;

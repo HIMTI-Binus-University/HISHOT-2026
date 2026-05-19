@@ -20,7 +20,6 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --color-card : #B2D9E7;
-
   --font-dela-gothic-one : "Dela Gothic One", sans-serif;
   --font-days-one : "Days One", sans-serif;
   --font-chivo : "Chivo", sans-serif;
@@ -108,4 +107,10 @@ body::before {
     content:"";
     transform: rotate(90deg);
     @apply hidden md:block absolute bg-transparent z-10 h-20 w-[3.125rem] border-0 rounded-tl-3xl border-[#F9FEFE] border-l-2 md:right-3 md:-bottom-[4.1875rem] md:w-[3.375rem] md:shadow-[-30px_-20px_0_var(--color-card)];
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar{
+        display: none;
+    }
 }
