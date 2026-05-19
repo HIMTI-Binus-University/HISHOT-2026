@@ -190,7 +190,7 @@ export default function HishotFAQ() {
   return (
     <section
       id="faq"
-      className="min-h-screen overflow-hidden relative items-center justify-center md:px-4 pt-24 pb-32 font-['Chivo']"
+      className=" -mb-16 md:mb-0 min-h-screen overflow-hidden relative items-center justify-center md:px-4 pt-24 pb-32 font-['Chivo']"
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Chivo:wght@300;400;700&display=swap');
@@ -250,13 +250,11 @@ export default function HishotFAQ() {
         /* title badge */
         .faq-badge {
           background-color: #CC61A5E5;
-          // background: linear-gradient(135deg, #cc3d8f, #b82d80);
           border-radius: 20px;
           padding: 0.55rem 2.2rem;
           display: inline-block;
           border: 2px solid #F9FEFE;
           box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-          // box-shadow: 0 4px 22px rgba(180,40,120,0.45);
           font-family: 'Days One', sans-serif;
           font-size: clamp(1.4rem, 2.5vw, 1.8rem);
           color: white;
@@ -298,7 +296,7 @@ export default function HishotFAQ() {
       src="/Cloud2_Blue.png"
       alt=""
       aria-hidden="true"
-      className="absolute hidden md:block bottom-[5rem] -left-[2rem] pointer-events-none w-[30rem]"
+      className="absolute hidden md:block top-[18rem] -left-[2rem] pointer-events-none w-[30rem]"
       // className="absolute bottom-[8%] md:bottom-[12%] lg:bottom-[12%] left-[-12%] sm:left-[-6%] md:left-[0%] w-[260px] sm:w-[360px] md:w-[clamp(530px,28vw,200px)] z-[2] pointer-events-none"
     />
 
@@ -307,7 +305,7 @@ export default function HishotFAQ() {
       src="/Moon.png"
       alt=""
       aria-hidden="true"
-      className=" w-[8rem] absolute hidden md:block bottom-[18rem] left-[4rem] pointer-events-none"
+      className=" w-[8rem] absolute hidden md:block top-[18rem] left-[4rem] pointer-events-none"
       // className="absolute bottom-[20%] md:bottom-[38%] lg:bottom-[38%] left-[2%] w-[70px] sm:w-[100px] md:w-[clamp(130px,28vw,100px)] z-[2] pointer-events-none"
     />
 
@@ -340,7 +338,7 @@ export default function HishotFAQ() {
     <img
       src="/Beurt_Float.png"
       alt="HiShot mascot"
-      className=" w-[15rem] absolute hidden md:block bottom-0 md:-right-[4.5rem] lg:w-[18rem] lg:right-[9rem] pointer-events-none"
+      className=" w-[15rem] absolute hidden md:block top-[23rem] md:-right-[4.5rem] lg:w-[18rem] lg:right-[9rem] pointer-events-none"
       // className="absolute right-[2%] sm:right-[8%] md:right-[18%] bottom-[1%] md:bottom-[3%] w-[180px] sm:w-[240px] md:w-[clamp(330px,47vw,130px)] z-[5] pointer-events-none select-none"
     />
 
@@ -352,7 +350,7 @@ export default function HishotFAQ() {
     />
 
       {/* ══════════ FAQ CARD ══════════ */}
-      <div
+      <div id="faq"
         className="relative z-[10] md:max-w-[min(800px,80vw)] max-lg:max-w-[min(900px,100vw)] w-full md:mx-auto"
       >
         {/* Badge */}

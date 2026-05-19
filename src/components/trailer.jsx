@@ -1,6 +1,6 @@
 export default function Trailer(){ 
     return( 
-        <section className="relative overflow-x-clip w-full max-w-full isolate"> 
+        <section id="about" className="relative overflow-x-clip w-full max-w-full isolate mb-12"> 
             <section className="flex flex-col md:flex-row pt-10 pb-10 md:p-10 lg:p-22 gap-0 md:items-stretch"> 
                 <div className=" rounded-2xl sm:rounded-3xl md:p-4 md:bg-[var(--color-card)] md:flex-1 md:border-2 border-[#F9FEFE] md:pb-20 md:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] lg:pb-18 md:border-r-0 inverted-radius-card md:-mr-1 text-left">
                     <h1 className="text-3xl lg:text-4xl p-4 pr-12 pb-2 font-[family:var(--font-days-one)] glow w-3/4 md:w-fit bg-[var(--color-card)] z-10 inverted-radius">What is HISHOT?</h1>

@@ -23,8 +23,15 @@ export default function HiShotHero() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const navItems = [
+    { name: "Home", path: "#home" },
+    { name: "About", path: "#about" },
+    { name: "Event", path: "#event" },
+    { name: "FAQ", path: "#faq" }
+  ];
+
   return (
-    <div
+    <div id="home"
       className="hishot-root"
       style={{
         fontFamily: "'Nunito','Poppins',sans-serif",
@@ -102,7 +109,7 @@ export default function HiShotHero() {
         .reg-dropdown a {
           display: block;
           padding: 0.72rem 1.2rem;
-          font-family: 'Poppins', sans-serif;
+          font-family: var(--font-days-one);
           font-weight: 600;
           font-size: 0.85rem;
           color: #1D7397;
@@ -294,8 +301,10 @@ export default function HiShotHero() {
           </div>
 
           <div className="d-nav" style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent:"space-between"}}>
-            {["Home", "About", "Event", "FAQ"].map(l => (
-              <a key={l} href="#" className="nav-link">{l}</a>
+            {navItems.map((item) => (
+              <a key={item.name} href={item.path} className="nav-link">
+                {item.name}
+              </a>
             ))}
             
             <div className="reg-wrapper" ref={regRef}>
