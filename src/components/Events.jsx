@@ -76,9 +76,9 @@ const Events = () => {
                 
                 {/* Bagian Details */}
                 <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                  <div className="flex items-start gap-2 xl:gap-4 mb-2 xl:mb-4">
-                    <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain mt-1" />
-                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4]" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                  <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                    <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                   </div>
                   <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                     Explore the intersection of Artificial Intelligence, cloud computing, and digital entrepreneurship. Through engaging discussions and interactive sessions, participants will gain insights into technologies shaping the future.
@@ -86,7 +86,7 @@ const Events = () => {
                 </div>
 
                 {/* Timeline */}
-                <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 lg:gap-8 px-2 xl:px-4 ml-4 md:ml-8 text-[#0F4A6D] min-w-0">
+                <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 ml-4 md:ml-8 text-[#0F4A6D] min-w-0">
                 
                   <div className="flex flex-col flex-1 w-full pt-0 lg:pt-4 min-w-0">
                     <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
@@ -108,7 +108,7 @@ const Events = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-8 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
+                  <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-0 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
                     {/* Speaker 1 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
@@ -142,7 +142,7 @@ const Events = () => {
                 </div>
 
                 {/* Lokasi di Mobile */}
-                <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
                   <div className="flex items-start gap-2 md:gap-4 mb-4">
                     <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain mt-1" />
                     <h3 className="text-[20px] md:text-[28px] leading-[1.4] w-full" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
@@ -159,7 +159,7 @@ const Events = () => {
 
             {/* ======================= WORKSHOP ======================= */}
             {activeTab === 'workshop' && (
-              <div className="w-full flex flex-col gap-14 xl:gap-20">
+              <div className="w-full flex flex-col">
                 
                 {/* Bagian pertama Workshop */}
                 <div className="w-full flex flex-col px-1 md:px-6">
@@ -174,16 +174,16 @@ const Events = () => {
                   
                   {/* Bagian Details */}
                   <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                    <div className="flex items-start gap-2 xl:gap-4 mb-2 xl:mb-4">
-                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain mt-1" />
-                      <h3 className="text-[20px] md:text-[24px] xl:text-[36px] leading-[1.4]" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                    <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                     </div>
                     <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                       Dive into the world of cloud security and discover how AI technologies are used to identify risks, monitor systems, and defend digital infrastructures. Participants will gain insights into modern cybersecurity challenges and solutions in cloud computing.
                     </p>
                   </div>
 
-                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                     
                     <div className="hidden lg:flex flex-col w-full lg:w-1/2 pt-4 pl-2 min-w-0">
                       <div className="flex items-start gap-4">
@@ -197,7 +197,7 @@ const Events = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-row justify-center lg:justify-end items-center w-full lg:w-1/2 pt-8 lg:pt-0 min-w-0">
+                    <div className="flex flex-row justify-center lg:justify-end items-center w-full lg:w-1/2 pt-0 lg:pt-0 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[90%] mx-auto mb-[8%] aspect-[3/2] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md">
                           <img src="/Meow.jpg" alt="Workshop Speaker 1" className="w-full h-full object-cover" />
@@ -211,7 +211,7 @@ const Events = () => {
                   </div>
 
                   {/* Lokasi di Mobile */}
-                  <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                  <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
                     <div className="flex items-start gap-2 md:gap-4 mb-4">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain mt-1" />
                       <h3 className="text-[20px] md:text-[28px] leading-[1.4] w-full" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
@@ -222,10 +222,10 @@ const Events = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Garis */}
-                  <div className="w-[90%] xl:w-full max-w-[1525px] mx-auto h-[3px] xl:h-[4px] bg-[#F9FEFE] my-10 xl:my-16 shadow-md opacity-50 rounded-full"></div>
                 </div>
+
+                {/* Garis */}
+                <div className="w-[90%] xl:w-full max-w-[1525px] mx-auto h-[3px] xl:h-[4px] bg-[#F9FEFE] mt-10 mb-6 xl:mt-12 xl:mb-10 shadow-md opacity-50 rounded-full"></div>
 
                 {/* Bagian kedua Workshop */}
                 <div className="w-full flex flex-col px-1 md:px-6">
@@ -240,16 +240,16 @@ const Events = () => {
                   
                   {/* Bagian Details */}
                   <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                    <div className="flex items-start gap-2 xl:gap-4 mb-2 xl:mb-4">
-                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain mt-1" />
-                      <h3 className="text-[20px] md:text-[24px] xl:text-[36px] leading-[1.4]" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                    <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                     </div>
                     <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                       Discover how cloud computing powers modern Artificial Intelligence systems. Through interactive sessions, participants will learn how machine learning models are deployed, managed, and optimized in cloud environments.
                     </p>
                   </div>
 
-                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                     
                     <div className="hidden lg:flex flex-col w-full lg:w-1/2 pt-4 pl-2 min-w-0">
                       <div className="flex items-start gap-4">
@@ -263,7 +263,7 @@ const Events = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-row justify-center lg:justify-end items-center w-full lg:w-1/2 pt-8 lg:pt-0 min-w-0">
+                    <div className="flex flex-row justify-center lg:justify-end items-center w-full lg:w-1/2 pt-0 lg:pt-0 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[90%] mx-auto mb-[8%] aspect-[3/2] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md">
                           <img src="/Meow.jpg" alt="Workshop Speaker 2" className="w-full h-full object-cover" />
@@ -277,7 +277,7 @@ const Events = () => {
                   </div>
 
                   {/* Lokasi di Mobile */}
-                  <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                  <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
                     <div className="flex items-start gap-2 md:gap-4 mb-4">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain mt-1" />
                       <h3 className="text-[20px] md:text-[28px] leading-[1.4] w-full" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
@@ -294,7 +294,6 @@ const Events = () => {
             )}
 
             {/* ======================= LOCAL STUDY TOUR ======================= */}
-            {/* Ini aku sembunyiin dengan false && () biar komentar di dalamnya gak menyebabkan syntax error */}
             {activeTab === 'local' && (
               <div className="w-full flex flex-col px-1 md:px-6">
                 <div className="w-full max-w-[1525px] mx-auto mb-6 xl:mb-10 px-0 xl:px-4 overflow-visible">
@@ -308,16 +307,16 @@ const Events = () => {
                   <div className="w-full flex flex-col">
                     {/* Template details Local Study Tour */}
                     <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                      <div className="flex items-start gap-2 xl:gap-4 mb-2 xl:mb-4">
-                        <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain mt-1" />
-                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4]" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                      <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                        <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                       </div>
                       <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                         Japan is turning footsteps into electricity! Using piezoelectric tiles, every step you take generates a small amount of energy. Millions of steps together can power LED lights and displays in busy places like Shibuya Station.
                       </p>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+                    <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                       
                       <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
                         <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
@@ -339,7 +338,7 @@ const Events = () => {
                         </div>
                       </div>
                       
-                      <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-8 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
+                      <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-0 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
                         
                         <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                           <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
@@ -364,7 +363,7 @@ const Events = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                    <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
                       <div className="flex items-start gap-2 md:gap-4 mb-4">
                         <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain mt-1" />
                         <h3 className="text-[20px] md:text-[28px] leading-[1.4] w-full" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Binus @ Alam Sutra</h3>
@@ -382,7 +381,6 @@ const Events = () => {
             )}
 
             {/* ======================= GLOBAL STUDY TOUR ======================= */}
-            {/* Ini aku sembunyiin dengan false && () biar komentar di dalamnya gak menyebabkan syntax error */}
             {activeTab === 'global' && (
               <div className="w-full flex flex-col gap-14 xl:gap-20 px-1 md:px-6">
                 
@@ -398,16 +396,16 @@ const Events = () => {
                   {false && (
                     <div className="w-full flex flex-col">
                       <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                        <div className="flex items-start gap-2 xl:gap-4 mb-2 xl:mb-4">
-                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain mt-1" />
-                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4]" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                        <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                         </div>
                         <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et mmm LOCATION dolore magna aliqua.
                         </p>
                       </div>
 
-                      <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+                      <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                         
                         <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
                           <div className="hidden lg:flex flex-col w-full mt-12 mb-8 text-[#0F4A6D]">
@@ -423,7 +421,7 @@ const Events = () => {
                           </div>
                         </div> 
 
-                        <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-8 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
+                        <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-0 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
                           
                           <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                             <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
@@ -447,7 +445,7 @@ const Events = () => {
                         </div>
                       </div>
 
-                      <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                      <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
                         <div className="flex items-start gap-2 md:gap-4 mb-4">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain mt-1" />
                           <h3 className="text-[20px] md:text-[28px] leading-[1.4] w-full" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details</h3>
