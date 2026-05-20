@@ -139,14 +139,14 @@ function EventTimeline() {
         {timelineEvents.map((ev) => (
           <div
             key={ev.id}
-            className="relative flex items-start py-3"
+            className="relative flex items-start py-1.5"
           >
 
             {/* dot */}
             <div
               className={`
                 absolute
-                top-[24px]
+                top-[14px]
                 rounded-full
                 border-[2.5px]
                 border-[rgba(15,74,109,1)]
@@ -165,7 +165,7 @@ function EventTimeline() {
                 {ev.label}
               </p>
 
-              <p className="font-['Chivo'] font-light text-[0.74rem] text-[rgba(15,74,109,0.85)] mt-[3px] mb-0">
+              <p className="font-['Chivo'] font-light text-[0.74rem] text-[rgba(15,74,109,0.85)] mt-[-3px] mb-0">
                 {ev.date}
               </p>
             </div>
@@ -358,10 +358,10 @@ export default function HishotFAQ() {
 
         {/* Card */}
           <div
-            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)]"
+            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)] h-[700px] overflow-hidden"
           >
 
-          <div className="flex pt-6 md:pt-0 flex-col gap-[0.6rem] overflow-y-scroll scrollbar">
+          <div className="flex pt-6 md:pt-0 flex-col gap-[0.6rem] overflow-y-scroll scrollbar h-full">
             {faqs.map((faq, i) => {
               const isOpen = openSet.has(i);
               const isTimeline = faq.answer === null;
