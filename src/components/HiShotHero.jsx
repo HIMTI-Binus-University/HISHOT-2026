@@ -427,7 +427,7 @@ export default function HiShotHero() {
         {/* ══ HERO PANEL ══ */}
         <div
           className="hero-panel
-          sm:min-w-[20rem] w-full pb-6"
+          sm:min-w-[20rem] w-full pb-0 sm:pb-[6rem]"
           style={{
             position: "relative", zIndex: 10,
           //   marginBottom: "10rem",
