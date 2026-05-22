@@ -177,13 +177,12 @@ export default function HiShotHero() {
         }
 
         .hero-section {
-          min-height: 100vh;
+          // min-height: 100vh;
           position: relative;
-          overflow: hidden;
           display: flex;
-          align-items: center;
+          // align-items: center;
           justify-content: center;
-          padding-top: 4rem;
+          padding-top: 8rem;
         }
         .hishot-root { overflow-x: hidden; }
 
@@ -193,13 +192,13 @@ export default function HiShotHero() {
 
           .hero-panel {
             margin-bottom: 6rem !important;
-            padding: 1.2rem 1.2rem 1.5rem !important;
+            padding: 1 1.2rem 1.5rem !important;
             max-width: 92vw !important;
             border-radius: 20px !important;
           }
 
           .hero-logo {
-            max-width: 80% !important;
+            // max-width: 80% !important;
           }
 
           .btn-start, .btn-learn {
@@ -316,7 +315,7 @@ export default function HiShotHero() {
               </button>
               {regOpen && (
                 <div className="reg-dropdown">
-                  <a href="#">Seminar & Workshop</a>
+                  <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing">Seminar & Workshop</a>
                   <a href="#">Local Study Tour</a>
                   <a href="#">Global Study Tour</a>
                 </div>
@@ -341,7 +340,7 @@ export default function HiShotHero() {
             ))}
             <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
               <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
-              <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+              <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing" className="nav-link" target="_blank" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
             </div>
@@ -351,7 +350,7 @@ export default function HiShotHero() {
 
       {/* ══════════ HERO SECTION ══════════ */}
       <section
-        className="hero-section"
+        className="relative hero-section overflow-y-clip"
         style={{
           width: "100%"
         }}
@@ -378,54 +377,47 @@ export default function HiShotHero() {
         <img src="/TechCircleHollow.png" alt="" aria-hidden="true"
           style={{ position:"absolute", top:"19%", right:"15%", width:10, height:10, opacity:0.85, zIndex:3, pointerEvents:"none" }}
         />
+
+        {/* Main element */}
         <img src="/Cloud2_Shadow.png" alt="" aria-hidden="true"
-          className="deco-hide-xs"
-          style={{ position:"absolute", bottom:"28%", right:"3%", width:"20vw", minWidth:130, maxWidth:200, zIndex:2, pointerEvents:"none", opacity:0.4 }}
+          className="absolute w-[6rem] -right-[0.5rem] bottom-[6rem] sm:w-[8rem] sm:right-[5rem] md:w-[12rem] lg:w-[14rem] md:bottom-[9rem] md:-right-[1rem]"
+          // style={{ position:"absolute", bottom:"28%", right:"3%", width:"20vw", minWidth:130, maxWidth:200, zIndex:2, pointerEvents:"none", opacity:0.4 }}
         />
         <img src="/Planet8.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", top:"25%", right:"-1%", width:"clamp(70px,12vw,160px)", zIndex:2, pointerEvents:"none" }}
+          className="absolute w-[4rem] bottom-[4rem] -right-[1rem] sm:w-[8rem] sm:bottom-[8rem] md:-right-[2rem]"
+          // style={{ position:"absolute", top:"25%", right:"-1%", width:"clamp(70px,12vw,160px)", zIndex:2, pointerEvents:"none" }}
         />
-        <img src="/Cloud3_Shadow.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", top:"13%", left:"-1%", width:"clamp(140px,30vw,320px)", zIndex:2, pointerEvents:"none" }}
+
+        {/* Left Element */}
+        <img src="/Cloud3_Shadow (3).svg" alt="" aria-hidden="true" className="absolute w-[10rem] bottom-[4rem] -left-[2rem] sm:w-[15rem] sm:bottom-[8rem] sm:-left-[3rem] md:-left-[3rem] md:w-[15rem] md:bottom-[9rem] lg:w-[20rem] lg:bottom-[8rem]"
+          // style={{ position:"absolute", top:"13%", left:"-1%", width:"clamp(140px,30vw,320px)", zIndex:2, pointerEvents:"none" }}
         />
-        <img src="/Cloud3_Blue.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", bottom:"22%", left:"-5%", width:"clamp(130px,28vw,300px)", zIndex:2, pointerEvents:"none" }}
+        <img src="/Cloud3_Blue.png" alt="" aria-hidden="true"  className="absolute w-[6rem] left-0 bottom-[2rem]  sm:w-[12rem] sm:bottom-[4rem] md:left-0 md:w-[10rem] md:bottom-[5rem] lg:w-[16rem] lg:bottom-[1rem]"
+          // style={{ position:"absolute", bottom:"22%", left:"-5%", width:"clamp(130px,28vw,300px)", zIndex:2, pointerEvents:"none" }}
         />
-        <img src="/Cloud2_Yellow.png" alt="" aria-hidden="true"
-          className="cloud-left-bottom"
-          style={{ position:"absolute", bottom:"-1%", left:"-5%", width:"clamp(160px,36vw,400px)", zIndex:3, pointerEvents:"none" }}
+        <img src="/CloudTech (1).svg" alt="" aria-hidden="true"
+          className="absolute w-[10rem] left-0 bottom-0 sm:w-[20rem] sm:bottom-0  md:left-0 md:w-[20rem] md:bottom-[0.5rem]"
+          // style={{ position:"absolute", bottom:"-1%", left:"-5%", width:"clamp(160px,36vw,400px)", zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/TechDetail1.png" alt="" aria-hidden="true"
-          className="deco-hide-xs"
-          style={{ position:"absolute", bottom:"20%", left:"29%", width:"clamp(60px,11vw,160px)", zIndex:1, pointerEvents:"none", opacity:0.9 }}
-        />
-        <img src="/TechDetail3.png" alt="" aria-hidden="true"
-          className="deco-hide-xs"
-          style={{ position:"absolute", bottom:"10%", left:"30%", width:"clamp(70px,15vw,210px)", zIndex:1, pointerEvents:"none", opacity:0.9 }}
-        />
-        <img src="/Cloud1_Outline.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", bottom:"-1%", right:"10%", width:"clamp(120px,30vw,280px)", zIndex:1, pointerEvents:"none" }}
+        <img src="/TechdetailRight.svg" alt="" aria-hidden="true" className="hidden absolute sm:block w-[15rem] z-10 right-[3rem] sm:w-[15rem] sm:bottom-0 md:w-[14rem] md:right-[5rem] lg:right-[6rem]"
+          // style={{ position:"absolute", bottom:"-1%", right:"10%", width:"clamp(120px,30vw,280px)", zIndex:1, pointerEvents:"none" }}
         />
         <img src="/Cloud2_Green.png" alt="" aria-hidden="true"
-          className="cloud-right-bottom"
-          style={{ position:"absolute", bottom:"10%", right:"-5%", width:"clamp(150px,34vw,380px)", zIndex:3, pointerEvents:"none" }}
+          className="absolute w-[10rem] -right-[3rem] bottom-[1.5rem] sm:w-[13rem] sm:bottom-[4rem] md:-right-[3rem] md:w-[16rem] md:bottom-[6rem] lg:w-[18rem] lg:bottom-[2rem] lg:-right-[5rem]"
+          // style={{ position:"absolute", bottom:"10%", right:"-5%", width:"clamp(150px,34vw,380px)", zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/Cloud1_Blue.png" alt="" aria-hidden="true"
-          style={{ position:"absolute", bottom:"-1%", right:"-5%", width:"clamp(120px,26vw,280px)", zIndex:4, pointerEvents:"none" }}
-        />
-        <img src="/TechDetail3-1.png" alt="" aria-hidden="true"
-          className="deco-hide-xs"
-          style={{ position:"absolute", bottom:"15%", right:"31%", width:"clamp(50px,9vw,130px)", zIndex:4, pointerEvents:"none", opacity:0.9 }}
+        <img src="/Cloud1_Blue.png" alt="" aria-hidden="true" className="absolute w-[8rem] -right-[2rem] bottom-0 sm:w-[12rem] sm:bottom-[0.5rem] md:-right-[2rem] lg:w-[15rem]"
+          // style={{ position:"absolute", bottom:"-1%", right:"-5%", width:"clamp(120px,26vw,280px)", zIndex:4, pointerEvents:"none" }}
         />
 
         {/* ── MASCOT ── */}
         <img src="/mascot.jpeg" alt="HiShot mascot"
-          className="mascot-img"
+          className="absolute w-[7rem] -right-[1rem] bottom-[1rem] sm:w-[12rem] sm:bottom-[1rem]"
           style={{
-            position: "absolute",
-            right: "clamp(130px, 3.5vw, 55px)",
-            bottom: "clamp(140px, 32vw, 1px)",
-            width: "clamp(150px, 7.5vw, 115px)",
+            // position: "absolute",
+            // right: "clamp(130px, 3.5vw, 55px)",
+            // bottom: "clamp(140px, 32vw, 1px)",
+            // width: "clamp(150px, 7.5vw, 115px)",
             zIndex: 10,
             pointerEvents: "none",
             userSelect: "none",
@@ -435,29 +427,28 @@ export default function HiShotHero() {
         {/* ══ HERO PANEL ══ */}
         <div
           className="hero-panel
-          sm:min-w-[20rem] md:max-w-[min(680px,88vw)] w-full"
+          sm:min-w-[20rem] w-full pb-6"
           style={{
-            position: "relative", zIndex: 5,
-            marginBottom: "10rem",
-            borderRadius: 32,
+            position: "relative", zIndex: 10,
+          //   marginBottom: "10rem",
+          //   borderRadius: 32,
             display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center",
           }}
         >
           <img
             src="/logo-title.jpeg"
             alt="HiShot 2026:ORBIT"
-            className="hero-logo"
+            className="hero-logo max-w-[15rem] ml-3 sm:max-w-[30rem] md:max-w-[60rem]"
             style={{
               width: "clamp(300px,80vw,900px)",
-              // maxWidth: "60%",
               pointerEvents: "none", userSelect: "none",
-              marginBottom: "1rem",
               mixBlendMode: "multiply",
             }}
           />
-          <div style={{ display:"flex", gap:"1.2rem", justifyContent:"center", flexWrap:"wrap" }}>
-            <button className="btn-start">Get started</button>
-            <button className="btn-learn">Learn More</button>
+          <div style={{ display:"flex", gap:"1.2rem", justifyContent:"center", flexWrap:"wrap", zindex:[40],
+          }}>
+            <a href="#about" className="btn-start z-20">Get started</a>
+            <a href="#faq" className="btn-learn z-20">Learn More</a>
           </div>
         </div>
       </section>

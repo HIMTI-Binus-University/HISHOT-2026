@@ -190,7 +190,7 @@ export default function HishotFAQ() {
   return (
     <section
       id="faq"
-      className=" -mb-16 md:mb-0 min-h-screen overflow-hidden relative items-center justify-center md:px-4 pt-24 pb-32 font-['Chivo']"
+      className="mb-[4rem] sm:mb-[8rem] h-fit overflow-x-clip relative items-center justify-center md:px-4 pt-24 font-['Chivo']"
     >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Chivo:wght@300;400;700&display=swap');
@@ -292,7 +292,7 @@ export default function HishotFAQ() {
       src="/Cloud2_Blue.png"
       alt=""
       aria-hidden="true"
-      className="absolute hidden md:block top-[18rem] -left-[2rem] pointer-events-none w-[30rem]"
+      className="absolute hidden md:block top-[19rem] -left-[2rem] pointer-events-none w-[25rem]"
       // className="absolute bottom-[8%] md:bottom-[12%] lg:bottom-[12%] left-[-12%] sm:left-[-6%] md:left-[0%] w-[260px] sm:w-[360px] md:w-[clamp(530px,28vw,200px)] z-[2] pointer-events-none"
     />
 
@@ -332,18 +332,20 @@ export default function HishotFAQ() {
     />
 
     <img
-      src="/Beurt_Float.png"
-      alt="HiShot mascot"
-      className=" w-[15rem] absolute hidden md:block top-[23rem] md:-right-[4.5rem] lg:w-[18rem] lg:right-[9rem] pointer-events-none"
-      // className="absolute right-[2%] sm:right-[8%] md:right-[18%] bottom-[1%] md:bottom-[3%] w-[180px] sm:w-[240px] md:w-[clamp(330px,47vw,130px)] z-[5] pointer-events-none select-none"
-    />
-
-    <img
       src="/Star.png"
       alt=""
       aria-hidden="true"
       className="tw-2 absolute top-[10%] md:top-[12%] right-[16%] md:right-[22%] w-[16px] sm:w-[20px] md:w-[22px] pointer-events-none z-[3]"
     />
+
+    <img 
+      className="hidden md:block absolute w-[3rem] left-1 -bottom-[5rem]" 
+      src="Star1.svg" 
+      alt="Star" />
+    <img 
+      className="hidden md:block absolute w-[3rem] -bottom-[7rem] right-[0.2rem]" 
+      src="Star1.svg" 
+      alt="Star" />
 
       {/* ══════════ FAQ CARD ══════════ */}
       <div id="faq"
@@ -351,15 +353,21 @@ export default function HishotFAQ() {
       >
         {/* Badge */}
         <div className="flex w-full justify-center">
-          <div className="absolute self-center text-center pb">
+          <div className="absolute self-center text-center pb z-10">
             <span className="faq-badge">Frequently Asked Questions</span>
           </div>
         </div>
 
         {/* Card */}
           <div
-            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_0px_4px_rgba(0,0,0,0.25)] h-[700px] overflow-hidden"
+            className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_4px_4px_rgba(0,0,0,0.25)] h-[650px] sm:h-[500px] md:h-[490px] lg:h-[550px] relative"
           >
+            <img
+            src="/Beurt_Float.png"
+            alt="HiShot mascot"
+            className=" w-[10rem] absolute hidden md:block top-[15rem] md:-right-[6rem] lg:w-[15rem] lg:-right-[10rem] pointer-events-none -z-10"
+            // className="absolute right-[2%] sm:right-[8%] md:right-[18%] bottom-[1%] md:bottom-[3%] w-[180px] sm:w-[240px] md:w-[clamp(330px,47vw,130px)] z-[5] pointer-events-none select-none"
+          />
 
           <div className="flex pt-6 md:pt-0 flex-col gap-[0.6rem] overflow-y-scroll scrollbar h-full">
             {faqs.map((faq, i) => {

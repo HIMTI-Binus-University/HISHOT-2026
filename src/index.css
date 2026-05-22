@@ -56,8 +56,8 @@ body::before {
     
   @apply md:border-[5px] md:border-solid md:border-[#C3E4E8];
     
-  @apply shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-[5px]; 
-  @apply md:shadow-[0_0_10px_2px_#F9FEFE,inset_0_0_10px_2px_#F9FEFE] blur-none; 
+  @apply shadow-[0_0_10px_1px_#F9FEFE,inset_0_0_10px_1px_#F9FEFE] blur-[5px]; 
+  @apply md:shadow-[0_0_10px_1px_#F9FEFE,inset_0_0_10px_1px_#F9FEFE] blur-none; 
   pointer-events: none;
 }
 

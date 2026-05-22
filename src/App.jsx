@@ -9,7 +9,7 @@ import SpecialThanks from './components/SpecialThanks.jsx';
 function App() {
   return (
     <>
-      <HiShotHero />
+      <HiShotHero/>
       <Trailer />
       <Events />
       <HishotFAQ />
