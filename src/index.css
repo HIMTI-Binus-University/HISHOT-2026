@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Days+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Chivo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+}
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --color-card : #B2D9E7;
+  --font-dela-gothic-one : "Dela Gothic One", sans-serif;
+  --font-days-one : "Days One", sans-serif;
+  --font-chivo : "Chivo", sans-serif;
+  --color-blue-info : #0F4A6D;
+  --color-glow : #18A18C;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-image : linear-gradient(to bottom, #124265 0%, #0B567A 26%, #43ACD2 74%);
+    background-repeat : no-repeat;
+    background-attachment: fixed;
+    /* min-height: 100vh; */
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 40px;
+    
+  @apply md:border-[5px] md:border-solid md:border-[#C3E4E8];
+    
+  @apply shadow-[0_0_10px_1px_#F9FEFE,inset_0_0_10px_1px_#F9FEFE] blur-[5px]; 
+  @apply md:shadow-[0_0_10px_1px_#F9FEFE,inset_0_0_10px_1px_#F9FEFE] blur-none; 
+  pointer-events: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.glow {
+    color : white;
+    text-shadow: 0 0 20px var(--color-glow), 0 0 5px var(--color-glow), 0 4px 4px rgba(0,0,0,0.25);
+    -webkit-text-stroke : 2px var(--color-glow);
+    paint-order: stroke fill;
+}
+.inverted-radius {
+    @apply rounded-tr-3xl border-t-2 border-r-2 border-[#F9FEFE] relative rounded-br-none;
+    @apply md:border-0;
+}
+
+.inverted-radius {
+    @apply relative rounded-tr-[2.25rem] border-t-2 border-r-2 border-[#F9FEFE] rounded-br-none md:border-0;
+}
+
+.inverted-radius::before{
+    content:"";
+    transform: rotate(270deg);
+    @apply absolute bg-transparent -right-[4rem] -bottom-[0.8125rem] -z-10 h-20 w-[3.125rem] rounded-tl-[2.25rem] border-l-2 border-[#F9FEFE] shadow-[-20px_-4px_0_var(--color-card)] md:hidden;
+}
+
+.inverted-radius-card {
+    @apply relative;
+}
+
+.inverted-radius-card::before{
+    content:"";
+    transform: rotate(270deg);
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-[3.125rem] border-0 rounded-tl-3xl border-[#F9FEFE] border-l-2 md:-right-[3.9375rem] md:-top-[1.6875rem] md:w-[3.375rem] md:shadow-[-30px_-20px_0_var(--color-card)];
+}
+
+.inverted-radius-card::after{
+    content:"";
+    transform: rotate(90deg);
+    @apply hidden md:block absolute bg-transparent z-10 h-20 w-[3.125rem] border-0 rounded-tl-3xl border-[#F9FEFE] border-l-2 md:right-3 md:-bottom-[4.1875rem] md:w-[3.375rem] md:shadow-[-30px_-20px_0_var(--color-card)];
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar{
+        display: none;
+    }
+}
