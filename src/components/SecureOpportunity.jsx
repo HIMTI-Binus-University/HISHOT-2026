@@ -21,7 +21,7 @@ export default function SecureOpportunity(){
 
   return(
     // FIX: Changed overflow-x-clip to overflow-x-visible so dropdown isn't cut off
-    <section className="relative overflow-x-visible w-full max-w-full">
+    <section className="relative overflow-x-clip w-full max-w-full">
       <div className="relative px-8 pt-2 pb-16 flex flex-col items-center gap-8">
         <div 
           className="px-8 py-4 flex flex-col items-center justify-center border-[#F9FEFE] border-[4px] rounded-[40px] z-10

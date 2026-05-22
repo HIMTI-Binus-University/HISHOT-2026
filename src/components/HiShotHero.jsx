@@ -253,7 +253,8 @@ export default function HiShotHero() {
 
       {/* ══════════ NAVBAR ══════════ */}
       <nav style={{
-        position: "sticky",
+        position: "fixed",
+        width:"100%",
         top: 0,
         zIndex: 100,
         background: "#ECFFFF",
@@ -350,7 +351,7 @@ export default function HiShotHero() {
 
       {/* ══════════ HERO SECTION ══════════ */}
       <section
-        className="relative hero-section overflow-y-clip"
+        className="relative hero-section"
         style={{
           width: "100%"
         }}
@@ -445,10 +446,10 @@ export default function HiShotHero() {
               mixBlendMode: "multiply",
             }}
           />
-          <div style={{ display:"flex", gap:"1.2rem", justifyContent:"center", flexWrap:"wrap", zindex:[40],
+          <div style={{ display:"flex", gap:"1.2rem", justifyContent:"center", flexWrap:"wrap", zIndex:50,
           }}>
-            <a href="#about" className="btn-start z-20">Get started</a>
-            <a href="#faq" className="btn-learn z-20">Learn More</a>
+            <a href="#about" className="btn-start">Get started</a>
+            <a href="#faq" className="btn-learn">Learn More</a>
           </div>
         </div>
       </section>
