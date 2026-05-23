@@ -9,7 +9,7 @@ export default function Trailer(){
                 <div className="bg-[var(--color-card)] p-4 md:px-6 lg:px-10 -mt-4 w-full flex justify-center items-center flex-col border-b-2 border-[#F9FEFE] md:flex-1 sm:mt-0 md:relative md:top-10 md:rounded-[2.25rem] md:border-2 md:border-l-0 pb-8 shadow-[0_4px_0_0_rgba(0,0,0,0.25)] md:-ml-0.5 ">
                     <h2 className="[font-family:var(--font-days-one)] text-2xl lg:text-4xl text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] self-center bg-[#F8A819]/90 w-fit border-[1.8px] border-[#F9FEFE] pt-4 pb-4 pr-4 pl-4 rounded-2xl md:rounded-3xl -mb-8 z-10 shadow-[0_4px_4x_rgba(0,0,0,0.25)]">Trailer</h2>
                     {/* Masih dalam revisi */} 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4fvhbuoom2c?si=qtPj1F3Fq7dAm2Es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className="w-full aspect-video"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/O0ncW1yV3Co?si=ki8qLxE0CZXeChrP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className="w-full aspect-video"></iframe>
                 </div> 
             </section> 
             
