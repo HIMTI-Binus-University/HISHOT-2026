@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "How to register for HISHOT 2026?",
     answer:
-      "Ready to explore the ORBIT? 🚀\nTo register for HISHOT 2026, simply visit the registration link [link] and fill in the required details. Once your registration is complete, you will gain access to a wide range of exciting events, including insightful seminar, interactive workshops, and exclusive study tours.\n\nParticipants will also receive further information through the official guidebook, which provides step-by-step instructions, event details, and everything you need to prepare for the experience. Don’t miss this opportunity to learn, connect, and grow in the world of cloud technology and digital infrastructure!",
+      "Ready to explore the ORBIT? 🚀\nTo register for HISHOT 2026, simply click the “Register Now” button and choose your preferred registration category from the dropdown menu. You will then be redirected to the corresponding registration form to complete your submission.\n\nParticipants will also receive further information through the official guidebook, including event details and preparation for the HISHOT 2026 experience. Don’t miss this opportunity to learn, connect, and grow in the world of cloud technology and digital infrastructure!",
   },
   {
     question: "What are the benefits of joining HISHOT 2026?",

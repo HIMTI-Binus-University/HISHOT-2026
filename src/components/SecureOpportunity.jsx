@@ -29,8 +29,8 @@ export default function SecureOpportunity(){
         >
           {/* FIX 2: Removed stray semicolon after font-bold */}
           <h1 
-            className="[font-family:var(--font-days-one)] text-center text-[clamp(30px,6vw,60px)] tracking-[0.12em] text-white leading-tight [text-shadow:0_0_20.6px_#6CB4D0,6px_6px_4.89px_rgba(0,0,0,0.30)] font-bold
-              [-webkit-text-stroke:2px_#6CB4D0] 
+            className="[font-family:var(--font-days-one)] text-center text-[clamp(30px,6vw,60px)] tracking-[0.12em] text-white leading-tight [text-shadow:0_0_15px_#6CB4D0,4px_4px_4px_rgba(0,0,0,0.30)] font-bold
+              [-webkit-text-stroke:1px_#6CB4D0] 
               [paint-order:stroke_fill]"
           >
             Secure Your Opportunity Now!
@@ -41,20 +41,22 @@ export default function SecureOpportunity(){
           
           {/* Dropdown: shows on hover (desktop) AND click/tap (mobile) */}
           <div 
-            className="relative inline-block z-[999]" 
+            className=" w-full flex-1 relative inline-block z-[999]" 
             ref={dropdownRef}
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onClick={() => setDropdownOpen(o => !o)}
+            // onMouseEnter={() => setDropdownOpen(true)}
+            // onMouseLeave={() => setDropdownOpen(false)}
           >
             <h2 
-              className="[font-family:var(--font-days-one)] text-center text-[clamp(12px,3vw,32px)] border-white border-[3px] rounded-[30px] md:rounded-[40px] px-7 py-2 md:py-4 text-white
+              className="[font-family:var(--font-days-one)] text-center w-full flex-1 text-[clamp(16px,3vw,32px)] border-white border-[3px] rounded-[30px] md:rounded-[40px] whitespace-nowrap px-2 sm:px-7 py-2 md:py-4 text-white
                 drop-shadow-[3px_7px_1.92px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-105 cursor-pointer 
                 [text-shadow:0_0_20.6px_#BD67A8,6px_6px_4.89px_rgba(0,0,0,0.30)] 
                 [-webkit-text-stroke:2px_#BD67A8] 
                 [paint-order:stroke_fill]
-                z-10 select-none"
+                z-10 select-none
+                leading-4 sm:leading-6"
               style={{ background: 'rgba(204,97,165,0.9)' }}
-              onClick={() => setDropdownOpen(prev => !prev)}
+              // onClick={() => setDropdownOpen(prev => !prev)}
             >
               Register Now
             </h2>
@@ -82,8 +84,9 @@ export default function SecureOpportunity(){
             className="hover:scale-105 transition-all duration-300"
           >
             <h2
-              className="[font-family:var(--font-days-one)] text-center text-[clamp(14px,3vw,32px)] border-white border-[3px] rounded-[30px] md:rounded-[40px] px-7 py-2 md:py-4 text-white relative
+              className="[font-family:var(--font-days-one)] text-center w-full flex-1 text-[clamp(16px,3vw,32px)] border-white border-[3px] rounded-[30px] md:rounded-[40px] whitespace-nowrap px-2 sm:px-7  py-2 md:py-4 text-white relative
                 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-105 cursor-pointer 
+                leading-4 sm:leading-6
                 [text-shadow:0_0_20.6px_#198387,6px_6px_4.89px_rgba(0,0,0,0.30)] 
                 [-webkit-text-stroke:2px_#198387] 
                 [paint-order:stroke_fill]
@@ -97,14 +100,14 @@ export default function SecureOpportunity(){
 
       <img className="absolute w-[10rem] left-0 -bottom-[5rem] md:w-[15rem] md:-left-[1rem] md:-bottom-[8rem] lg:w-[25rem] lg:-left-2 lg:-bottom-[13rem] z-[2]" src="Cloud3_Green.svg" alt="Cloud"/>
       <img className="absolute w-[8rem] left-0 bottom-[2rem] md:w-[15rem] md:-left-[5rem] md:bottom-[3rem] lg:w-[25rem] lg:left-0 lg:-bottom-[2rem]" src="Cloud2_Outline.svg" alt="Cloud Outline"/>
-      <img className="absolute hidden md:block w-[12rem] left-[3rem] -bottom-[6rem] lg:w-[18rem] lg:left-[10rem] lg:-bottom-[9rem] z-[3]" src="Planet4.svg" alt="Planet"/>
+      <img className="absolute hidden md:block w-[12rem] left-[3rem] -bottom-[6rem] lg:w-[18rem] lg:left-[9rem] lg:-bottom-[9rem] z-[3]" src="Planet4.svg" alt="Planet"/>
       <img className="absolute hidden md:block w-[18rem] left-[8rem] -bottom-[4rem] lg:w-[28rem] lg:left-[16rem] lg:-bottom-[8rem] z-[2]" src="Cloud2_Shadow.svg" alt="Cloud Shadow"/>
       <img className="absolute hidden md:block w-[10rem] left-[11rem] bottom-[0.5rem] lg:w-[10rem] lg:left-[22rem] lg:bottom-[1rem] z-[2]" src="TechDetail3.svg" alt="Tech"/>
       <img className="absolute w-[18rem] -right-[10rem] -bottom-[3rem] md:w-[30rem] md:-right-[20rem] md:-bottom-[3rem] lg:w-[35rem] lg:-right-[18rem] lg:-bottom-[2rem] z-[2]" src="Cloud2_Shadow.svg" alt="Cloud Shadow"/>
       <img className="absolute hidden md:block md:w-[10rem] md:right-0 md:-bottom-[3rem] lg:w-[15rem] lg:right-0 lg:-bottom-[3rem] z-[2]" src="Cloud1_Blue.svg" alt="Cloud"/>
-      <img className="absolute hidden md:block md:w-[10rem] md:right-[4rem] md:-bottom-[5.5rem] lg:w-[15rem] lg:right-[9rem] lg:-bottom-[7rem] z-[2]" src="Planet7.svg" alt="Planet"/>
-      <img className="absolute hidden md:block md:w-[11rem] md:right-[7rem] md:bottom-0 lg:w-[15rem] lg:right-[15rem] lg:bottom-0 z-[1]" src="TechDetail4.svg" alt="Tech"/>
-      <img className="absolute hidden md:block md:w-[11rem] md:right-[5rem] md:bottom-[1.5rem] lg:w-[15rem] lg:right-[11rem] lg:bottom-[1.5rem] z-[1]" src="TechDetail4.svg" alt="Tech"/>
+      <img className="absolute hidden md:block md:w-[10rem] md:right-[4rem] md:-bottom-[5.5rem] lg:w-[15rem] lg:right-[6rem] lg:-bottom-[7rem] z-[2]" src="Planet7.svg" alt="Planet"/>
+      <img className="absolute hidden md:block md:w-[11rem] md:right-[7rem] md:bottom-0 lg:w-[15rem] lg:right-[10rem] lg:bottom-0 z-[1]" src="TechDetail4.svg" alt="Tech"/>
+      <img className="absolute hidden md:block md:w-[11rem] md:right-[5rem] md:bottom-[1.5rem] lg:w-[15rem] lg:right-[8rem] lg:bottom-[1.5rem] z-[1]" src="TechDetail4.svg" alt="Tech"/>
     </section>
   )
 }
