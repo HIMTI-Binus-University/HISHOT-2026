@@ -139,14 +139,21 @@ export default function HiShotHero() {
           color: white;
           border: 2px solid #F9FEFE;
           padding: 0.85rem 2.6rem; border-radius: 9999px;
-          font-family: var(--font-days-one); font-weight: 700; font-size: 1.05rem;
+          font-family: var(--font-days-one); font-weight: 700; 
+          font-size: 1.05rem;
           cursor: pointer;
-          box-shadow: 0 4px 4px #00000040;
           transition: transform 0.2s, box-shadow 0.2s;
           letter-spacing: 0.03em;
-          text-shadow: 6px 6px 4.89px #0000004D;
-          -webkit-text-stroke : 2px #B95FA0;
           paint-order: stroke fill;
+
+          // -webkit-text-stroke : 2px #B95FA0;
+          // box-shadow: 0 4px 4px #00000040;
+          // text-shadow: 6px 6px 4.89px #0000004D;
+
+          box-shadow: 0 3px 6px rgba(0,0,0,0.22);
+          text-shadow: 2px 2px px rgba(0,0,0,0.25);
+          -webkit-text-stroke: 1px #B95FA0;
+
         }
         .btn-start:hover { transform:translateY(-3px);}
 
@@ -202,7 +209,7 @@ export default function HiShotHero() {
           }
 
           .btn-start, .btn-learn {
-            padding: 0.7rem 1.8rem !important;
+            padding: 0.5rem 1.5rem !important;
             font-size: 0.9rem !important;
           }
 
@@ -227,7 +234,7 @@ export default function HiShotHero() {
         @media(max-width:480px){
           .btn-start, .btn-learn {
             padding: 0.65rem 1.4rem !important;
-            font-size: 0.82rem !important;
+            font-size: 0.rem !important;
           }
           .hero-panel {
             margin-bottom: 4rem !important;
@@ -316,7 +323,7 @@ export default function HiShotHero() {
               </button>
               {regOpen && (
                 <div className="reg-dropdown">
-                  <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing">Seminar & Workshop</a>
+                  <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing" target="_blank">Seminar & Workshop</a>
                   <a href="#">Local Study Tour</a>
                   <a href="#">Global Study Tour</a>
                 </div>
@@ -413,7 +420,7 @@ export default function HiShotHero() {
 
         {/* ── MASCOT ── */}
         <img src="/mascot.jpeg" alt="HiShot mascot"
-          className="absolute w-[7rem] -right-[1rem] bottom-[1rem] sm:w-[12rem] sm:bottom-[1rem]"
+          className="absolute w-[6rem] -right-[2rem] -bottom-0 sm:w-[12rem] sm:bottom-[1rem]"
           style={{
             // position: "absolute",
             // right: "clamp(130px, 3.5vw, 55px)",
@@ -431,9 +438,10 @@ export default function HiShotHero() {
           sm:min-w-[20rem] w-full pb-0 sm:pb-[6rem]"
           style={{
             position: "relative", zIndex: 10,
-          //   marginBottom: "10rem",
+            // marginBottom: "10rem",
           //   borderRadius: 32,
             display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center",
+            gap:"0.5rem",
           }}
         >
           <img
