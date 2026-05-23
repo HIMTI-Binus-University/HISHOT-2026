@@ -78,27 +78,28 @@ const Events = () => {
                   </h2>
                 </div>
                 
-                {/* Bagian Details */}
-                <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                  <div className="flex items-center gap-2 xl:gap-4 mb-1">
-                    <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
-                  </div>
-                    <p className="px-[30px] md:px-[40px] xl:px-[65px] text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                    Explore the intersection of Artificial Intelligence, cloud computing, and digital entrepreneurship. Through engaging discussions and interactive sessions, participants will gain insights into technologies shaping the future.
-                  </p>
-                </div>
-
-                {/* Timeline */}
-                <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 ml-4 md:ml-8 text-[#0F4A6D] min-w-0">
+                {/* Split Content: Left (Details, Timeline, Location) | Right (Speakers) */}
+                <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                 
-                  <div className="flex flex-col flex-1 w-full pt-0 lg:pt-4 min-w-0">
-                    <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] -mt-4 lg:-mt-8 flex flex-col gap-4 xl:gap-6 py-1 w-full flex-1 text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                      {/* <img src="/TechDetail4.png" alt="Timeline" className="absolute left-[5px] md:left-[10px] xl:left-[15px] top-[5px] xl:top-[10px] w-[15px] md:w-[20px] xl:w-[32.5px] h-[55px] md:h-[70px] xl:h-[108px] object-contain" /> */}
+                  {/* Left Column */}
+                  <div className="flex flex-col flex-1 w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
+                    
+                    {/* Bagian Details */}
+                    <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
+                      <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                        <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                      </div>
+                      <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                        Explore the intersection of Artificial Intelligence, cloud computing, and digital entrepreneurship. Through engaging discussions and interactive sessions, participants will gain insights into technologies shaping the future.
+                      </p>
+                    </div>
+
+                    {/* Timeline */}
+                    <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full flex-1 text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                       <div className='relative w-full flex align-middle'>
                         <img src="TechCircle.svg" alt="Tech" className="absolute -left-[20px] md:-left-[30px] xl:-left-[45px] top-[3px] w-[15px] md:w-[20px] xl:w-[32.5px] object-contain" />
-                        {/* line connection tech circle */}
-                        <div className='absolute -left-[13px] md:-left-[21px] xl:-left-[31px] xl:w-1 top-[17px] md:top-[22px] xl:top-[32px] h-[115%] lg:h-[51px] xl:h-[69px] w-0.5 bg-[#0F4A6D]'> </div>
+                        <div className='absolute -left-[13px] md:-left-[21px] xl:-left-[31px] xl:w-1 top-[17px] md:top-[22px] xl:top-[32px] h-[25px] lg:h-[51px] xl:h-[69px] w-0.5 bg-[#0F4A6D]'> </div>
                         <p className="text-[14px] md:text-[18px] xl:text-[24px] font-light leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
                       </div>
                       <div className='relative w-full flex align-middle'>
@@ -106,12 +107,14 @@ const Events = () => {
                         <p className="text-[14px] md:text-[18px] xl:text-[24px] font-light leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
                       </div>
                     </div>
-                    <div className="hidden lg:flex flex-col flex-1 gap-2 w-fit mt-12 -ml-8 text-[#0F4A6D]">
+                    
+                    {/* Location di Desktop */}
+                    <div className="hidden lg:flex flex-col flex-1 gap-2 w-full mt-10 xl:mt-12 text-[#0F4A6D]">
                       <div className="flex w-full items-center gap-2 xl:gap-4 mb-1">
                         <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                         <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
                       </div>
-                      <div className="flex gap-[15px] xl:gap-[20px] mt-6 xl:mt-8">
+                      <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
                         {['More info', 'Guidebook'].map((text) => (
                           <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                         ))}
@@ -119,7 +122,8 @@ const Events = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-0 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
+                  {/* Right Column */}
+                  <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-4 w-full lg:w-1/2 min-w-0">
                     {/* Speaker 1 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
@@ -153,12 +157,12 @@ const Events = () => {
                 </div>
 
                 {/* Lokasi di Mobile */}
-                <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
-                  <div className="flex items-center gap-2 md:gap-4 mb-4">
+                <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                  <div className="flex items-center gap-2 md:gap-4 mb-2">
                     <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
                     <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
                   </div>
-                  <div className="flex justify-start gap-[15px]">
+                  <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                     {['More info', 'Guidebook'].map((text) => (
                       <button key={text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                     ))}
@@ -183,31 +187,38 @@ const Events = () => {
                     </h2>
                   </div>
                   
-                  {/* Bagian Details */}
-                  <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                    <div className="flex items-center gap-2 xl:gap-4 mb-1">
-                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
-                    </div>
-                    <p className="px-[30px] md:px-[40px] xl:px-[65px] text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>                      Dive into the world of cloud security and discover how AI technologies are used to identify risks, monitor systems, and defend digital infrastructures. Participants will gain insights into modern cybersecurity challenges and solutions in cloud computing.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 xl:px-4 text-[#0F4A6D] min-w-0">
+                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                     
-                    <div className="hidden lg:flex flex-col w-full lg:w-1/2 pt-4 min-w-0">
-                      <div className="flex items-center gap-4">
-                        <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain ml-2" />
-                        <h3 className=" text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                    {/* Left Column */}
+                    <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
+                      
+                      {/* Bagian Details */}
+                      <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
+                        <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                        </div>
+                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                          Dive into the world of cloud security and discover how AI technologies are used to identify risks, monitor systems, and defend digital infrastructures. Participants will gain insights into modern cybersecurity challenges and solutions in cloud computing.
+                        </p>
                       </div>
-                      <div className="flex gap-[15px] xl:gap-[20px] pl-[50px] xl:pl-[59px] mt-6 xl:mt-8">
-                        {['More info', 'Guidebook'].map((text) => (
-                          <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
-                        ))}
+
+                      {/* Location di Desktop */}
+                      <div className="hidden lg:flex flex-col w-full mt-6 text-[#0F4A6D]">
+                        <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                          <h3 className=" text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                        </div>
+                        <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
+                          {['More info', 'Guidebook'].map((text) => (
+                            <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex flex-row justify-center lg:justify-end items-center w-full lg:w-1/2 pt-0 lg:pt-0 min-w-0">
+                    {/* Right Column */}
+                    <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[90%] mx-auto mb-[8%] aspect-[3/2] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md">
                           <img src="/Meow.jpg" alt="Workshop Speaker 1" className="w-full h-full object-cover" />
@@ -221,12 +232,12 @@ const Events = () => {
                   </div>
 
                   {/* Lokasi di Mobile */}
-                  <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
-                    <div className="flex items-center gap-2 md:gap-4 mb-4">
+                  <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                    <div className="flex items-center gap-2 md:gap-4 mb-2">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
                       <h3 className="text-[14px] sm:text-[18px] md:text-[28px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
-                    <div className="flex justify-start gap-[15px]">
+                    <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                       {['More info', 'Guidebook'].map((text) => (
                         <button key={text} className="w-[150px] sm:w-[180px] h-fit py-[1px] sm:py-[2px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                       ))}
@@ -234,7 +245,7 @@ const Events = () => {
                   </div>
                 </div>
 
-                {/* Garis */}
+                {/* Garis Pembatas */}
                 <div className="w-[90%] xl:w-full max-w-[1525px] mx-auto h-[3px] xl:h-[4px] bg-[#F9FEFE] mt-10 mb-6 xl:mt-12 xl:mb-10 shadow-md opacity-50 rounded-full"></div>
 
                 {/* Bagian kedua Workshop */}
@@ -248,33 +259,38 @@ const Events = () => {
                     </h2>
                   </div>
                   
-                  {/* Bagian Details */}
-                  <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                    <div className="flex items-center gap-2 xl:gap-4 mb-1">
-                      <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
-                    </div>
-                    <p className="px-[30px] md:px-[40px] xl:px-[65px] text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                      Discover how cloud computing powers modern Artificial Intelligence systems. Through interactive sessions, participants will learn how machine learning models are deployed, managed, and optimized in cloud environments.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 xl:px-4 text-[#0F4A6D] min-w-0">
+                  <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                     
-                    <div className="hidden lg:flex flex-col w-full lg:w-1/2 pt-4 min-w-0">
-                      <div className="flex items-center gap-4">
-                        <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain ml-2" />
-                        <h3 className=" text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                    {/* Left Column */}
+                    <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
+                      
+                      {/* Bagian Details */}
+                      <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
+                        <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                        </div>
+                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                          Discover how cloud computing powers modern Artificial Intelligence systems. Through interactive sessions, participants will learn how machine learning models are deployed, managed, and optimized in cloud environments.
+                        </p>
                       </div>
 
-                      <div className="flex gap-[15px] xl:gap-[20px] pl-[50px] xl:pl-[59px] mt-6 xl:mt-8">
-                        {['More info', 'Guidebook'].map((text) => (
-                          <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
-                        ))}
+                      {/* Location di Desktop */}
+                      <div className="hidden lg:flex flex-col w-full mt-6 text-[#0F4A6D]">
+                        <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                          <h3 className=" text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                        </div>
+                        <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
+                          {['More info', 'Guidebook'].map((text) => (
+                            <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex flex-row justify-center lg:justify-end items-center w-full lg:w-1/2 pt-0 lg:pt-0 min-w-0">
+                    {/* Right Column */}
+                    <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[90%] mx-auto mb-[8%] aspect-[3/2] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md">
                           <img src="/Meow.jpg" alt="Workshop Speaker 2" className="w-full h-full object-cover" />
@@ -288,12 +304,12 @@ const Events = () => {
                   </div>
 
                   {/* Lokasi di Mobile */}
-                  <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
-                    <div className="flex items-center gap-2 md:gap-4 mb-4">
+                  <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                    <div className="flex items-center gap-2 md:gap-4 mb-2">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
                       <h3 className="text-[14px] sm:text-[18px] md:text-[28px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
-                    <div className="flex justify-start gap-[15px]">
+                    <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                       {['More info', 'Guidebook'].map((text) => (
                         <button key={text} className="w-[150px] sm:w-[180px] h-fit py-[1px] sm:py-[2px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                       ))}
@@ -316,32 +332,33 @@ const Events = () => {
                 
                 {false && (
                   <div className="w-full flex flex-col">
-                    {/* Template details Local Study Tour */}
-                    <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                      <div className="flex items-center gap-2 xl:gap-4 mb-1">
-                        <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
-                      </div>
-                      <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                        Japan is turning footsteps into electricity! Using piezoelectric tiles, every step you take generates a small amount of energy. Millions of steps together can power LED lights and displays in busy places like Shibuya Station.
-                      </p>
-                    </div>
-
                     <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                       
+                      {/* Left Column */}
                       <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
+                        {/* Template details Local Study Tour */}
+                        <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
+                          <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                            <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                            <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                          </div>
+                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                            Japan is turning footsteps into electricity! Using piezoelectric tiles, every step you take generates a small amount of energy. Millions of steps together can power LED lights and displays in busy places like Shibuya Station.
+                          </p>
+                        </div>
+
                         <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
                           <img src="/TechDetail4.png" alt="Timeline" className="absolute left-[5px] md:left-[10px] xl:left-[15px] top-[5px] xl:top-[10px] w-[15px] md:w-[20px] xl:w-[32.5px] h-[55px] md:h-[70px] xl:h-[108px] object-contain" />
                           <p className="text-[14px] md:text-[16px] xl:text-[24px] font-light leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
                           <p className="text-[14px] md:text-[16px] xl:text-[24px] font-light leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
                         </div>
 
-                        <div className="hidden lg:flex flex-col w-full mt-12 mb-8 text-[#0F4A6D]">
-                          <div className="flex items-center gap-4">
-                            <img src="/StarInfo.svg" alt="Star" className="w-[30px] h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                        <div className="hidden lg:flex flex-col w-full mt-10 xl:mt-12 mb-8 text-[#0F4A6D]">
+                          <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                            <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                             <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Binus @ Alam Sutra</h3>
                           </div>
-                          <div className="flex gap-[15px] xl:gap-[20px] pl-[50px] xl:pl-[59px] mt-6 xl:mt-8">
+                          <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
                             {['More info', 'Guidebook'].map((text) => (
                               <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                             ))}
@@ -349,8 +366,8 @@ const Events = () => {
                         </div>
                       </div>
                       
-                      <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-0 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
-                        
+                      {/* Right Column */}
+                      <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-10 xl:pt-12 w-full lg:w-1/2 min-w-0">
                         <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                           <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                             <img src="/Meow.jpg" alt="Place" className="w-full h-full object-cover" />
@@ -370,16 +387,15 @@ const Events = () => {
                             <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB</p>
                           </div>
                         </div>
-
                       </div>
                     </div>
 
-                    <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
-                      <div className="flex items-center gap-2 md:gap-4 mb-4">
+                    <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                      <div className="flex items-center gap-2 md:gap-4 mb-2">
                         <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
                         <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Binus @ Alam Sutra</h3>
                       </div>
-                      <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[46px]">
+                      <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                         {['More info', 'Guidebook'].map((text) => (
                           <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] md:text-[14px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                         ))}
@@ -387,7 +403,6 @@ const Events = () => {
                     </div>
                   </div>
                 )}
-
               </div>
             )}
 
@@ -406,25 +421,26 @@ const Events = () => {
                   
                   {false && (
                     <div className="w-full flex flex-col">
-                      <div className="w-full max-w-[1525px] mx-auto mb-6 lg:mb-8 px-2 xl:px-4 text-[#0F4A6D]">
-                        <div className="flex items-center gap-2 xl:gap-4 mb-1">
-                          <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
-                        </div>
-                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-0 md:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4]" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et mmm LOCATION dolore magna aliqua.
-                        </p>
-                      </div>
-
                       <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
                         
+                        {/* Left Column */}
                         <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
-                          <div className="hidden lg:flex flex-col w-full mt-12 mb-8 text-[#0F4A6D]">
-                            <div className="flex items-center gap-4">
-                              <img src="/StarInfo.svg" alt="Star" className="w-[30px] h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                          <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
+                            <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                              <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                              <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                            </div>
+                            <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et mmm LOCATION dolore magna aliqua.
+                            </p>
+                          </div>
+
+                          <div className="hidden lg:flex flex-col w-full mt-10 xl:mt-12 mb-8 text-[#0F4A6D]">
+                            <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                              <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                               <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details</h3>
                             </div>
-                            <div className="flex gap-[15px] xl:gap-[20px] pl-[50px] xl:pl-[59px] mt-6 xl:mt-8">
+                            <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
                               {['More info', 'Guidebook'].map((text) => (
                                 <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                               ))}
@@ -432,8 +448,8 @@ const Events = () => {
                           </div>
                         </div> 
 
-                        <div className="flex flex-row justify-center lg:justify-end items-end gap-[15px] xl:gap-[30px] pt-0 lg:pt-0 xl:pt-2 w-full lg:w-1/2 min-w-0">
-                          
+                        {/* Right Column */}
+                        <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-10 xl:pt-12 w-full lg:w-1/2 min-w-0">
                           <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                             <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                               <img src="/Meow.jpg" alt="Place 1" className="w-full h-full object-cover" />
@@ -456,12 +472,12 @@ const Events = () => {
                         </div>
                       </div>
 
-                      <div className="flex flex-col lg:hidden w-full mt-4 px-2 text-[#0F4A6D]">
-                        <div className="flex items-center gap-2 md:gap-4 mb-4">
+                      <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                        <div className="flex items-center gap-2 md:gap-4 mb-2">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
                           <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details</h3>
                         </div>
-                        <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[46px]">
+                        <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                           {['More info', 'Guidebook'].map((text) => (
                             <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] md:text-[14px] transition-all duration-200 hover:scale-105 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                           ))}
