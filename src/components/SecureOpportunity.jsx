@@ -29,8 +29,8 @@ export default function SecureOpportunity(){
         >
           {/* FIX 2: Removed stray semicolon after font-bold */}
           <h1 
-            className="[font-family:var(--font-days-one)] text-center text-[clamp(30px,6vw,60px)] tracking-[0.12em] text-white leading-tight [text-shadow:0_0_20.6px_#6CB4D0,6px_6px_4.89px_rgba(0,0,0,0.30)] font-bold
-              [-webkit-text-stroke:2px_#6CB4D0] 
+            className="[font-family:var(--font-days-one)] text-center text-[clamp(30px,6vw,60px)] tracking-[0.12em] text-white leading-tight [text-shadow:0_0_15px_#6CB4D0,4px_4px_4px_rgba(0,0,0,0.30)] font-bold
+              [-webkit-text-stroke:1px_#6CB4D0] 
               [paint-order:stroke_fill]"
           >
             Secure Your Opportunity Now!

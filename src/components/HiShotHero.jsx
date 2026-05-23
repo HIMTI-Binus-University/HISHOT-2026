@@ -151,7 +151,7 @@ export default function HiShotHero() {
           // text-shadow: 6px 6px 4.89px #0000004D;
 
           box-shadow: 0 3px 6px rgba(0,0,0,0.22);
-          text-shadow: 2px 2px px rgba(0,0,0,0.25);
+          text-shadow: 4px 4px 4px rgba(0,0,0,0.25);
           -webkit-text-stroke: 1px #B95FA0;
 
         }
@@ -166,9 +166,9 @@ export default function HiShotHero() {
           cursor: pointer;
           transition: transform 0.2s, background 0.2s;
           letter-spacing: 0.03em;
-          box-shadow: 0 4px 4px #00000040;
-          text-shadow: 6px 6px 4.89px #0000004D, 0 0 20.6px #6CB4D0;
-          -webkit-text-stroke : 2px #6CB4D0;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.22);
+          text-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+          -webkit-text-stroke : 1px #6CB4D0;
           paint-order: stroke fill;
 
         }
@@ -198,7 +198,7 @@ export default function HiShotHero() {
           .m-btn  { display:flex!important; }
 
           .hero-panel {
-            margin-bottom: 6rem !important;
+            margin-bottom: 12rem !important;
             padding: 1 1.2rem 1.5rem !important;
             max-width: 92vw !important;
             border-radius: 20px !important;
@@ -233,13 +233,19 @@ export default function HiShotHero() {
 
         @media(max-width:480px){
           .btn-start, .btn-learn {
-            padding: 0.65rem 1.4rem !important;
-            font-size: 0.rem !important;
+            padding: 0.3rem 1rem !important;
+            font-size: 0.7rem !important;
           }
           .hero-panel {
-            margin-bottom: 4rem !important;
+            margin-bottom: 9rem !important;
           }
           .deco-hide-xs { display: none !important; }
+        }
+
+        @media(min-width:480px) and (max-width:769px){
+          .hero-panel {
+            margin-bottom:10rem !important;
+          }
         }
 
         @media(min-width:769px){
@@ -250,7 +256,7 @@ export default function HiShotHero() {
         @media(min-width:769px) and (max-width:1024px){
           .hero-panel {
             max-width: 75vw !important;
-            margin-bottom: 8rem !important;
+            margin-bottom: 12rem !important;
           }
           .mascot-img {
             width: clamp(150px, 10vw, 140px) !important;
@@ -420,7 +426,7 @@ export default function HiShotHero() {
 
         {/* ── MASCOT ── */}
         <img src="/mascot.jpeg" alt="HiShot mascot"
-          className="absolute w-[6rem] -right-[2rem] -bottom-0 sm:w-[12rem] sm:bottom-[1rem]"
+          className="absolute w-[7rem] -right-[2rem] bottom-[1rem] sm:w-[12rem] sm:bottom-[1rem]"
           style={{
             // position: "absolute",
             // right: "clamp(130px, 3.5vw, 55px)",
@@ -435,7 +441,7 @@ export default function HiShotHero() {
         {/* ══ HERO PANEL ══ */}
         <div
           className="hero-panel
-          sm:min-w-[20rem] w-full pb-0 sm:pb-[6rem]"
+          sm:min-w-[20rem] w-full lg:pb-[8rem]"
           style={{
             position: "relative", zIndex: 10,
             // marginBottom: "10rem",
