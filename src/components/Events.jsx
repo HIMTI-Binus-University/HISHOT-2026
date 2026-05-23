@@ -98,7 +98,7 @@ const Events = () => {
                       <div className='relative w-full flex align-middle'>
                         <img src="TechCircle.svg" alt="Tech" className="absolute -left-[20px] md:-left-[30px] xl:-left-[45px] top-[3px] w-[15px] md:w-[20px] xl:w-[32.5px] object-contain" />
                         {/* line connection tech circle */}
-                        <div className='absolute -left-[13px] md:-left-[21px] xl:-left-[31px] xl:w-1 top-[17px] md:top-[22px] xl:top-[32px] h-[25px] lg:h-[51px] xl:h-[69px] w-0.5 bg-[#0F4A6D]'> </div>
+                        <div className='absolute -left-[13px] md:-left-[21px] xl:-left-[31px] xl:w-1 top-[17px] md:top-[22px] xl:top-[32px] h-[115%] lg:h-[51px] xl:h-[69px] w-0.5 bg-[#0F4A6D]'> </div>
                         <p className="text-[14px] md:text-[18px] xl:text-[24px] font-light leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
                       </div>
                       <div className='relative w-full flex align-middle'>
