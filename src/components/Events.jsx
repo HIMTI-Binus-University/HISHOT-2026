@@ -162,7 +162,7 @@ const Events = () => {
                     <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
                     <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
                   </div>
-                  <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
+                  <div className="flex justify-start gap-[15px]">
                     {['More info', 'Guidebook'].map((text) => (
                       <button key={text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                     ))}
@@ -207,7 +207,7 @@ const Events = () => {
                       <div className="hidden lg:flex flex-col w-full mt-6 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 xl:gap-4 mb-1">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                          <h3 className=" text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px]mt-2 xl:mt-4">
                           {['More info', 'Guidebook'].map((text) => (
@@ -235,7 +235,7 @@ const Events = () => {
                   <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
                     <div className="flex items-center gap-2 md:gap-4 mb-2">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                      <h3 className="text-[14px] sm:text-[18px] md:text-[28px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
                       {['More info', 'Guidebook'].map((text) => (
@@ -279,7 +279,7 @@ const Events = () => {
                       <div className="hidden lg:flex flex-col w-full mt-6 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 xl:gap-4 mb-1">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                          <h3 className=" text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-2 xl:mt-4">
                           {['More info', 'Guidebook'].map((text) => (
@@ -307,7 +307,7 @@ const Events = () => {
                   <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
                     <div className="flex items-center gap-2 md:gap-4 mb-2">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                      <h3 className="text-[14px] sm:text-[18px] md:text-[28px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
                       {['More info', 'Guidebook'].map((text) => (
