@@ -112,7 +112,7 @@ const Events = () => {
                     <div className="hidden lg:flex flex-col flex-1 gap-2 w-full mt-10 xl:mt-12 text-[#0F4A6D]">
                       <div className="flex w-full items-center gap-2 xl:gap-4 mb-1">
                         <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
+                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
                       </div>
                       <div className="flex gap-[15px] xl:gap-[20px] mt-2 xl:mt-4">
                         {['More info', 'Guidebook'].map((text) => (
@@ -127,30 +127,30 @@ const Events = () => {
                     {/* Speaker 1 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                        <img src="/Meow.jpg" alt="Speaker 1" className="w-full h-full object-cover" />
+                        <img src="/QuestionCard.svg" alt="Speaker 1" className="w-full h-full object-cover" />
                       </div>
                       <div className="absolute -bottom-[2rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
                         <h4 className="text-white text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
-                          Yonathan Handoyo
+                          Surprise Speaker
                         </h4>
-                        <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
-                          Job Job Job JOB JOB
-                        </p>
+                        {/* <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
+                          shh... it's a surprise...
+                        </p> */}
                       </div>
                     </div>
 
                     {/* Speaker 2 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                        <img src="/Meow.jpg" alt="Speaker 2" className="w-full h-full object-cover" />
+                        <img src="/QuestionCard.svg" alt="Speaker 2" className="w-full h-full object-cover" />
                       </div>
                       <div className="absolute -bottom-[2rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
                         <h4 className="text-white text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
-                          William G.
+                          Surprise Speaker
                         </h4>
-                        <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
-                          Job Job Job JOB JOB
-                        </p>
+                        {/* <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
+                          shh... it's a surprise...
+                        </p> */}
                       </div>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ const Events = () => {
                 <div className="flex flex-col lg:hidden w-full mt-14 px-2 text-[#0F4A6D]">
                   <div className="flex items-center gap-2 md:gap-4 mb-2">
                     <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: BINUS @ Alam Sutra</h3>
+                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
                   </div>
                   <div className="flex justify-start gap-[15px]">
                     {['More info', 'Guidebook'].map((text) => (
@@ -221,11 +221,11 @@ const Events = () => {
                     <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[90%] mx-auto mb-[8%] aspect-[3/2] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md">
-                          <img src="/Meow.jpg" alt="Workshop Speaker 1" className="w-full h-full object-cover" />
+                          <img src="/QuestionCard2.svg" alt="Workshop Speaker 1" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute bottom-0 left-0 w-full h-[25%] xl:h-[30%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
-                          <h4 className="text-white text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[32px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Wahyu Hidayat</h4>
-                          <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>details details</p>
+                          <h4 className="text-white text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[32px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Speaker</h4>
+                          {/* <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>shh... it's a surprise</p> */}
                         </div>
                       </div>
                     </div>
@@ -293,11 +293,11 @@ const Events = () => {
                     <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[90%] mx-auto mb-[8%] aspect-[3/2] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md">
-                          <img src="/Meow.jpg" alt="Workshop Speaker 2" className="w-full h-full object-cover" />
+                          <img src="/QuestionCard2.svg" alt="Workshop Speaker 2" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute bottom-0 left-0 w-full h-[25%] xl:h-[30%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
-                          <h4 className="text-white text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[32px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Adrianus B. Kurnadi</h4>
-                          <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>details details</p>
+                          <h4 className="text-white text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[32px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Speaker</h4>
+                          {/* <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>shh... it's a surprise</p> */}
                         </div>
                       </div>
                     </div>
@@ -343,7 +343,7 @@ const Events = () => {
                             <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                           </div>
                           <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                            Japan is turning footsteps into electricity! Using piezoelectric tiles, every step you take generates a small amount of energy. Millions of steps together can power LED lights and displays in busy places like Shibuya Station.
+                            TBA.
                           </p>
                         </div>
 
@@ -356,7 +356,7 @@ const Events = () => {
                         <div className="hidden lg:flex flex-col w-full mt-10 xl:mt-12 mb-8 text-[#0F4A6D]">
                           <div className="flex items-center gap-2 xl:gap-4 mb-1">
                             <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                            <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Binus @ Alam Sutra</h3>
+                            <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: To be Announced</h3>
                           </div>
                           <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
                             {['More info', 'Guidebook'].map((text) => (
@@ -370,21 +370,21 @@ const Events = () => {
                       <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-10 xl:pt-12 w-full lg:w-1/2 min-w-0">
                         <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                           <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                            <img src="/Meow.jpg" alt="Place" className="w-full h-full object-cover" />
+                            <img src="/QuestionCard.svg" alt="Place" className="w-full h-full object-cover" />
                           </div>
                           <div className="absolute bottom-0 left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-1 md:px-2 xl:px-4 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Place</h4>
-                            <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB</p>
+                            <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Place</h4>
+                            <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>it's a surprise</p>
                           </div>
                         </div>
 
                         <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                           <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                            <img src="/Meow.jpg" alt="Speaker" className="w-full h-full object-cover" />
+                            <img src="/QuestionCard.svg" alt="Speaker" className="w-full h-full object-cover" />
                           </div>
                           <div className="absolute bottom-0 left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-1 md:px-2 xl:px-4 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Speaker</h4>
-                            <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB</p>
+                            <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Speaker Speaker</h4>
+                            <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>it's a surprise</p>
                           </div>
                         </div>
                       </div>
@@ -393,7 +393,7 @@ const Events = () => {
                     <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
                       <div className="flex items-center gap-2 md:gap-4 mb-2">
                         <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                        <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Binus @ Alam Sutra</h3>
+                        <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
                       </div>
                       <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                         {['More info', 'Guidebook'].map((text) => (
@@ -431,14 +431,14 @@ const Events = () => {
                               <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                             </div>
                             <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et mmm LOCATION dolore magna aliqua.
+                              TBA.
                             </p>
                           </div>
 
                           <div className="hidden lg:flex flex-col w-full mt-10 xl:mt-12 mb-8 text-[#0F4A6D]">
                             <div className="flex items-center gap-2 xl:gap-4 mb-1">
                               <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                              <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details</h3>
+                              <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
                             </div>
                             <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
                               {['More info', 'Guidebook'].map((text) => (
@@ -452,21 +452,21 @@ const Events = () => {
                         <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-10 xl:pt-12 w-full lg:w-1/2 min-w-0">
                           <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                             <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                              <img src="/Meow.jpg" alt="Place 1" className="w-full h-full object-cover" />
+                              <img src="/QuestionCard.svg" alt="Place 1" className="w-full h-full object-cover" />
                             </div>
                             <div className="absolute bottom-0 left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-1 md:px-2 xl:px-4 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                              <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Place</h4>
-                              <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB</p>
+                              <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Place</h4>
+                              <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>It's a surprise</p>
                             </div>
                           </div>
 
                           <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                             <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                              <img src="/Meow.jpg" alt="Place 2" className="w-full h-full object-cover" />
+                              <img src="/QuestionCard.svg" alt="Place 2" className="w-full h-full object-cover" />
                             </div>
                             <div className="absolute bottom-0 left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-1 md:px-2 xl:px-4 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                              <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Speaker</h4>
-                              <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Job Job Job JOB JOB</p>
+                              <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Speaker</h4>
+                              <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>It's a surprise</p>
                             </div>
                           </div>
                         </div>
@@ -475,7 +475,7 @@ const Events = () => {
                       <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 md:gap-4 mb-2">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                          <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Place Name + Details</h3>
+                          <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
                         </div>
                         <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
                           {['More info', 'Guidebook'].map((text) => (
