@@ -100,11 +100,11 @@ const Events = () => {
                       <div className='relative w-full flex align-middle'>
                         <img src="TechCircle (1).svg" alt="Tech" className="absolute -left-[20px] md:-left-[30px] xl:-left-[45px] top-[3px] w-[15px] md:w-[20px] xl:w-[32.5px] object-contain" />
                         <div className='absolute -left-[14px] md:-left-[21px] xl:-left-[31px] xl:w-1 top-[18px] md:top-[22px] xl:top-[32px] h-[125%] sm:h-[140%] md:h-[120%] lg:h-[120%] xl:h-[120%] w-0.5 bg-[#0F4A6D]'> </div>
-                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
+                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal"><span className='font-bold'>First Session:</span> Rising Through Interactions for The Future</p>
                       </div>
                       <div className='relative w-full flex align-middle'>
                         <img src="TechCircle (1).svg" alt="Tech" className="absolute -left-[20px] md:-left-[30px] xl:-left-[45px] top-[3px] w-[15px] md:w-[20px] xl:w-[32.5px] object-contain" />
-                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
+                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal"><span className="font-bold">Second Session:</span> From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
                       </div>
                     </div>
                     
