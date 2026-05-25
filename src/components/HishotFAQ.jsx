@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What is HISHOT?",
     answer:
-      "HISHOT stands for HIMTI seminar, workshop, and study tour, an annual event organized by HIMTI BINUS University aimed at expanding knowledge and experience through technology-focused activities.\n\nIn 2026, HISHOT carries the theme:\n“ORBIT: Optimizing Resource for Building Infrastructure and Technology”, which focuses on how cloud technology and digital infrastructure can be optimized to build efficient, scalable, and sustainable digital infrastructure.",
+      "HISHOT stands for HIMTI Seminar, Workshop, and Study Tour. It’s the ultimate annual flagship event hosted by HIMTI BINUS University designed to bridge the gap between classroom theory and real-world tech mastery. \n\nFor 2026, we’re going big with our theme: “ORBIT: Optimizing Resource for Building Infrastructure and Technology.” 🌌 We’re diving deep into how cloud technology is the secret sauce behind the next generation of efficient, scalable, and sustainable digital infrastructure.",
   },
   {
     question: "What events are in HISHOT 2026?",
@@ -28,12 +28,12 @@ const faqs = [
   {
     question: "Is HISHOT open for public?",
     answer:
-      "Yes! HISHOT 2026 is open to the public, allowing, professionals, and anyone interested in technology to participate. As a hybrid event, it offers both onsite seminars at BINUS University and online workshops, making it accessible for everyone to learn, connect, and explore the world of cloud technology and digital infrastructure.",
+      "YES! HISHOT 2026 is open to the public. Whether you're a student, a professional, or just a curious tech enthusiast, you’re welcome to join. It’s a hybrid event, so you can join us on-campus or plug in from anywhere in the world! 🌏",
   },
   {
     question: "How to register for HISHOT 2026?",
     answer:
-      "Ready to explore the ORBIT? 🚀\nTo register for HISHOT 2026, simply click the “Register Now” button and choose your preferred registration category from the dropdown menu. You will then be redirected to the corresponding registration form to complete your submission.\n\nParticipants will also receive further information through the official guidebook, including event details and preparation for the HISHOT 2026 experience. Don’t miss this opportunity to learn, connect, and grow in the world of cloud technology and digital infrastructure!",
+      "Ready to enter the ORBIT? Just hit the “Register Now” button, pick your preferred category from the dropdown menu, and follow the link to complete your registration form. Keep an eye on your inbox, the official guidebook with all the prep details will be coming your way soon! 📩",
   },
   {
     question: "What are the benefits of joining HISHOT 2026?",
@@ -47,7 +47,7 @@ function EventTimeline() {
   return (
     <div className="w-full pt-1 pb-3">
       {/* Intro sentence */}
-      <p className="font-['Chivo'] font-light text-[clamp(0.78rem,1.5vw,0.88rem)] text-[rgba(15,74,109,1)] leading-[1.6] mb-[1.4rem]">
+      <p className="[font-family:var(--font-body)] font-normal text-[clamp(0.78rem,1.5vw,0.88rem)] text-[rgba(15,74,109,1)] leading-[1.6] mb-[1.4rem]">
         The series of events will be held from June to December 2026, with details as follows :
       </p>
 
@@ -62,11 +62,11 @@ function EventTimeline() {
                 key={ev.id}
                 className="flex-1 flex flex-col items-center text-center min-w-0 px-2"
               >
-                <span className="font-['Chivo'] font-bold text-[clamp(0.68rem,1.3vw,0.82rem)] text-[rgba(15,74,109,1)] leading-[1.25]">
+                <span className="[font-family:var(--font-body)] font-bold text-[clamp(0.68rem,1.3vw,0.82rem)] text-[rgba(15,74,109,1)] leading-[1.25]">
                   {ev.label}
                 </span>
 
-                <span className="font-['Chivo'] font-light text-[clamp(0.62rem,1.1vw,0.75rem)] text-[rgba(15,74,109,0.82)] mt-[2px]">
+                <span className="[font-family:var(--font-body)] text-[clamp(0.62rem,1.1vw,0.75rem)] text-[rgba(15,74,109,0.82)] mt-[2px]">
                   {ev.date}
                 </span>
               </div>
@@ -115,11 +115,11 @@ function EventTimeline() {
                 key={ev.id}
                 className="flex-1 flex flex-col items-center text-center px-1"
               >
-                <span className="font-['Chivo'] font-bold text-[clamp(0.68rem,1.3vw,0.82rem)] text-[rgba(15,74,109,1)] leading-[1.25]">
+                <span className="[font-family:var(--font-body)] font-bold text-[clamp(0.68rem,1.3vw,0.82rem)] text-[rgba(15,74,109,1)] leading-[1.25]">
                   {ev.label}
                 </span>
 
-                <span className="font-['Chivo'] font-light text-[clamp(0.62rem,1.1vw,0.75rem)] text-[rgba(15,74,109,0.82)] mt-[2px]">
+                <span className="[font-family:var(--font-body)] font-normal text-[clamp(0.62rem,1.1vw,0.75rem)] text-[rgba(15,74,109,0.82)] mt-[2px]">
                   {ev.date}
                 </span>
               </div>
@@ -161,11 +161,11 @@ function EventTimeline() {
 
             {/* text */}
             <div className="ml-4 text-left">
-              <p className="font-['Chivo'] font-bold text-[0.82rem] text-[rgba(15,74,109,1)] m-0 leading-[1.3]">
+              <p className="[font-family:var(--font-body)] font-bold text-[0.82rem] text-[rgba(15,74,109,1)] m-0 leading-[1.3]">
                 {ev.label}
               </p>
 
-              <p className="font-['Chivo'] font-light text-[0.74rem] text-[rgba(15,74,109,0.85)] mt-[-3px] mb-0">
+              <p className="[font-family:var(--font-body)] font-normal text-[0.74rem] text-[rgba(15,74,109,0.85)] mt-[-3px] mb-0">
                 {ev.date}
               </p>
             </div>
@@ -190,11 +190,9 @@ export default function HishotFAQ() {
   return (
     <section
       id="faq"
-      className="mb-[4rem] sm:mb-[8rem] h-fit overflow-x-clip relative items-center justify-center md:px-4 pt-24 font-['Chivo']"
+      className="mb-[4rem] sm:mb-[8rem] h-fit overflow-x-clip relative items-center justify-center md:px-4 pt-24 [font-family:var(--font-body)]"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Chivo:wght@300;400;700&display=swap');
-
         .faq-item-hshot {
           transition: background 0.3s ease, box-shadow 0.3s ease;
         }
@@ -386,7 +384,7 @@ export default function HishotFAQ() {
                     className="w-full flex items-center justify-between gap-4 py-4 bg-none cursor-pointer border-0 text-left bg-transparent"
                   >
                     <span
-                      className={`faq-question-text font-['Chivo'] font-semibold text-[clamp(1.2rem,2vw,1.7rem)] leading-[1.4] tracking-[0.01em]${isOpen ? " active" : ""}`}
+                      className={`faq-question-text [font-family:var(--font-body)] font-semibold text-[clamp(1.2rem,2vw,1.7rem)] leading-[1.4] tracking-[0.01em]${isOpen ? " active" : ""}`}
                       style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
                     >
                       {faq.question}
@@ -418,7 +416,7 @@ export default function HishotFAQ() {
                           <EventTimeline />
                         </div>
                       ) : (
-                        <p className="font-['Chivo'] font-light text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 text-justify whitespace-pre-line mt-2">
+                        <p className="[font-family:var(--font-body)] font-normal text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 text-justify whitespace-pre-line mt-2">
                           {faq.answer}
                         </p>
                       )}

@@ -329,7 +329,7 @@ export default function HiShotHero() {
               </button>
               {regOpen && (
                 <div className="reg-dropdown">
-                  <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing" target="_blank">Seminar & Workshop</a>
+                  <a href="#">Seminar & Workshop</a>
                   <a href="#">Local Study Tour</a>
                   <a href="#">Global Study Tour</a>
                 </div>
@@ -356,7 +356,7 @@ export default function HiShotHero() {
             ))}
             <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
               <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
-              <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing" className="nav-link" target="_blank" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+              <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
             </div>

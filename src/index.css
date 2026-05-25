@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular);
 @import url(https://fonts.googleapis.com/css?family=Days+One:regular);
 @import url(https://fonts.googleapis.com/css?family=Chivo:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,9 +20,10 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --color-card : #B2D9E7;
-  --font-dela-gothic-one : "Dela Gothic One", sans-serif;
   --font-days-one : "Days One", sans-serif;
-  --font-chivo : "Chivo", sans-serif;
+  /* --font-work-sans : "Work Sans", sans-serif; */
+  /* --font-chivo : "Chivo", sans-serif; */
+  --font-body: "Work Sans", sans-serif;
   --color-blue-info : #0F4A6D;
   --color-glow : #18A18C;
 
