@@ -68,7 +68,7 @@ export default function SecureOpportunity(){
                   className="p-4 bg-white rounded-2xl shadow-xl border border-gray-100"
                   style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}
                 >
-                  <a href="https://docs.google.com/spreadsheets/d/11JfbsRSFq3qdFfqYfj9BdkBYzxIERi-p4I8LqpaH2K4/edit?usp=sharing" className="nav-link" target="_blank" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+                  <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
                 </div>

@@ -52,7 +52,7 @@ const Events = () => {
                 <img src={tab.img} alt={tab.label} className="w-[50px] h-[50px] md:w-[65px] md:h-[65px] lg:w-[75px] lg:h-[75px] xl:w-[85px] xl:h-[85px] object-contain mb-1" />
                 <span 
                   className="text-[#F9FEFE] text-[14px] md:text-[20px] lg:text-[26px] xl:text-[36px] font-normal leading-tight xl:leading-none tracking-normal text-center drop-shadow-[0px_2px_2px_rgba(0,0,0,0.25)] xl:drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] px-2" 
-                  style={{ fontFamily: "'Chivo', sans-serif" }}
+                  style={{ fontFamily: "var(--font-body)" }}
                 >
                   {tab.label === 'Local Study Tour' ? <>Local<br/>Study Tour</> : tab.label === 'Global Study Tour' ? <>Global<br/>Study Tour</> : tab.label}
                 </span>
@@ -84,7 +84,7 @@ const Events = () => {
                     <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                     <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                   </div>
-                  <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                  <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "var(--font-body)" }}>
                     Explore the intersection of Artificial Intelligence, cloud computing, and digital entrepreneurship. Through engaging discussions and interactive sessions, participants will gain insights into technologies shaping the future.
                   </p>
                 </div>
@@ -96,15 +96,15 @@ const Events = () => {
                   <div className="flex flex-col flex-1 w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
 
                     {/* Timeline */}
-                    <div className="relative px-[35px] md:px-[55px] xl:px-[90px] flex flex-col gap-4 xl:gap-6 py-1 w-full flex-1 text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                    <div className="relative px-[35px] md:px-[55px] xl:px-[90px] flex flex-col gap-4 xl:gap-6 py-1 w-full flex-1 text-[#0F4A6D]" style={{ fontFamily: "var(--font-body)" }}>
                       <div className='relative w-full flex align-middle'>
                         <img src="TechCircle (1).svg" alt="Tech" className="absolute -left-[20px] md:-left-[30px] xl:-left-[45px] top-[3px] w-[15px] md:w-[20px] xl:w-[32.5px] object-contain" />
                         <div className='absolute -left-[14px] md:-left-[21px] xl:-left-[31px] xl:w-1 top-[18px] md:top-[22px] xl:top-[32px] h-[125%] sm:h-[140%] md:h-[120%] lg:h-[120%] xl:h-[120%] w-0.5 bg-[#0F4A6D]'> </div>
-                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-light leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
+                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
                       </div>
                       <div className='relative w-full flex align-middle'>
                         <img src="TechCircle (1).svg" alt="Tech" className="absolute -left-[20px] md:-left-[30px] xl:-left-[45px] top-[3px] w-[15px] md:w-[20px] xl:w-[32.5px] object-contain" />
-                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-light leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
+                        <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
                       </div>
                     </div>
                     
@@ -112,7 +112,7 @@ const Events = () => {
                     <div className="hidden lg:flex flex-col flex-1 gap-2 w-full mt-10 xl:mt-12 text-[#0F4A6D]">
                       <div className="flex w-full items-center gap-2 xl:gap-4 mb-1">
                         <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
+                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: To Be Announced</h3>
                       </div>
                       <div className="flex gap-[15px] xl:gap-[20px] mt-2 xl:mt-4">
                         {['More info', 'Guidebook'].map((text) => (
@@ -160,7 +160,7 @@ const Events = () => {
                 <div className="flex flex-col lg:hidden w-full mt-14 px-2 text-[#0F4A6D]">
                   <div className="flex items-center gap-2 md:gap-4 mb-2">
                     <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
+                    <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: To Be Announced</h3>
                   </div>
                   <div className="flex justify-start gap-[15px]">
                     {['More info', 'Guidebook'].map((text) => (
@@ -198,7 +198,7 @@ const Events = () => {
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                           <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                         </div>
-                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "var(--font-body)" }}>
                           Dive into the world of cloud security and discover how AI technologies are used to identify risks, monitor systems, and defend digital infrastructures. Participants will gain insights into modern cybersecurity challenges and solutions in cloud computing.
                         </p>
                       </div>
@@ -270,7 +270,7 @@ const Events = () => {
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                           <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                         </div>
-                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                        <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Work Sans', sans-serif" }}>
                           Discover how cloud computing powers modern Artificial Intelligence systems. Through interactive sessions, participants will learn how machine learning models are deployed, managed, and optimized in cloud environments.
                         </p>
                       </div>
@@ -342,15 +342,15 @@ const Events = () => {
                             <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                             <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                           </div>
-                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily:"var(--font-body)" }}>
                             TBA.
                           </p>
                         </div>
 
-                        <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                        <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "var(--font-body)" }}>
                           <img src="/TechDetail4.png" alt="Timeline" className="absolute left-[5px] md:left-[10px] xl:left-[15px] top-[5px] xl:top-[10px] w-[15px] md:w-[20px] xl:w-[32.5px] h-[55px] md:h-[70px] xl:h-[108px] object-contain" />
-                          <p className="text-[14px] md:text-[16px] xl:text-[24px] font-light leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
-                          <p className="text-[14px] md:text-[16px] xl:text-[24px] font-light leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
+                          <p className="text-[14px] md:text-[16px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
+                          <p className="text-[14px] md:text-[16px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
                         </div>
 
                         <div className="hidden lg:flex flex-col w-full mt-10 xl:mt-12 mb-8 text-[#0F4A6D]">
@@ -430,7 +430,7 @@ const Events = () => {
                               <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                               <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                             </div>
-                            <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-light tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Chivo', sans-serif" }}>
+                            <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "var(--font-body)" }}>
                               TBA.
                             </p>
                           </div>

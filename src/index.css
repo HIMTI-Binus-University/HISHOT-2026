@@ -21,8 +21,9 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --color-card : #B2D9E7;
   --font-days-one : "Days One", sans-serif;
-  --font-work-sans : "Work Sans", sans-serif;
-  --font-chivo : "Chivo", sans-serif;
+  /* --font-work-sans : "Work Sans", sans-serif; */
+  /* --font-chivo : "Chivo", sans-serif; */
+  --font-body: "Work Sans", sans-serif;
   --color-blue-info : #0F4A6D;
   --color-glow : #18A18C;
 
