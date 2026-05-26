@@ -18,8 +18,21 @@ const faqs = [
   },
   {
     question: "What events are in HISHOT 2026?",
-    answer:
-      "HISHOT 2026 brings a series of exciting activities, including onsite seminar that explore the latest trends in cloud technology and digital infrastructure, as well as interactive online workshops that provide hands-on learning experiences. Participants can also join domestic and international study tours to gain real-world insights into the tech industry. These events are open to the public and are designed to inspire learning, collaboration, and growth in today’s evolving digital landscape.",
+    type: "events",
+    events: [
+      {
+        title: "Onsite Seminar",
+        desc: "Get face-to-face insights on the latest cloud trends.",
+      },
+      {
+        title: "Interactive Online Workshops",
+        desc: "Get your hands dirty with practical, skill-building sessions.",
+      },
+      {
+        title: "Study Tours",
+        desc: "Join our domestic (STDN) and international (STLN) tours to see how the tech industry really works behind the scenes.",
+      },
+    ],
   },
   {
     question: "When will the events be held?",
@@ -411,7 +424,89 @@ export default function HishotFAQ() {
                   {/* Answer */}
                   <div className={`faq-answer-hshot${isOpen ? " open" : ""}`}>
                     <div className="faq-answer-inner whitespace-pre-line">
-                      {isTimeline ? (
+                      {faq.type === "events" ? (
+                        <div
+                          className="
+                            relative
+                            px-[24px]
+                            sm:px-[35px]
+                            md:px-[45px]
+                            flex
+                            flex-col
+                            gap-4
+                            py-2
+                            w-full
+                            text-[#0F4A6D]
+                          "
+                          style={{ fontFamily: "var(--font-body)" }}
+                        >
+                          {faq.events.map((event, idx) => (
+                            <div
+                              key={idx}
+                              className="relative w-full flex items-start"
+                            >
+
+                              {/* Circle */}
+                              <div
+                                className="
+                                  absolute
+                                  -left-[22px]
+                                  sm:-left-[30px]
+                                  md:-left-[38px]
+                                  top-[4px]
+                                  w-[16px]
+                                  h-[16px]
+                                  sm:w-[20px]
+                                  sm:h-[20px]
+                                  md:w-[24px]
+                                  md:h-[24px]
+                                  rounded-full
+                                  border-[3px]
+                                  border-[#0F4A6D]
+                                  bg-[#B2D9E7]
+                                  z-10
+                                "
+                              />
+
+                              {/* Vertical Line */}
+                              {idx !== faq.events.length - 1 && (
+                                <div
+                                  className="
+                                    absolute
+                                    -left-[15px]
+                                    sm:-left-[21px]
+                                    md:-left-[27px]
+                                    top-[18px]
+                                    sm:top-[22px]
+                                    md:top-[28px]
+                                    w-[3px]
+                                    h-[calc(100%+2px)]
+                                    bg-[#0F4A6D]
+                                  "
+                                />
+                              )}
+
+                              {/* Text */}
+                              <p
+                                className="
+                                  text-[0.9rem]
+                                  sm:text-[1rem]
+                                  md:text-[1.08rem]
+                                  font-normal
+                                  leading-[1.6]
+                                  tracking-normal
+                                  text-left
+                                "
+                              >
+                                <span className="font-bold">
+                                  {event.title}:
+                                </span>{" "}
+                                {event.desc}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      ) : isTimeline ? (
                         <div className="pb-2">
                           <EventTimeline />
                         </div>
