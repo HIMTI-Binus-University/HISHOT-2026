@@ -50,8 +50,30 @@ const faqs = [
   },
   {
     question: "What are the benefits of joining HISHOT 2026?",
-    answer:
-      "HISHOT 2026 offers an exciting opportunity to explore cloud technology and digital infrastructure through interactive sessions and practical experiences. Throughout the event, you’ll have the chance to learn from industry professionals, connect with others who share the same interests, and gain valuable knowledge to support your future in tech.\n\nOn top of that, participants will receive an e-certificate, and BINUS students can earn SAT points making HISHOT 2026 not just a learning experience, but a valuable step toward your digital future.",
+    type: "benefits",
+    intro: "Beyond the bragging rights, you’ll get:",
+    benefits: [
+      {
+        title: "Expert Insights",
+        desc: "Learn directly from industry pros.",
+        emoji: "💡",
+      },
+      {
+        title: "Networking",
+        desc: "Connect with like-minded peers and future collaborators.",
+        emoji: "🤝",
+      },
+      {
+        title: "Recognition",
+        desc: "Get an official e-certificate to level up your portfolio.",
+        emoji: "📜",
+      },
+      {
+        title: "SAT Points",
+        desc: "Exclusive for BINUS students. Don't miss out on boosting your records!",
+        emoji: "📈",
+      },
+    ],
   },
 ];
 
@@ -424,96 +446,128 @@ export default function HishotFAQ() {
                   {/* Answer */}
                   <div className={`faq-answer-hshot${isOpen ? " open" : ""}`}>
                     <div className="faq-answer-inner whitespace-pre-line">
-                      {faq.type === "events" ? (
-                        <div
-                          className="
-                            relative
-                            px-[24px]
-                            sm:px-[35px]
-                            md:px-[45px]
-                            flex
-                            flex-col
-                            gap-4
-                            py-2
-                            w-full
-                            text-[#0F4A6D]
-                          "
-                          style={{ fontFamily: "var(--font-body)" }}
-                        >
-                          {faq.events.map((event, idx) => (
-                            <div
-                              key={idx}
-                              className="relative w-full flex items-start"
+
+                      {/* EVENTS & BENEFITS */}
+                      {faq.type === "events" || faq.type === "benefits" ? (
+                        <div className="pb-4 pt-3">
+
+                          {/* Intro */}
+                          {faq.intro && (
+                            <p
+                              className="
+                                [font-family:var(--font-body)]
+                                text-[rgba(15,74,109,1)]
+                                text-[0.9rem]
+                                sm:text-[1rem]
+                                md:text-[1.05rem]
+                                leading-[1.6]
+                                mb-5
+                              "
                             >
+                              {faq.intro}
+                            </p>
+                          )}
 
-                              {/* Circle */}
+                          {/* Timeline Bullet UI */}
+                          <div
+                            className="
+                              relative
+                              px-[24px]
+                              sm:px-[35px]
+                              md:px-[45px]
+                              flex
+                              flex-col
+                              gap-5
+                              py-1
+                              w-full
+                              text-[#0F4A6D]
+                            "
+                            style={{ fontFamily: "var(--font-body)" }}
+                          >
+                            {(faq.events || faq.benefits).map((item, idx, arr) => (
                               <div
-                                className="
-                                  absolute
-                                  -left-[22px]
-                                  sm:-left-[30px]
-                                  md:-left-[38px]
-                                  top-[4px]
-                                  w-[16px]
-                                  h-[16px]
-                                  sm:w-[20px]
-                                  sm:h-[20px]
-                                  md:w-[24px]
-                                  md:h-[24px]
-                                  rounded-full
-                                  border-[3px]
-                                  border-[#0F4A6D]
-                                  bg-[#B2D9E7]
-                                  z-10
-                                "
-                              />
+                                key={idx}
+                                className="relative w-full flex items-start"
+                              >
 
-                              {/* Vertical Line */}
-                              {idx !== faq.events.length - 1 && (
+                                {/* Circle */}
                                 <div
                                   className="
                                     absolute
-                                    -left-[15px]
-                                    sm:-left-[21px]
-                                    md:-left-[27px]
-                                    top-[18px]
-                                    sm:top-[22px]
-                                    md:top-[28px]
-                                    w-[3px]
-                                    h-[calc(100%+2px)]
-                                    bg-[#0F4A6D]
+                                    -left-[22px]
+                                    sm:-left-[30px]
+                                    md:-left-[38px]
+                                    top-[4px]
+                                    w-[16px]
+                                    h-[16px]
+                                    sm:w-[20px]
+                                    sm:h-[20px]
+                                    md:w-[24px]
+                                    md:h-[24px]
+                                    rounded-full
+                                    border-[3px]
+                                    border-[#0F4A6D]
+                                    bg-[#B2D9E7]
+                                    z-10
                                   "
                                 />
-                              )}
 
-                              {/* Text */}
-                              <p
-                                className="
-                                  text-[0.9rem]
-                                  sm:text-[1rem]
-                                  md:text-[1.08rem]
-                                  font-normal
-                                  leading-[1.6]
-                                  tracking-normal
-                                  text-left
-                                "
-                              >
-                                <span className="font-bold">
-                                  {event.title}:
-                                </span>{" "}
-                                {event.desc}
-                              </p>
-                            </div>
-                          ))}
+                                {/* Vertical Line */}
+                                {idx !== arr.length - 1 && (
+                                  <div
+                                    className="
+                                      absolute
+                                      -left-[15px]
+                                      sm:-left-[21px]
+                                      md:-left-[27px]
+                                      top-[18px]
+                                      sm:top-[22px]
+                                      md:top-[28px]
+                                      w-[2px]
+                                      h-[calc(100%+28px)]
+                                      bg-[#0F4A6D]
+                                    "
+                                  />
+                                )}
+
+                                {/* Text */}
+                                <p
+                                  className="
+                                    text-[0.9rem]
+                                    sm:text-[1rem]
+                                    md:text-[1.08rem]
+                                    font-normal
+                                    leading-[1.7]
+                                    tracking-normal
+                                    text-left
+                                    text-[#0F4A6D]
+                                  "
+                                >
+                                  <span className="font-bold">
+                                    {item.title}:
+                                  </span>{" "}
+                                  {item.desc}{" "}
+                                  {item.emoji && (
+                                    <span>{item.emoji}</span>
+                                  )}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
                         </div>
+
                       ) : isTimeline ? (
+
                         <div className="pb-2">
                           <EventTimeline />
                         </div>
+
                       ) : (
+
                         <p className="[font-family:var(--font-body)] font-normal text-[clamp(0.82rem,1.6vw,0.92rem)] text-[rgba(15,74,109,1)] leading-[1.4] pb-4 text-justify whitespace-pre-line mt-2">
                           {faq.answer}
                         </p>
+
                       )}
                     </div>
                   </div>
