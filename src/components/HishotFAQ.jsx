@@ -13,8 +13,11 @@ const timelineEvents = [
 const faqs = [
   {
     question: "What is HISHOT?",
-    answer:
-      "HISHOT stands for HIMTI Seminar, Workshop, and Study Tour. It’s the ultimate annual flagship event hosted by HIMTI BINUS University designed to bridge the gap between classroom theory and real-world tech mastery. \n\nFor 2026, we’re going big with our theme: “ORBIT: Optimizing Resource for Building Infrastructure and Technology.” 🌌 We’re diving deep into how cloud technology is the secret sauce behind the next generation of efficient, scalable, and sustainable digital infrastructure.",
+    answer: (
+      <>
+        HISHOT stands for HIMTI Seminar, Workshop, and Study Tour. It’s the ultimate annual flagship event hosted by HIMTI BINUS Univesity designed to bridge the gap between classroom theory and real-world tech mastery. {"\n\n"}For 2026, we’re going big with our theme: “<strong>ORBIT: Optimizing Resource for Building Infrastructure and Technology.</strong>” 🌌 We’re diving deep into how cloud technology is the secret sauce behind the next generation of efficient, scalable, and sustainable digital infrastructure.
+      </>
+    ),
   },
   {
     question: "What events are in HISHOT 2026?",
