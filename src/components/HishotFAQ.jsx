@@ -527,7 +527,7 @@ export default function HishotFAQ() {
                                       sm:top-[22px]
                                       md:top-[28px]
                                       w-[2px]
-                                      h-[calc(100%+28px)]
+                                      h-[calc(100%+20px)]
                                       bg-[#0F4A6D]
                                     "
                                   />
