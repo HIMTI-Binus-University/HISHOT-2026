@@ -127,11 +127,12 @@ const Events = () => {
                     {/* Speaker 1 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                        <img src="/QuestionCard.svg" alt="Speaker 1" className="w-full h-full object-cover" />
+                        <img src="/Speaker/DhimasWahyuWibisono.jpeg
+                        " alt="Speaker 1" className="w-full h-full  object-cover scale-[1.2] translate-y-[10%] translate-x-[-3%]" />
                       </div>
-                      <div className="absolute -bottom-[2rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
+                      <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
                         <h4 className="text-white text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
-                          Surprise Speaker
+                          Dhimas Wahyu Wibisono
                         </h4>
                         {/* <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
                           shh... it's a surprise...
@@ -142,11 +143,11 @@ const Events = () => {
                     {/* Speaker 2 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                        <img src="/QuestionCard.svg" alt="Speaker 2" className="w-full h-full object-cover" />
+                        <img src="/Speaker/David.jpeg" alt="Speaker 2" className="w-full h-full object-cover scale-[1.1] -translate-y-[5%]" />
                       </div>
-                      <div className="absolute -bottom-[2rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
+                      <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
                         <h4 className="text-white text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
-                          Surprise Speaker
+                          David, S.Kom
                         </h4>
                         {/* <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
                           shh... it's a surprise...
