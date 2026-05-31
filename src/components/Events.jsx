@@ -5,10 +5,10 @@ const Events = () => {
 
   // Helper untuk warna tema berdasarkan tab
   const themes = {
-    seminar: { color: '#F8A819E5', glow: '#F8A819' },
-    workshop: { color: '#1D7397E5', glow: '#1D7397' },
-    local: { color: '#18A18CE5', glow: '#18A18C' },
-    global: { color: '#CC61A5E5', glow: '#CC61A5' }
+    seminar: { color: '#F8A819', glow: '#F8A819' },
+    workshop: { color: '#1D7397', glow: '#1D7397' },
+    local: { color: '#18A18C', glow: '#18A18C' },
+    global: { color: '#CC61A5', glow: '#CC61A5' }
   };
 
   const currentTheme = themes[activeTab];
@@ -90,7 +90,7 @@ const Events = () => {
                 </div>
                 
                 {/* Split Content: Left (Details, Timeline, Location) | Right (Speakers) */}
-                <div className="flex flex-col lg:flex-row justify-between w-full max-w-[1525px] mx-auto gap-4 px-2 text-[#0F4A6D] min-w-0 items-start">
+                <div className="flex flex-col lg:flex-row justify-between w-full max-w-[1525px] mx-auto px-2 text-[#0F4A6D] min-w-0 items-start gap-4">
                 
                   {/* Left Column */}
                   <div className="flex flex-col flex-1 w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
@@ -128,10 +128,10 @@ const Events = () => {
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
                       <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
                         <img src="/Speaker/DhimasWahyuWibisono.jpeg
-                        " alt="Speaker 1" className="w-full h-full  object-cover scale-[1.2] translate-y-[10%] translate-x-[-3%]" />
+                        " alt="Speaker 1" className="w-full h-full  object-cover scale-[1.4] translate-y-[20%]" />
                       </div>
                       <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                        <h4 className="text-white text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
+                        <h4 className="text-white text-[11.5px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
                           Dhimas Wahyu Wibisono
                         </h4>
                         {/* <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
@@ -142,11 +142,11 @@ const Events = () => {
 
                     {/* Speaker 2 */}
                     <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
-                      <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                        <img src="/Speaker/David.jpeg" alt="Speaker 2" className="w-full h-full object-cover scale-[1.1] -translate-y-[5%]" />
+                      <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#dedcdc]">
+                        <img src="/Speaker/David.jpeg" alt="Speaker 2" className="w-full h-full object-cover scale-[1] -translate-y-[7%]" />
                       </div>
                       <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                        <h4 className="text-white text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
+                        <h4 className="text-white text-[11.5px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
                           David, S.Kom
                         </h4>
                         {/* <p className="text-white text-[10px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
@@ -208,9 +208,9 @@ const Events = () => {
                       <div className="hidden lg:flex flex-col w-full mt-6 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 xl:gap-4 mb-1">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-8" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
-                        <div className="flex gap-[15px] xl:gap-[20px]mt-2 xl:mt-4">
+                        <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {['More info', 'Guidebook'].map((text) => (
                             <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                           ))}
@@ -236,7 +236,7 @@ const Events = () => {
                   <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
                     <div className="flex items-center gap-2 md:gap-4 mb-2">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-6" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
                       {['More info', 'Guidebook'].map((text) => (
@@ -280,9 +280,9 @@ const Events = () => {
                       <div className="hidden lg:flex flex-col w-full mt-6 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 xl:gap-4 mb-1">
                           <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                          <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-8" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
-                        <div className="flex gap-[15px] xl:gap-[20px] mt-2 xl:mt-4">
+                        <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {['More info', 'Guidebook'].map((text) => (
                             <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                           ))}
@@ -308,7 +308,7 @@ const Events = () => {
                   <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
                     <div className="flex items-center gap-2 md:gap-4 mb-2">
                       <img src="/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
+                      <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-6" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
                       {['More info', 'Guidebook'].map((text) => (
