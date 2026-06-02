@@ -212,7 +212,6 @@ const Events = () => {
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {['More info', 'Guidebook'].map((text) => (
-                          // {/* {['More info'].map((text) => ( */}
                             <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                           ))}
                         </div>
@@ -240,8 +239,7 @@ const Events = () => {
                       <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-6" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
-                      {/* {['More info', 'Guidebook'].map((text) => ( */}
-                      {['More info'].map((text) => (
+                      {['More info', 'Guidebook'].map((text) => (
                         <button key={text} className="w-[150px] sm:w-[180px] h-fit py-[1px] sm:py-[2px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                       ))}
                     </div>
@@ -285,8 +283,7 @@ const Events = () => {
                           <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-8" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
-                          {/* {['More info', 'Guidebook'].map((text) => ( */}
-                          {['More info'].map((text) => (
+                          {['More info', 'Guidebook'].map((text) => (
                             <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                           ))}
                         </div>
@@ -314,8 +311,7 @@ const Events = () => {
                       <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-6" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
-                      {/* {['More info', 'Guidebook'].map((text) => ( */}
-                      {['More info'].map((text) => (
+                      {['More in?fo', 'Guidebook'].map((text) => (
                         <button key={text} className="w-[150px] sm:w-[180px] h-fit py-[1px] sm:py-[2px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                       ))}
                     </div>
