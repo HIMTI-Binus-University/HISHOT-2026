@@ -410,12 +410,12 @@ export default function HiShotHero() {
         <img src="/CloudTech (1).svg" alt="" aria-hidden="true"
           className="absolute w-[10rem] left-0 bottom-1 sm:w-[20rem] sm:bottom-0  md:left-0 md:w-[20rem] md:bottom-[0.5rem] lg:w-[23rem] lg:bottom-0 lg:left-0"
         />
-        <img src="/TechDetailRight2.svg" alt="" aria-hidden="true" className="hidden absolute sm:block w-[15rem] z-10 right-[5rem] sm:w-[15rem] sm:bottom-0 md:w-[14rem] md:right-[6rem] lg:right-[10rem] lg:w-[15rem]"
+        <img src="/TechDetailRight2.svg" alt="" aria-hidden="true" className="hidden absolute sm:block w-[15rem] z-0 right-[5rem] sm:w-[15rem] sm:bottom-0 md:w-[14rem] md:right-[6rem] lg:right-[10rem] lg:w-[15rem]"
         />
         <img src="/Cloud2_Green.png" alt="" aria-hidden="true"
-          className="absolute w-[10rem] -right-[2.5rem] bottom-[1.5rem] sm:w-[13rem] sm:bottom-[4rem] sm:-right-[1rem] md:-right-[3rem] md:w-[16rem] md:bottom-[4rem] lg:w-[18rem] lg:bottom-[3rem] lg:-right-[1rem]"
+          className="absolute w-[10rem] -right-[2.5rem] bottom-[1.5rem] sm:w-[13rem] sm:bottom-[4rem] sm:-right-[1rem] md:-right-[3rem] md:w-[16rem] md:bottom-[4rem] lg:w-[18rem] lg:bottom-[3rem] lg:-right-[1rem] z-[1]"
         />
-        <img src="/Cloud1_Blue.png" alt="" aria-hidden="true" className="absolute w-[8rem] -right-[2.5rem] bottom-0 sm:w-[12rem] sm:bottom-[0.5rem] md:-right-[2rem] lg:w-[15rem] lg:-right-0 lg:bottom-0"
+        <img src="/Cloud1_Blue.png" alt="" aria-hidden="true" className="absolute w-[8rem] -right-[2.5rem] bottom-0 sm:w-[12rem] sm:bottom-[0.5rem] md:-right-[2rem] lg:w-[15rem] lg:-right-0 lg:bottom-0 z-[2]"
         />
 
         {/* ── MASCOT ── */}

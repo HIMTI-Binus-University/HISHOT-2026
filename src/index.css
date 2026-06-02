@@ -36,6 +36,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image : linear-gradient(to bottom, #124265 0%, #0B567A 26%, #43ACD2 74%);
     background-repeat : no-repeat;
