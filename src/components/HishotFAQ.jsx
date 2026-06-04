@@ -49,7 +49,11 @@ const faqs = [
   {
     question: "How to register for HISHOT 2026?",
     answer:
-      "Ready to enter the ORBIT? Just hit the “Register Now” button, pick your preferred category from the dropdown menu, and follow the link to complete your registration form. Keep an eye on your inbox, the official guidebook with all the prep details will be coming your way soon! 📩",
+     (
+      <>
+         Ready to enter the ORBIT? Just hit the “<strong>Register Now</strong>” button, pick your preferred category from the dropdown menu, and follow the link to complete your registration form. Keep an eye on your inbox, the official guidebook with all the prep details will be coming your way soon! 📩
+      </>
+     ),
   },
   {
     question: "What are the benefits of joining HISHOT 2026?",
