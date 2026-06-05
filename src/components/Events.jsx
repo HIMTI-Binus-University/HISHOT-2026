@@ -17,7 +17,7 @@ const Events = () => {
     {
       text : "More info",
       link : {
-        seminar: "https://drive.google.com/file/d/1HaA4O3ztyJ_UVivdtiCQHTsOBq0qXydH/view"
+        seminar: "https://drive.google.com/file/d/1VxdDtVEzO0i0VH2o1kcQFR76E9eUruNn/view"
       },
       isHidden : false
     },
