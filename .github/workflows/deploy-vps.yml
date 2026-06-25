@@ -58,6 +58,8 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
           script: |
+            set -e 
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
             cd /opt/himti-platform
             docker compose pull hishot2026
             docker compose up -d hishot2026
