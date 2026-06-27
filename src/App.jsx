@@ -14,7 +14,7 @@ function App() {
       <Events />
       <HishotFAQ />
       {/* Special Thanks masih di keep hidden karena belum ada arahan untuk tampilin */}
-      {/* <SpecialThanks/> */}
+      <SpecialThanks/>
       <SecureOpportunity/>
       <Footer/>
     </>

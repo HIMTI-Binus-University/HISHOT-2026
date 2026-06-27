@@ -20,14 +20,12 @@ export default function SecureOpportunity(){
   }, []);
 
   return(
-    // FIX: Changed overflow-x-clip to overflow-x-visible so dropdown isn't cut off
     <section className="relative overflow-x-clip w-full max-w-full">
       <div className="relative px-8 pt-2 pb-16 flex flex-col items-center gap-8">
         <div 
           className="px-8 py-4 flex flex-col items-center justify-center border-[#F9FEFE] border-[4px] rounded-[40px] z-10
           drop-shadow-[3px_7px_4px_rgba(0,0,0,0.25)] bg-[#124466E5]" 
         >
-          {/* FIX 2: Removed stray semicolon after font-bold */}
           <h1 
             className="[font-family:var(--font-days-one)] text-center text-[clamp(30px,6vw,60px)] tracking-[0.12em] text-white leading-tight [text-shadow:0_0_15px_#6CB4D0,4px_4px_4px_rgba(0,0,0,0.30)] font-bold
               [-webkit-text-stroke:1px_#6CB4D0] 
@@ -76,7 +74,6 @@ export default function SecureOpportunity(){
             )}
           </div>
 
-          {/* FIX 1: Changed target="-blank" to target="_blank" */}
           <a 
             href="https://www.instagram.com/hishot_2026?igsh=bG9od3I4dmk0bXhr"
             target="_blank"
