@@ -10,13 +10,16 @@ export default function SpecialThanks() {
   ];
 
   const GAP = 15;
-  const BLEED = 10; 
+  const BLEED = 10;
 
   const getVisibleCount = () => {
     if (typeof window === "undefined") return 3;
+    if (window.innerWidth < 640) return 1;
     if (window.innerWidth < 1024) return 2;
     return 3;
   };
+
+  const isMobile = () => typeof window !== "undefined" && window.innerWidth < 640;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -25,6 +28,7 @@ export default function SpecialThanks() {
   const [isPaused, setIsPaused] = useState(false);
   const [visibleCount, setVisibleCount] = useState(getVisibleCount);
   const [itemWidth, setItemWidth] = useState(0);
+  const [mobilePad, setMobilePad] = useState(0);
   const trackRef = useRef(null);
   const autoPlayRef = useRef(null);
 
@@ -33,7 +37,10 @@ export default function SpecialThanks() {
       if (!trackRef.current) return;
       const vc = getVisibleCount();
       setVisibleCount(vc);
-      const usable = trackRef.current.clientWidth - BLEED * 2;
+      // On mobile, reserve 20% on each side so the single card appears ~60% width
+      const hPad = isMobile() ? trackRef.current.clientWidth * 0.2 : BLEED;
+      setMobilePad(hPad);
+      const usable = trackRef.current.clientWidth - hPad * 2;
       setItemWidth((usable - GAP * (vc - 1)) / vc);
     };
     measure();
@@ -89,8 +96,8 @@ export default function SpecialThanks() {
   };
 
   const translateX = itemWidth
-    ? BLEED - currentIndex * (itemWidth + GAP) + dragOffset
-    : BLEED;
+    ? mobilePad - currentIndex * (itemWidth + GAP) + dragOffset
+    : mobilePad;
 
   return (
     <div className="relative py-1 pb-12 flex flex-col items-center w-full select-none">
@@ -111,7 +118,7 @@ export default function SpecialThanks() {
         <button
           onClick={() => { goTo(currentIndex - 1); pauseAndResume(); }}
           disabled={currentIndex === 0}
-          className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center text-white"
+          className="hidden sm:flex flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 items-center justify-center text-white"
           aria-label="Previous"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
@@ -120,7 +127,13 @@ export default function SpecialThanks() {
         <div
           ref={trackRef}
           className="flex-1 overflow-hidden cursor-grab active:cursor-grabbing"
-          style={{ padding: BLEED, boxSizing: "border-box" }}
+          style={{
+            paddingTop: BLEED,
+            paddingBottom: BLEED,
+            paddingLeft: mobilePad || BLEED,
+            paddingRight: mobilePad || BLEED,
+            boxSizing: "border-box",
+          }}
           onMouseDown={onMouseDown}
           onMouseMove={onMouseMove}
           onMouseUp={onMouseUp}
@@ -133,7 +146,7 @@ export default function SpecialThanks() {
             className="flex flex-row"
             style={{
               gap: GAP,
-              transform: `translateX(${translateX - BLEED}px)`,
+              transform: `translateX(${translateX - (mobilePad || BLEED)}px)`,
               transition: isDragging ? "none" : "transform 0.55s cubic-bezier(0.25,1,0.5,1)",
               willChange: "transform",
             }}
@@ -161,7 +174,7 @@ export default function SpecialThanks() {
         <button
           onClick={() => { goTo(currentIndex + 1); pauseAndResume(); }}
           disabled={currentIndex >= maxIndex}
-          className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center text-white"
+          className="hidden sm:flex flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 items-center justify-center text-white"
           aria-label="Next"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
