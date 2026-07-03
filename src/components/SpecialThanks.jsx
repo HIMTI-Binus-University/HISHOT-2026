@@ -2,11 +2,11 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 export default function SpecialThanks() {
   const sponsors = [
-    { id: 0, name: "Sponsor One", logo: "/sponsors/sponsor1.png" },
-    { id: 1, name: "Sponsor Two", logo: "/sponsors/sponsor2.png" },
-    { id: 2, name: "Sponsor Three", logo: "/sponsors/sponsor3.png" },
-    { id: 3, name: "Sponsor Four", logo: "/sponsors/sponsor4.png" },
-    { id: 4, name: "Sponsor Five", logo: "/sponsors/sponsor5.png" },
+    { id: 0, name: "Sponsor One", logo: "/Sponsor/IndonesiaBlockChainCenter.png" },
+    // { id: 1, name: "Sponsor Two", logo: "/sponsors/sponsor2.png" },
+    // { id: 2, name: "Sponsor Three", logo: "/sponsors/sponsor3.png" },
+    // { id: 3, name: "Sponsor Four", logo: "/sponsors/sponsor4.png" },
+    // { id: 4, name: "Sponsor Five", logo: "/sponsors/sponsor5.png" },
   ];
 
   const GAP = 15;
@@ -37,7 +37,6 @@ export default function SpecialThanks() {
       if (!trackRef.current) return;
       const vc = getVisibleCount();
       setVisibleCount(vc);
-      // On mobile, reserve 20% on each side so the single card appears ~60% width
       const hPad = isMobile() ? trackRef.current.clientWidth * 0.2 : BLEED;
       setMobilePad(hPad);
       const usable = trackRef.current.clientWidth - hPad * 2;
@@ -50,6 +49,8 @@ export default function SpecialThanks() {
 
   const totalBoxes = sponsors.length;
   const maxIndex = Math.max(0, totalBoxes - visibleCount);
+  // If all sponsors fit within the visible area, just center them — no carousel needed
+  const isCentered = totalBoxes <= visibleCount;
 
   const goTo = useCallback(
     (idx) => setCurrentIndex(Math.max(0, Math.min(idx, maxIndex))),
@@ -70,9 +71,9 @@ export default function SpecialThanks() {
   }, [next]);
 
   useEffect(() => {
-    if (!isPaused) startAutoPlay();
+    if (!isPaused && !isCentered) startAutoPlay();
     return stopAutoPlay;
-  }, [isPaused, startAutoPlay]);
+  }, [isPaused, startAutoPlay, isCentered]);
 
   const commitDrag = useCallback(() => {
     if (dragOffset < -60) next();
@@ -83,12 +84,12 @@ export default function SpecialThanks() {
     setTimeout(() => setIsPaused(false), 4000);
   }, [dragOffset, maxIndex, next]);
 
-  const onMouseDown = (e) => { setIsDragging(true); setDragStartX(e.clientX); setDragOffset(0); setIsPaused(true); stopAutoPlay(); };
+  const onMouseDown = (e) => { if (isCentered) return; setIsDragging(true); setDragStartX(e.clientX); setDragOffset(0); setIsPaused(true); stopAutoPlay(); };
   const onMouseMove = (e) => { if (!isDragging) return; setDragOffset(e.clientX - dragStartX); };
   const onMouseUp = () => { if (!isDragging) return; commitDrag(); };
-  const onTouchStart = (e) => { setIsDragging(true); setDragStartX(e.touches[0].clientX); setDragOffset(0); setIsPaused(true); stopAutoPlay(); };
+  const onTouchStart = (e) => { if (isCentered) return; setIsDragging(true); setDragStartX(e.touches[0].clientX); setDragOffset(0); setIsPaused(true); stopAutoPlay(); };
   const onTouchMove = (e) => { if (!isDragging) return; setDragOffset(e.touches[0].clientX - dragStartX); };
-  const onTouchEnd = () => commitDrag();
+  const onTouchEnd = () => { if (!isDragging) return; commitDrag(); };
 
   const pauseAndResume = () => {
     setIsPaused(true);
@@ -120,13 +121,14 @@ export default function SpecialThanks() {
           disabled={currentIndex === 0}
           className="hidden sm:flex flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 items-center justify-center text-white"
           aria-label="Previous"
+          style={{ visibility: isCentered ? "hidden" : "visible" }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
         </button>
 
         <div
           ref={trackRef}
-          className="flex-1 overflow-hidden cursor-grab active:cursor-grabbing"
+          className={`flex-1 overflow-hidden ${isCentered ? "cursor-default" : "cursor-grab active:cursor-grabbing"}`}
           style={{
             paddingTop: BLEED,
             paddingBottom: BLEED,
@@ -142,33 +144,57 @@ export default function SpecialThanks() {
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          <div
-            className="flex flex-row"
-            style={{
-              gap: GAP,
-              transform: `translateX(${translateX - (mobilePad || BLEED)}px)`,
-              transition: isDragging ? "none" : "transform 0.55s cubic-bezier(0.25,1,0.5,1)",
-              willChange: "transform",
-            }}
-          >
-            {sponsors.map((sponsor) => (
-              <div
-                key={sponsor.id}
-                className="aspect-square flex-shrink-0 bg-[rgba(195,228,232,1)] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
-                style={{
-                  width: itemWidth || 0,
-                  pointerEvents: isDragging ? "none" : "auto",
-                }}
-              >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="max-w-full max-h-full object-contain"
-                  draggable={false}
-                />
-              </div>
-            ))}
-          </div>
+          {isCentered ? (
+            // Centered static layout — no translateX, just flex center
+            <div
+              className="flex flex-row justify-center"
+              style={{ gap: GAP }}
+            >
+              {sponsors.map((sponsor) => (
+                <div
+                  key={sponsor.id}
+                  className="aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
+                  style={{ width: itemWidth || 0 }}
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="max-w-full max-h-full object-contain"
+                    draggable={false}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            // Carousel layout
+            <div
+              className="flex flex-row"
+              style={{
+                gap: GAP,
+                transform: `translateX(${translateX - (mobilePad || BLEED)}px)`,
+                transition: isDragging ? "none" : "transform 0.55s cubic-bezier(0.25,1,0.5,1)",
+                willChange: "transform",
+              }}
+            >
+              {sponsors.map((sponsor) => (
+                <div
+                  key={sponsor.id}
+                  className="aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
+                  style={{
+                    width: itemWidth || 0,
+                    pointerEvents: isDragging ? "none" : "auto",
+                  }}
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="max-w-full max-h-full object-contain"
+                    draggable={false}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <button
@@ -176,23 +202,27 @@ export default function SpecialThanks() {
           disabled={currentIndex >= maxIndex}
           className="hidden sm:flex flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 items-center justify-center text-white"
           aria-label="Next"
+          style={{ visibility: isCentered ? "hidden" : "visible" }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </button>
       </div>
 
-      <div className="flex gap-2 mt-8">
-        {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => { goTo(idx); pauseAndResume(); }}
-            aria-label={`Go to slide ${idx + 1}`}
-            className={`h-3 rounded-full transition-all duration-300 ${
-              currentIndex === idx ? "w-8 bg-[#FAD075]" : "w-3 bg-white/40 hover:bg-white/60"
-            }`}
-          />
-        ))}
-      </div>
+      {/* Hide dots when centered — nothing to navigate */}
+      {!isCentered && (
+        <div className="flex gap-2 mt-8">
+          {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => { goTo(idx); pauseAndResume(); }}
+              aria-label={`Go to slide ${idx + 1}`}
+              className={`h-3 rounded-full transition-all duration-300 ${
+                currentIndex === idx ? "w-8 bg-[#FAD075]" : "w-3 bg-white/40 hover:bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
