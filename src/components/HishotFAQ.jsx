@@ -232,7 +232,7 @@ export default function HishotFAQ() {
   return (
     <section
       id="faq"
-      className="mb-[4rem] sm:mb-[8rem] h-fit overflow-x-clip relative items-center justify-center md:px-4 pt-24 [font-family:var(--font-body)]"
+      className="mb-[4rem] sm:mb-[5rem] h-fit overflow-x-clip relative items-center justify-center md:px-4 pt-24 [font-family:var(--font-body)]"
     >
       <style>{`
         .faq-item-hshot {

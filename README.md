@@ -1,16 +1,9 @@
-# React + Vite
+# HISHOT 2026 - ORBIT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![HISHOT 2026](public/logo/LOGOHISHOT.svg)
 
-Currently, two official plugins are available:
+## About HISHOT 2026
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+HISHOT 2026 is an annual event organized by HIMTI BINUS University that focuses on **Cloud Technology and Digital Infrastructure**. With the theme “ **ORBIT: Optimizing Resource for Building Infrastructure and Technology**”, HISHOT 2026 features a series of seminars, workshops, and study tours, offering both onsite and online experiences.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This website serves as the main platform for participants to learn about the events, register, and access important information about HISHOT 2026.
