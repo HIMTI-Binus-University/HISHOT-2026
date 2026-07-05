@@ -2,8 +2,8 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 export default function SpecialThanks() {
   const sponsors = [
-    { id: 0, name: "Sponsor One", logo: "/Sponsor/IndonesiaBlockChainCenter.png" },
-    // { id: 1, name: "Sponsor Two", logo: "/sponsors/sponsor2.png" },
+    { id: 0, name: "Indonesia Block Chain Center", logo: "/Sponsor/IndonesiaBlockChainCenter.png" },
+    { id: 1, name: "Dewaweb", logo: "/Sponsor/dewaweb-square-logo-rgb.png" },
     // { id: 2, name: "Sponsor Three", logo: "/sponsors/sponsor3.png" },
     // { id: 3, name: "Sponsor Four", logo: "/sponsors/sponsor4.png" },
     // { id: 4, name: "Sponsor Five", logo: "/sponsors/sponsor5.png" },
@@ -115,20 +115,9 @@ export default function SpecialThanks() {
       </div>
 
       <div className="w-full max-w-5xl px-4 sm:px-8 flex items-center gap-2 sm:gap-3">
-
-        <button
-          onClick={() => { goTo(currentIndex - 1); pauseAndResume(); }}
-          disabled={currentIndex === 0}
-          className="hidden sm:flex flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 items-center justify-center text-white"
-          aria-label="Previous"
-          style={{ visibility: isCentered ? "hidden" : "visible" }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-        </button>
-
         <div
           ref={trackRef}
-          className={`flex-1 overflow-hidden ${isCentered ? "cursor-default" : "cursor-grab active:cursor-grabbing"}`}
+          className={`flex-1 overflow-hidden`}
           style={{
             paddingTop: BLEED,
             paddingBottom: BLEED,
@@ -144,85 +133,44 @@ export default function SpecialThanks() {
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-          {isCentered ? (
-            // Centered static layout — no translateX, just flex center
             <div
-              className="flex flex-row justify-center"
-              style={{ gap: GAP }}
+              className="flex flex-row justify-center flex-wrap  gap-4 md:gap-6 lg:gap-10"
             >
-              {sponsors.map((sponsor) => (
-                <div
-                  key={sponsor.id}
-                  className="aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
-                  style={{ width: itemWidth || 0 }}
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="max-w-full max-h-full object-contain"
-                    draggable={false}
-                  />
-                </div>
-              ))}
+              {sponsors.map((sponsor) => 
+                sponsor.name == "Dewaweb" ? (
+                  <div
+                    key={sponsor.id}
+                    className="min-w-[100px] aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
+                    style={{ width: itemWidth || 0 }}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="max-w-full max-h-full min-w-[82px] min-h-[82px] object-contain"
+                      draggable={false}
+                    />
+                  </div>
+                ) : (
+                  <div
+                    key={sponsor.id}
+                    className="min-w-[100px] aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
+                    style={{ width: itemWidth || 0 }}
+                  >
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="max-w-full max-h-full min-w-[100px] min-h-[100px] object-contain"
+                      draggable={false}
+                    />
+                  </div>
+                )
+              )}
             </div>
-          ) : (
-            // Carousel layout
-            <div
-              className="flex flex-row"
-              style={{
-                gap: GAP,
-                transform: `translateX(${translateX - (mobilePad || BLEED)}px)`,
-                transition: isDragging ? "none" : "transform 0.55s cubic-bezier(0.25,1,0.5,1)",
-                willChange: "transform",
-              }}
-            >
-              {sponsors.map((sponsor) => (
-                <div
-                  key={sponsor.id}
-                  className="aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
-                  style={{
-                    width: itemWidth || 0,
-                    pointerEvents: isDragging ? "none" : "auto",
-                  }}
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="max-w-full max-h-full object-contain"
-                    draggable={false}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          {/* ) : (
+            
+          )} */}
         </div>
-
-        <button
-          onClick={() => { goTo(currentIndex + 1); pauseAndResume(); }}
-          disabled={currentIndex >= maxIndex}
-          className="hidden sm:flex flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white/50 bg-white/10 hover:bg-white/20 disabled:opacity-20 disabled:cursor-not-allowed transition-all duration-200 items-center justify-center text-white"
-          aria-label="Next"
-          style={{ visibility: isCentered ? "hidden" : "visible" }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </button>
       </div>
-
-      {/* Hide dots when centered — nothing to navigate */}
-      {!isCentered && (
-        <div className="flex gap-2 mt-8">
-          {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => { goTo(idx); pauseAndResume(); }}
-              aria-label={`Go to slide ${idx + 1}`}
-              className={`h-3 rounded-full transition-all duration-300 ${
-                currentIndex === idx ? "w-8 bg-[#FAD075]" : "w-3 bg-white/40 hover:bg-white/60"
-              }`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   );
 }

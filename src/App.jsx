@@ -13,7 +13,6 @@ function App() {
       <Trailer />
       <Events />
       <HishotFAQ />
-      {/* Special Thanks masih di keep hidden karena belum ada arahan untuk tampilin */}
       <SpecialThanks/>
       <SecureOpportunity/>
       <Footer/>
