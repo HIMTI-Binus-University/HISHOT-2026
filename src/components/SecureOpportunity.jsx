@@ -66,7 +66,7 @@ export default function SecureOpportunity(){
                   className="p-4 bg-white rounded-2xl shadow-xl border border-gray-100"
                   style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}
                 >
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCg9eLSEK8sbCgCN0IoyN9dLx2GGQe3rauO65tRWzLAGf0aw/formResponse" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+                  <a href="https://link.himtibinus.or.id/RegistSemWork2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
                 </div>

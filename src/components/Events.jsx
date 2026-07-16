@@ -17,14 +17,15 @@ const Events = () => {
     {
       text : "More info",
       link : {
-        seminar: "https://drive.google.com/file/d/1e7zxLHxOflNAy_JNAbGm_HP-Qlh9Cyrw/view?usp=drive_link"
+        seminar: "https://drive.google.com/file/d/1e7zxLHxOflNAy_JNAbGm_HP-Qlh9Cyrw/view?usp=drive_link",
       },
       isHidden : false
     },
     {
       text : "Guidebook",
       link : {
-        seminar: "https://drive.google.com/drive/folders/15C0Xh4Q4wcd58oNyDCozNwj1GS1zcIEV"
+        seminar: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
+        workshop: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
       },
       isHidden : false
     }
@@ -232,8 +233,10 @@ const Events = () => {
                           <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-8" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
-                          {['More info', 'Guidebook'].map((text) => (
-                            <button key={text} className="hidden w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                          {InfoButton.map((item) => (
+                            item.link.workshop && (
+                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                            )
                           ))}
                         </div>
                       </div>
@@ -243,10 +246,10 @@ const Events = () => {
                     <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[55%] lg:w-[70%] mx-auto mb-[8%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md md:max-h-[300px] lg:max-h-[500px]">
-                          <img src="/QuestionCard.svg" alt="Workshop Speaker 1" className="w-full h-full object-cover scale-[1.4] translate-y-[-15px] translate-x-[5px]" />
+                          <img src="/Speaker/Edoeardo.svg" alt="Workshop Speaker 1" className="w-full h-full object-cover" />
                         </div>
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] lg:w-[85%] h-[20%] lg:h-[25%] xl:h-[20%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
-                          <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Speaker</h4>
+                          <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Edoeardo Setiawan</h4>
                           {/* <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>shh... it's a surprise</p> */}
                         </div>
                       </div>
@@ -261,10 +264,10 @@ const Events = () => {
                     </div>
                     <div className="flex justify-start gap-[15px]">
                     {InfoButton.map((item) => (
-                      !item.isHidden && (
-                        <button key={item.text} className="hidden w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{item.text}</button>
-                      )
-                    ))}
+                        item.link.workshop && (
+                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                        )
+                      ))}
                   </div>
                   </div>
                 </div>
@@ -306,8 +309,10 @@ const Events = () => {
                           <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-8" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
-                          {['More info', 'Guidebook'].map((text) => (
-                            <button key={text} className="hidden w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                          {InfoButton.map((item) => (
+                            item.link.workshop && (
+                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                            )
                           ))}
                         </div>
                       </div>
@@ -317,10 +322,10 @@ const Events = () => {
                     <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
                       <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
                         <div className="w-[55%] lg:w-[70%] mx-auto mb-[8%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md md:max-h-[300px] lg:max-h-[500px]">
-                          <img src="/QuestionCard2.svg" alt="Workshop Speaker 2" className="w-full h-full object-cover translate-y-[-10px] lg:translate-y-[-35px]" />
+                          <img src="/Speaker/DapidCandra.svg" alt="Workshop Speaker 2" className="w-full h-full object-cover scale-[1.2]" />
                         </div>
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] lg:w-[85%] h-[20%] lg:h-[25%] xl:h-[20%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
-                          <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Speaker</h4>
+                          <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Dapid Candra</h4>
                           {/* <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>shh... it's a surprise</p> */}
                         </div>
                       </div>
@@ -335,8 +340,8 @@ const Events = () => {
                     </div>
                     <div className="flex justify-start gap-[15px]">
                       {InfoButton.map((item) => (
-                        !item.isHidden && (
-                          <button key={item.text} className="hidden w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{item.text}</button>
+                        item.link.workshop && (
+                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
                         )
                       ))}
                     </div>
