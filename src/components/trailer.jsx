@@ -51,11 +51,11 @@ export default function Trailer(){
 
             <img 
             className="absolute w-[3rem] left-1" 
-            src="Star1.svg" 
+            src="/Icons/Star1.svg" 
             alt="Star" />
             <img 
             className="absolute w-[3rem] -bottom-[6rem] md:-bottom-[10rem] right-[0.2rem]" 
-            src="Star1.svg" 
+            src="/Icons/Star1.svg" 
             alt="Star" />
         </section> 
 

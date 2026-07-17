@@ -66,7 +66,21 @@ export default function SecureOpportunity(){
                   className="p-4 bg-white rounded-2xl shadow-xl border border-gray-100"
                   style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}
                 >
-                  <a href="https://link.himtibinus.or.id/RegistSemWork2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar & Workshop</a>
+                  <style>{`
+                    .nav-link {
+                      font-family: var(--font-days-one);
+                      font-size: 0.85rem;
+                      color: #1D7397;
+                      text-decoration: none;
+                      transition: opacity 0.2s;
+                      text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+                      letter-spacing: 0.01em;                      
+                    }
+                  .nav-link:hover { opacity: 0.75; }
+                  `}
+                  </style>
+                  <a href="https://link.himtibinus.or.id/RegistSemWork2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
+                  <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
                 </div>
@@ -95,16 +109,16 @@ export default function SecureOpportunity(){
         </div>
       </div>
 
-      <img className="absolute w-[10rem] left-0 -bottom-[5rem] md:w-[15rem] md:-left-[1rem] md:-bottom-[8rem] lg:w-[25rem] lg:-left-2 lg:-bottom-[13rem] z-[2]" src="Cloud3_Green.svg" alt="Cloud"/>
-      <img className="absolute w-[8rem] left-0 bottom-[2rem] md:w-[15rem] md:-left-[5rem] md:bottom-[3rem] lg:w-[25rem] lg:left-0 lg:-bottom-[2rem]" src="Cloud2_Outline.svg" alt="Cloud Outline"/>
-      <img className="absolute md:block w-[12rem] right-[-2rem] -bottom-[-9rem] lg:w-[18rem] lg:left-[9rem] lg:-bottom-[9rem] z-[3]" src="Planet4.svg" alt="Planet"/>
-      <img className="absolute hidden md:block w-[18rem] left-[8rem] -bottom-[4rem] lg:w-[28rem] lg:left-[16rem] lg:-bottom-[8rem] z-[2]" src="Cloud2_Shadow.svg" alt="Cloud Shadow"/>
-      <img className="absolute hidden md:block w-[10rem] left-[11rem] bottom-[0.5rem] lg:w-[10rem] lg:left-[22rem] lg:bottom-[1rem] z-[2]" src="TechDetail3.svg" alt="Tech"/>
-      <img className="absolute w-[18rem] -right-[10rem] -bottom-[3rem] md:w-[30rem] md:-right-[20rem] md:-bottom-[3rem] lg:w-[35rem] lg:-right-[18rem] lg:-bottom-[2rem] z-[2]" src="Cloud2_Shadow.svg" alt="Cloud Shadow"/>
-      <img className="absolute hidden md:block md:w-[10rem] md:right-0 md:-bottom-[3rem] lg:w-[15rem] lg:right-0 lg:-bottom-[3rem] z-[2]" src="Cloud1_Blue.svg" alt="Cloud"/>
-      <img className="absolute hidden md:block md:w-[10rem] md:right-[4rem] md:-bottom-[5.5rem] lg:w-[15rem] lg:right-[6rem] lg:-bottom-[7rem] z-[2]" src="Planet7.svg" alt="Planet"/>
-      <img className="absolute hidden md:block md:w-[11rem] md:right-[7rem] md:bottom-0 lg:w-[15rem] lg:right-[10rem] lg:bottom-0 z-[1]" src="TechDetail4.svg" alt="Tech"/>
-      <img className="absolute hidden md:block md:w-[11rem] md:right-[5rem] md:bottom-[1.5rem] lg:w-[15rem] lg:right-[8rem] lg:bottom-[1.5rem] z-[1]" src="TechDetail4.svg" alt="Tech"/>
+      <img className="absolute w-[10rem] left-0 -bottom-[5rem] md:w-[15rem] md:-left-[1rem] md:-bottom-[8rem] lg:w-[25rem] lg:-left-2 lg:-bottom-[13rem] z-[2]" src="/Icons/Cloud3_Green.svg" alt="Cloud"/>
+      <img className="absolute w-[8rem] left-0 bottom-[2rem] md:w-[15rem] md:-left-[5rem] md:bottom-[3rem] lg:w-[25rem] lg:left-0 lg:-bottom-[2rem]" src="/Icons/Cloud2_Outline.svg" alt="Cloud Outline"/>
+      <img className="absolute md:block w-[12rem] right-[-2rem] -bottom-[-9rem] lg:w-[18rem] lg:left-[9rem] lg:-bottom-[9rem] z-[3]" src="/Icons/Planet4.svg" alt="Planet"/>
+      <img className="absolute hidden md:block w-[18rem] left-[8rem] -bottom-[4rem] lg:w-[28rem] lg:left-[16rem] lg:-bottom-[8rem] z-[2]" src="/Icons/Cloud2_Shadow.svg" alt="Cloud Shadow"/>
+      <img className="absolute hidden md:block w-[10rem] left-[11rem] bottom-[0.5rem] lg:w-[10rem] lg:left-[22rem] lg:bottom-[1rem] z-[2]" src="/Icons/TechDetail3.svg" alt="Tech"/>
+      <img className="absolute w-[18rem] -right-[10rem] -bottom-[3rem] md:w-[30rem] md:-right-[20rem] md:-bottom-[3rem] lg:w-[35rem] lg:-right-[18rem] lg:-bottom-[2rem] z-[2]" src="/Icons/Cloud2_Shadow.svg" alt="Cloud Shadow"/>
+      <img className="absolute hidden md:block md:w-[10rem] md:right-0 md:-bottom-[3rem] lg:w-[15rem] lg:right-0 lg:-bottom-[3rem] z-[2]" src="/Icons/Cloud1_Blue.svg" alt="Cloud"/>
+      <img className="absolute hidden md:block md:w-[10rem] md:right-[4rem] md:-bottom-[5.5rem] lg:w-[15rem] lg:right-[6rem] lg:-bottom-[7rem] z-[2]" src="/Icons/Planet7.svg" alt="Planet"/>
+      <img className="absolute hidden md:block md:w-[11rem] md:right-[7rem] md:bottom-0 lg:w-[15rem] lg:right-[10rem] lg:bottom-0 z-[1]" src="/Icons/TechDetail4.svg" alt="Tech"/>
+      <img className="absolute hidden md:block md:w-[11rem] md:right-[5rem] md:bottom-[1.5rem] lg:w-[15rem] lg:right-[8rem] lg:bottom-[1.5rem] z-[1]" src="/Icons/TechDetail4.svg" alt="Tech"/>
     </section>
   )
 }

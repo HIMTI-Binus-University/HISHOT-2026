@@ -320,7 +320,7 @@ export default function HishotFAQ() {
     {/* ══════ LEFT ══════ */}
     {/* Cloud3_Shadow — kiri atas */}
     <img
-      src="/Cloud3_Shadow.png"
+      src="/Icons/Cloud3_Shadow.png"
       alt=""
       aria-hidden="true"
       className="absolute hidden md:block top-[10rem] -left-[3rem] pointer-events-none w-[25rem]"
@@ -329,7 +329,7 @@ export default function HishotFAQ() {
 
     {/* Cloud3_Blue — kiri tengah-bawah */}
     <img
-      src="/Cloud2_Blue.png"
+      src="/Icons/Cloud2_Blue.png"
       alt=""
       aria-hidden="true"
       className="absolute hidden md:block top-[19rem] -left-[2rem] pointer-events-none w-[25rem]"
@@ -338,7 +338,7 @@ export default function HishotFAQ() {
 
     {/* Moon — kiri tengah-bawah */}
     <img
-      src="/Moon.png"
+      src="/Icons/Moon.png"
       alt=""
       aria-hidden="true"
       className=" w-[8rem] absolute hidden md:block top-[18rem] left-[4rem] pointer-events-none"
@@ -346,7 +346,7 @@ export default function HishotFAQ() {
     />
 
     <img
-      src="/Star.png"
+      src="/Icons/Star.png"
       alt=""
       aria-hidden="true"
       className="tw-1 absolute top-[32%] md:top-[35%] left-[13%] md:left-[15%] w-[18px] sm:w-[22px] md:w-[26px] pointer-events-none z-[3]"
@@ -355,7 +355,7 @@ export default function HishotFAQ() {
     {/* ══════ RIGHT ══════ */}
     {/* ── Decoration: top cloud right ── */}
     <img
-      src="/Cloud2_Shadow.png"
+      src="/Icons/Cloud2_Shadow.png"
       alt=""
       aria-hidden="true"
       className=" w-[23rem] absolute hidden md:block top-[2rem] right-0 pointer-events-none"
@@ -364,7 +364,7 @@ export default function HishotFAQ() {
 
     {/* ── Decoration: bottom cloud right ── */}
     <img
-      src="/Cloud2_Yellow-2.png"
+      src="/Icons/Cloud2_Yellow-2.png"
       alt=""
       aria-hidden="true"
       className=" w-[12rem] absolute hidden md:block top-0 right-0 pointer-events-none"
@@ -372,7 +372,7 @@ export default function HishotFAQ() {
     />
 
     <img
-      src="/Star.png"
+      src="/Icons/Star.png"
       alt=""
       aria-hidden="true"
       className="tw-2 absolute top-[10%] md:top-[12%] right-[16%] md:right-[22%] w-[16px] sm:w-[20px] md:w-[22px] pointer-events-none z-[3]"
@@ -380,11 +380,11 @@ export default function HishotFAQ() {
 
     <img 
       className="hidden md:block absolute w-[3rem] left-1 -bottom-[5rem]" 
-      src="Star1.svg" 
+      src="/Icons/Star1.svg" 
       alt="Star" />
     <img 
       className="hidden md:block absolute w-[3rem] -bottom-[7rem] right-[0.2rem]" 
-      src="Star1.svg" 
+      src="/Icons/Star1.svg" 
       alt="Star" />
 
       {/* ══════════ FAQ CARD ══════════ */}
@@ -403,7 +403,7 @@ export default function HishotFAQ() {
             className="faq-card bg-[#B2D9E7] border-2 rounded-[32px] px-[2.4rem] pt-[2.2rem] pb-[4rem] shadow-[0_4px_4px_rgba(0,0,0,0.25)] h-[650px] sm:h-[500px] md:h-[490px] lg:h-[550px] relative"
           >
             <img
-            src="/Beurt_Float.png"
+            src="/Icons/Beurt_Float.png"
             alt="HiShot mascot"
             className=" w-[10rem] absolute hidden md:block top-[15rem] md:-right-[6rem] lg:w-[15rem] lg:-right-[10rem] pointer-events-none -z-10"
             // className="absolute right-[2%] sm:right-[8%] md:right-[18%] bottom-[1%] md:bottom-[3%] w-[180px] sm:w-[240px] md:w-[clamp(330px,47vw,130px)] z-[5] pointer-events-none select-none"

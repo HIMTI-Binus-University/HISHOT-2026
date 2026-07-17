@@ -290,7 +290,7 @@ export default function HiShotHero() {
             
             <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
               <img
-                src="/logo-title.jpeg"
+                src="/Icons/logo-title.jpeg"
                 alt="HiShot logo"
                 style={{
                   height: "38px", width: "auto", objectFit: "contain",
@@ -329,7 +329,7 @@ export default function HiShotHero() {
               </button>
               {regOpen && (
                 <div className="reg-dropdown">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCg9eLSEK8sbCgCN0IoyN9dLx2GGQe3rauO65tRWzLAGf0aw/formResponse" target="_blank">Seminar</a>
+                  <a href="https://link.himtibinus.or.id/RegistSemWork2026" target="_blank">Seminar</a>
                   <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target="_blank">Workshop</a>
                   <a href="#">Local Study Tour</a>
                   <a href="#">Global Study Tour</a>
@@ -357,7 +357,7 @@ export default function HiShotHero() {
             ))}
             <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
               <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCg9eLSEK8sbCgCN0IoyN9dLx2GGQe3rauO65tRWzLAGf0aw/formResponse" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
+              <a href="https://link.himtibinus.or.id/RegistSemWork2026" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
               <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
@@ -375,53 +375,53 @@ export default function HiShotHero() {
       >
 
         {/* ── Sparkles & Circles ── */}
-        <img src="/Star.png" alt="" aria-hidden="true"
+        <img src="/Icons/Star.png" alt="" aria-hidden="true"
           style={{ position:"absolute", top:"30%", left:"18%", width:28, height:28, zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/TechCircleHollow.png" alt="" aria-hidden="true"
+        <img src="/Icons/TechCircleHollow.png" alt="" aria-hidden="true"
           className="sparkle-hide-xs"
           style={{position:"absolute", top:"22%", left:"20%", width:20, height:20, opacity:0.7, zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/TechCircleFilled.png" alt="" aria-hidden="true"
+        <img src="/Icons/TechCircleFilled.png" alt="" aria-hidden="true"
           style={{ position:"absolute", top:"20%", left:"15%", width:10, height:10, opacity:0.9, zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/Star.png" alt="" aria-hidden="true"
+        <img src="/Icons/Star.png" alt="" aria-hidden="true"
           style={{ position:"absolute", top:"20%", right:"20%", width:32, height:32, zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/TechCircleFilled-1.png" alt="" aria-hidden="true"
+        <img src="/Icons/TechCircleFilled-1.png" alt="" aria-hidden="true"
           className="sparkle-hide-xs"
           style={{ position:"absolute", top:"30%", right:"18%", width:16, height:16, zIndex:3, pointerEvents:"none" }}
         />
-        <img src="/TechCircleHollow.png" alt="" aria-hidden="true"
+        <img src="/Icons/TechCircleHollow.png" alt="" aria-hidden="true"
           style={{ position:"absolute", top:"19%", right:"15%", width:10, height:10, opacity:0.85, zIndex:3, pointerEvents:"none" }}
         />
 
         {/* Main element */}
-        <img src="/Cloud2_Shadow.png" alt="" aria-hidden="true"
+        <img src="/Icons/Cloud2_Shadow.png" alt="" aria-hidden="true"
           className="absolute w-[8rem] -right-[3rem] bottom-[4rem] sm:w-[12rem] sm:-right-[4rem] sm:bottom-[7rem] md:w-[15rem] md:-right-[5rem] md:bottom-[8rem] lg:w-[18rem] lg:-right-[9rem] lg:bottom-[8rem]"
         />
-        <img src="/Planet8.png" alt="" aria-hidden="true"
+        <img src="/Icons/Planet8.png" alt="" aria-hidden="true"
           className="absolute w-[4rem] bottom-[4.5rem] -right-[2rem] sm:w-[6rem] sm:bottom-[7rem] md:-right-[2rem] md:bottom-[10rem] lg:w-[7rem] lg:bottom-[9rem]"
         />
 
         {/* Left Element */}
-        <img src="/Cloud3_Shadow (3).svg" alt="" aria-hidden="true" className="absolute w-[7rem] bottom-[4rem] -left-[2rem] sm:w-[14rem] sm:bottom-[8rem] sm:-left-[3.5rem] md:-left-[5rem] md:w-[15rem] md:bottom-[8rem] lg:w-[20rem] lg:bottom-[6rem] lg:-left-[5.5rem]"
+        <img src="/Icons/Cloud3_Shadow (3).svg" alt="" aria-hidden="true" className="absolute w-[7rem] bottom-[4rem] -left-[2rem] sm:w-[14rem] sm:bottom-[8rem] sm:-left-[3.5rem] md:-left-[5rem] md:w-[15rem] md:bottom-[8rem] lg:w-[20rem] lg:bottom-[6rem] lg:-left-[5.5rem]"
         />
-        <img src="/Cloud3_Blue.png" alt="" aria-hidden="true"  className="absolute w-[6rem] -left-[1rem] bottom-[2rem]  sm:w-[12rem] sm:bottom-[4rem] md:left-0 md:w-[10rem] md:bottom-[6rem] lg:w-[15rem] lg:bottom-[4rem] lg:-left-[1rem]"
+        <img src="/Icons/Cloud3_Blue.png" alt="" aria-hidden="true"  className="absolute w-[6rem] -left-[1rem] bottom-[2rem]  sm:w-[12rem] sm:bottom-[4rem] md:left-0 md:w-[10rem] md:bottom-[6rem] lg:w-[15rem] lg:bottom-[4rem] lg:-left-[1rem]"
         />
-        <img src="/CloudTech (1).svg" alt="" aria-hidden="true"
+        <img src="/Icons/CloudTech (1).svg" alt="" aria-hidden="true"
           className="absolute w-[10rem] left-0 bottom-1 sm:w-[20rem] sm:bottom-0  md:left-0 md:w-[20rem] md:bottom-[0.5rem] lg:w-[23rem] lg:bottom-0 lg:left-0"
         />
-        <img src="/TechDetailRight2.svg" alt="" aria-hidden="true" className="hidden absolute sm:block w-[15rem] z-0 right-[5rem] sm:w-[15rem] sm:bottom-0 md:w-[14rem] md:right-[6rem] lg:right-[10rem] lg:w-[15rem]"
+        <img src="/Icons/TechDetailRight2.svg" alt="" aria-hidden="true" className="hidden absolute sm:block w-[15rem] z-0 right-[5rem] sm:w-[15rem] sm:bottom-0 md:w-[14rem] md:right-[6rem] lg:right-[10rem] lg:w-[15rem]"
         />
-        <img src="/Cloud2_Green.png" alt="" aria-hidden="true"
+        <img src="/Icons/Cloud2_Green.png" alt="" aria-hidden="true"
           className="absolute w-[10rem] -right-[2.5rem] bottom-[1.5rem] sm:w-[13rem] sm:bottom-[4rem] sm:-right-[1rem] md:-right-[3rem] md:w-[16rem] md:bottom-[4rem] lg:w-[18rem] lg:bottom-[3rem] lg:-right-[1rem] z-[1]"
         />
-        <img src="/Cloud1_Blue.png" alt="" aria-hidden="true" className="absolute w-[8rem] -right-[2.5rem] bottom-0 sm:w-[12rem] sm:bottom-[0.5rem] md:-right-[2rem] lg:w-[15rem] lg:-right-0 lg:bottom-0 z-[2]"
+        <img src="/Icons/Cloud1_Blue.png" alt="" aria-hidden="true" className="absolute w-[8rem] -right-[2.5rem] bottom-0 sm:w-[12rem] sm:bottom-[0.5rem] md:-right-[2rem] lg:w-[15rem] lg:-right-0 lg:bottom-0 z-[2]"
         />
 
         {/* ── MASCOT ── */}
-        <img src="/mascot.jpeg" alt="HiShot mascot"
+        <img src="/Icons/mascot.jpeg" alt="HiShot mascot"
           className="absolute w-[7rem] -right-[1rem] bottom-[1rem] sm:w-[10rem] sm:bottom-[1.5rem] sm:right-[1.5rem] lg:w-[13rem]"
           style={{
             zIndex: 10,
@@ -443,7 +443,7 @@ export default function HiShotHero() {
           }}
         >
           <img
-            src="/logo-title.jpeg"
+            src="/Icons/logo-title.jpeg"
             alt="HiShot 2026:ORBIT"
             className="hero-logo max-w-[15rem] ml-3 sm:max-w-[30rem] md:max-w-[60rem]"
             style={{
