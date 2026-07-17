@@ -100,12 +100,12 @@ For more information, visit our website or follow our social media channels.
   <a href="https://instagram.com/hishot_2026">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="30" height="30" align="center" style="filter: invert(1);" />
   </a>
-  <span>  : hishot_2026</span>
+  <span> : hishot_2026</span>
 </p>
 
 <p>
   <a href="https://hishot.himtibinus.or.id/">
     <img src="public/logo/LOGOHISHOT.svg" width="30" height="30" align="center" />
   </a>
-  <span>  : Hishot 2026</span>
+  <span> : Hishot 2026</span>
 </p>
