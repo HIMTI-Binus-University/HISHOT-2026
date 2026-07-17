@@ -58,5 +58,5 @@ export default function Trailer(){
             src="/Icons/Star1.svg" 
             alt="Star" />
         </section> 
-
+        
     ); }
