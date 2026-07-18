@@ -23,7 +23,7 @@ const Footer = () => {
 
                 <div className="mt-8 md:mt-0">
                     <img
-                        src="/logo-title.jpeg"
+                        src="/Icons/logo-title.jpeg"
                         alt="HISHOT 2026"
                         className="h-20 md:h-28 object-contain transition-transform duration-200 
                         ml-5 ease-in-out hover:scale-110"

@@ -140,7 +140,7 @@ export default function SpecialThanks() {
                 sponsor.name == "Dewaweb" ? (
                   <div
                     key={sponsor.id}
-                    className="min-w-[100px] aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
+                    className="min-w-[100px] max-w-[300px] max-h-[300px] aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
                     style={{ width: itemWidth || 0 }}
                   >
                     <img
@@ -153,7 +153,7 @@ export default function SpecialThanks() {
                 ) : (
                   <div
                     key={sponsor.id}
-                    className="min-w-[100px] aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
+                    className="min-w-[100px] max-w-[300px] max-h-[300px] aspect-square flex-shrink-0 bg-[#ffffff] rounded-[20px] sm:rounded-[30px] border-white border-[1px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] hover:scale-95 transition-transform duration-300 flex items-center justify-center p-4 sm:p-6"
                     style={{ width: itemWidth || 0 }}
                   >
                     <img
