@@ -18,6 +18,7 @@ const Events = () => {
       text : "More info",
       link : {
         seminar: "https://drive.google.com/file/d/1e7zxLHxOflNAy_JNAbGm_HP-Qlh9Cyrw/view?usp=drive_link",
+        workshop1: "https://link.himtibinus.or.id/PosterRegisWorkshop12026",
       },
       isHidden : false
     },
@@ -25,7 +26,8 @@ const Events = () => {
       text : "Guidebook",
       link : {
         seminar: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
-        workshop: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
+        workshop1: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
+        workshop2: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
       },
       isHidden : false
     }
@@ -234,8 +236,8 @@ const Events = () => {
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {InfoButton.map((item) => (
-                            item.link.workshop && (
-                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                            item.link.workshop1 && (
+                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop1, "_blank")}>{item.text}</button>
                             )
                           ))}
                         </div>
@@ -264,8 +266,8 @@ const Events = () => {
                     </div>
                     <div className="flex justify-start gap-[15px]">
                     {InfoButton.map((item) => (
-                        item.link.workshop && (
-                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                        item.link.workshop1 && (
+                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop1, "_blank")}>{item.text}</button>
                         )
                       ))}
                   </div>
@@ -310,8 +312,8 @@ const Events = () => {
                         </div>
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {InfoButton.map((item) => (
-                            item.link.workshop && (
-                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                            item.link.workshop2 && (
+                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop2, "_blank")}>{item.text}</button>
                             )
                           ))}
                         </div>
@@ -340,8 +342,8 @@ const Events = () => {
                     </div>
                     <div className="flex justify-start gap-[15px]">
                       {InfoButton.map((item) => (
-                        item.link.workshop && (
-                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop, "_blank")}>{item.text}</button>
+                        item.link.workshop2 && (
+                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop2, "_blank")}>{item.text}</button>
                         )
                       ))}
                     </div>
