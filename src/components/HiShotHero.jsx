@@ -330,7 +330,8 @@ export default function HiShotHero() {
               {regOpen && (
                 <div className="reg-dropdown">
                   <a href="https://link.himtibinus.or.id/RegistSemWork2026" target="_blank">Seminar</a>
-                  <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target="_blank">Workshop</a>
+                  <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target="_blank">Workshop 1</a>
+                  <a href="https://link.himtibinus.or.id/WS2Regist" target="_blank">Workshop 2</a>
                   <a href="#">Local Study Tour</a>
                   <a href="#">Global Study Tour</a>
                 </div>
@@ -358,7 +359,8 @@ export default function HiShotHero() {
             <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: 4 }}>
               <span style={{ fontFamily: "'Poppins',sans-serif", fontWeight: 700, fontSize: "0.8rem", color: "#1aaa8c" }}>Register Now</span>
               <a href="https://link.himtibinus.or.id/RegistSemWork2026" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
-              <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop</a>
+              <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop 1</a>
+              <a href="https://link.himtibinus.or.id/WS2Regist" target="_blank" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop 2</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
               <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
             </div>

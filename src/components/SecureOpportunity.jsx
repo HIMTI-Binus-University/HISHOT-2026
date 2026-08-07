@@ -80,7 +80,8 @@ export default function SecureOpportunity(){
                   `}
                   </style>
                   <a href="https://link.himtibinus.or.id/RegistSemWork2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Seminar</a>
-                  <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop</a>
+                  <a href="https://link.himtibinus.or.id/RegistWorkShop2026" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop 1</a>
+                  <a href="https://link.himtibinus.or.id/WS2Regist" target='_blank' className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Workshop 2</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Local Study Tour</a>
                   <a href="#" className="nav-link" style={{ fontSize: "0.9rem", paddingLeft: "0.75rem" }}>Global Study Tour</a>
                 </div>
