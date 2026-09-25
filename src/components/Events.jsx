@@ -20,6 +20,7 @@ const Events = () => {
         seminar: "https://drive.google.com/file/d/1e7zxLHxOflNAy_JNAbGm_HP-Qlh9Cyrw/view?usp=drive_link",
         workshop1: "https://link.himtibinus.or.id/PosterRegisWorkshop12026",
         workshop2: "https://drive.google.com/file/d/1cueU9wp0LT8GnGq_njfrn6I-rq-_0ZAJ/view?usp=sharing",
+        STDN: "https://drive.google.com/drive/folders/1klvjD5_9RPXqyQ5PDwaEwAj71UWAktdE?usp=sharing",
       },
       isHidden: false
     },
