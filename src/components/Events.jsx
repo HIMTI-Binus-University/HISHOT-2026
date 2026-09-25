@@ -15,22 +15,23 @@ const Events = () => {
 
   const InfoButton = [
     {
-      text : "More info",
-      link : {
+      text: "More info",
+      link: {
         seminar: "https://drive.google.com/file/d/1e7zxLHxOflNAy_JNAbGm_HP-Qlh9Cyrw/view?usp=drive_link",
         workshop1: "https://link.himtibinus.or.id/PosterRegisWorkshop12026",
-        workshop2: "https://drive.google.com/file/d/1cueU9wp0LT8GnGq_njfrn6I-rq-_0ZAJ/view?usp=sharing"
+        workshop2: "https://drive.google.com/file/d/1cueU9wp0LT8GnGq_njfrn6I-rq-_0ZAJ/view?usp=sharing",
+        STDN: "https://drive.google.com/drive/folders/1klvjD5_9RPXqyQ5PDwaEwAj71UWAktdE?usp=sharing",
       },
-      isHidden : false
+      isHidden: false
     },
     {
-      text : "Guidebook",
-      link : {
+      text: "Guidebook",
+      link: {
         seminar: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
         workshop1: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
         workshop2: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
       },
-      isHidden : false
+      isHidden: false
     }
   ]
 
@@ -38,16 +39,16 @@ const Events = () => {
     <section id='event' className="relative overflow-x-clip w-full max-w-full isolate h-fit">
       <div className="relative z-10 mt-16 min-fit p-0 md:p-10 flex justify-center items-start overflow-x-hidden font-sans flex-col">
         {/* ================= MAIN CONTAINER ================= */}
-        <div 
+        <div
           className={`relative w-full max-w-[1700px] bg-[#B2D9E7] border-[2px] border-[#F9FEFE] border-solid rounded-[30px] xl:rounded-[50px] px-4 pr-[20px] md:px-10 md:pr-12 xl:px-14 pt-[70px] xl:pt-[110px] pb-10 xl:pb-16 mt-[70px] xl:mt-[80px] md:mx-auto flex flex-col shadow-[0px_4px_4px_0px_#00000040] mb-2 h-fit`}
           style={{ '--glow': currentTheme.glow }}
         >
           {/* Logo Event yang diatas */}
           <div className="absolute -top-[35px] xl:-top-[75px] left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
-            <img 
-              className="absolute w-[18rem] -top-[1.5rem] sm:w-[22rem] xl:w-[42rem] max-w-none sm:-top-[1.8rem] xl:-top-[3.4rem] pointer-events-none" 
-              src="/Icons/EventTechDetails.svg" 
-              alt="Tech Details" 
+            <img
+              className="absolute w-[18rem] -top-[1.5rem] sm:w-[22rem] xl:w-[42rem] max-w-none sm:-top-[1.8rem] xl:-top-[3.4rem] pointer-events-none"
+              src="/Icons/EventTechDetails.svg"
+              alt="Tech Details"
             />
             <div className="flex items-center justify-center w-[160px] h-[60px] xl:w-[300px] xl:h-[120px] bg-[#158080E5] border-[3px] xl:border-[4px] border-[#F9FEFE] border-solid rounded-[20px] xl:rounded-[40px] shadow-lg relative">
               <span className="text-[#FFFFFF] text-[32px] xl:text-[56px] leading-none [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]" style={{ fontFamily: "'Days One', sans-serif" }}>
@@ -63,7 +64,7 @@ const Events = () => {
               { id: 'local', label: 'Local Study Tour', img: '/Icons/Local Study Tour.png', col: '#18A18CE5' },
               { id: 'global', label: 'Global Study Tour', img: '/Icons/Global Study Tour.png', col: '#CC61A5E5' }
             ].map((tab) => (
-              <div 
+              <div
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex flex-col items-center justify-center w-[130px] h-[130px] md:w-[170px] md:h-[170px] lg:w-[210px] lg:h-[210px] xl:w-[240px] xl:h-[240px] rounded-[20px] xl:rounded-[40px] border-[2px] xl:border-[4px] border-[#F9FEFE] border-solid gap-[2px] xl:gap-[5px] transition-all duration-300 cursor-pointer pt-1 xl:pt-2 hover:scale-105 active:scale-95
@@ -71,11 +72,11 @@ const Events = () => {
                 style={{ backgroundColor: tab.col }}
               >
                 <img src={tab.img} alt={tab.label} className="w-[50px] h-[50px] md:w-[65px] md:h-[65px] lg:w-[75px] lg:h-[75px] xl:w-[85px] xl:h-[85px] object-contain mb-1" />
-                <span 
-                  className="text-[#F9FEFE] text-[14px] md:text-[20px] lg:text-[26px] xl:text-[36px] font-normal leading-tight xl:leading-none tracking-normal text-center drop-shadow-[0px_2px_2px_rgba(0,0,0,0.25)] xl:drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] px-2" 
+                <span
+                  className="text-[#F9FEFE] text-[14px] md:text-[20px] lg:text-[26px] xl:text-[36px] font-normal leading-tight xl:leading-none tracking-normal text-center drop-shadow-[0px_2px_2px_rgba(0,0,0,0.25)] xl:drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] px-2"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  {tab.label === 'Local Study Tour' ? <>Local<br/>Study Tour</> : tab.label === 'Global Study Tour' ? <>Global<br/>Study Tour</> : tab.label}
+                  {tab.label === 'Local Study Tour' ? <>Local<br />Study Tour</> : tab.label === 'Global Study Tour' ? <>Global<br />Study Tour</> : tab.label}
                 </span>
               </div>
             ))}
@@ -86,22 +87,22 @@ const Events = () => {
 
           {/* ======================= CONTENT AREA ======================= */}
           <div className="w-full animate-[fadeIn_0.5s_ease-in-out]">
-            
+
             {/* ======================= SEMINAR ======================= */}
             {activeTab === 'seminar' && (
               <div className="w-full max-w-full flex flex-col px-1 md:px-6">
-                
+
                 {/* Bagian Judulnya */}
                 <div className="w-full max-w-[1525px] mx-auto mb-4 xl:mb-6 px-2 xl:px-4 overflow-visible">
-                  <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
-                      style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
+                  <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
+                    style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
                     Within the Clouds: AI-Driven Interaction
                   </h2>
                 </div>
 
                 {/* Bagian Details */}
                 <div className="mb-2 lg:mb-0 text-[#0F4A6D]">
-                 <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                  <div className="flex items-center gap-2 xl:gap-4 mb-1">
                     <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                     <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                   </div>
@@ -109,10 +110,10 @@ const Events = () => {
                     Explore the intersection of Artificial Intelligence, cloud computing, and digital entrepreneurship. Through engaging discussions and interactive sessions, participants will gain insights into technologies shaping the future.
                   </p>
                 </div>
-                
+
                 {/* Split Content: Left (Details, Timeline, Location) | Right (Speakers) */}
                 <div className="flex flex-col lg:flex-row justify-between w-full max-w-[1525px] mx-auto px-2 text-[#0F4A6D] min-w-0 items-start gap-4">
-                
+
                   {/* Left Column */}
                   <div className="flex flex-col flex-1 w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
 
@@ -128,7 +129,7 @@ const Events = () => {
                         <p className="text-[14px] md:text-[18px] xl:text-[24px] font-normal leading-[1.4] tracking-normal"><span className="font-bold">Second Session:</span> From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
                       </div>
                     </div>
-                    
+
                     {/* Location di Desktop */}
                     <div className="hidden lg:flex flex-col flex-1 gap-2 w-full mt-10 xl:mt-12 text-[#0F4A6D]">
                       <div className="flex w-full items-center gap-2 xl:gap-4 mb-1">
@@ -138,7 +139,7 @@ const Events = () => {
                       <div className="flex gap-[15px] xl:gap-[20px] mt-2 xl:mt-4">
                         {InfoButton.map((item) => (
                           !item.isHidden && (
-                            <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.seminar, "_blank")}>{item.text}</button>
+                            <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.seminar, "_blank")}>{item.text}</button>
                           )
                         ))}
                       </div>
@@ -189,7 +190,7 @@ const Events = () => {
                   <div className="flex justify-start gap-[15px]">
                     {InfoButton.map((item) => (
                       !item.isHidden && (
-                        <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.seminar, "_blank")}>{item.text}</button>
+                        <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.seminar, "_blank")}>{item.text}</button>
                       )
                     ))}
                   </div>
@@ -201,23 +202,23 @@ const Events = () => {
             {/* ======================= WORKSHOP ======================= */}
             {activeTab === 'workshop' && (
               <div className="w-full flex flex-col">
-                
+
                 {/* Bagian pertama Workshop */}
                 <div className="w-full flex flex-col px-1 md:px-6">
-                  
+
                   {/* Bagian Judul */}
                   <div className="w-full max-w-[1525px] mx-auto px-2 xl:px-4 mb-4 xl:mb-6 overflow-visible">
-                    <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
-                        style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
+                    <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
+                      style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
                       Defending the Sky: AI-Driven Cloud Security
                     </h2>
                   </div>
-                  
+
                   <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-0 md:gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
-                    
+
                     {/* Left Column */}
                     <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
-                      
+
                       {/* Bagian Details */}
                       <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 xl:gap-4 mb-1">
@@ -238,7 +239,7 @@ const Events = () => {
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {InfoButton.map((item) => (
                             item.link.workshop1 && (
-                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop1, "_blank")}>{item.text}</button>
+                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.workshop1, "_blank")}>{item.text}</button>
                             )
                           ))}
                         </div>
@@ -266,12 +267,12 @@ const Events = () => {
                       <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-6" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Online Platform (via Zoom)</h3>
                     </div>
                     <div className="flex justify-start gap-[15px]">
-                    {InfoButton.map((item) => (
+                      {InfoButton.map((item) => (
                         item.link.workshop1 && (
-                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop1, "_blank")}>{item.text}</button>
+                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.workshop1, "_blank")}>{item.text}</button>
                         )
                       ))}
-                  </div>
+                    </div>
                   </div>
                 </div>
 
@@ -280,20 +281,20 @@ const Events = () => {
 
                 {/* Bagian kedua Workshop */}
                 <div className="w-full flex flex-col px-1 md:px-6">
-                  
+
                   {/* Bagian Judul */}
                   <div className="w-full max-w-[1525px] mx-auto mb-4 lg:mb-6 px-2 xl:px-4 overflow-visible">
-                    <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[48px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
-                        style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
+                    <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[48px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
+                      style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
                       Modern AI Deployment: Build & Deploy ML Models
                     </h2>
                   </div>
-                  
+
                   <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
-                    
+
                     {/* Left Column */}
                     <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
-                      
+
                       {/* Bagian Details */}
                       <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
                         <div className="flex items-center gap-2 xl:gap-4 mb-1">
@@ -314,7 +315,7 @@ const Events = () => {
                         <div className="flex gap-[15px] xl:gap-[20px] mt-4 xl:mt-4">
                           {InfoButton.map((item) => (
                             item.link.workshop2 && (
-                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop2, "_blank")}>{item.text}</button>
+                              <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.workshop2, "_blank")}>{item.text}</button>
                             )
                           ))}
                         </div>
@@ -329,7 +330,6 @@ const Events = () => {
                         </div>
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] lg:w-[85%] h-[20%] lg:h-[25%] xl:h-[20%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
                           <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Dapid Candra</h4>
-                          {/* <p className="text-white text-[9px] sm:text-[13px] md:text-[14px] lg:text-[14px] xl:text-[22px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>shh... it's a surprise</p> */}
                         </div>
                       </div>
                     </div>
@@ -344,7 +344,7 @@ const Events = () => {
                     <div className="flex justify-start gap-[15px]">
                       {InfoButton.map((item) => (
                         item.link.workshop2 && (
-                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={()=>window.open(item.link.workshop2, "_blank")}>{item.text}</button>
+                          <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.workshop2, "_blank")}>{item.text}</button>
                         )
                       ))}
                     </div>
@@ -357,85 +357,77 @@ const Events = () => {
             {/* ======================= LOCAL STUDY TOUR ======================= */}
             {activeTab === 'local' && (
               <div className="w-full flex flex-col px-1 md:px-6">
-                <div className="w-full max-w-[1525px] mx-auto mb-6 xl:mb-10 px-0 xl:px-4 overflow-visible">
-                  <h2 className="text-[#FFFFFF] text-[32px] xl:text-[48px] text-center font-normal leading-tight xl:leading-none tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
-                      style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
-                    To be Announced
+                <div className="w-full max-w-[1525px] mx-auto px-2 xl:px-4 mb-4 xl:mb-6 overflow-visible">
+                  <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
+                    style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
+                    Above the Clouds: Cloud Technology in Enterprise Practice
                   </h2>
                 </div>
-                
-                {false && (
+
+                {true && (
                   <div className="w-full flex flex-col">
-                    <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
-                      
-                      {/* Left Column */}
-                      <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
-                        {/* Template details Local Study Tour */}
+                    <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-0 md:gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+                      <div className="flex flex-col flex-1 w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
+
+                        {/* Details */}
                         <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
                           <div className="flex items-center gap-2 xl:gap-4 mb-1">
                             <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                             <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
                           </div>
-                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily:"var(--font-body)" }}>
-                            TBA.
+                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+                            Participants will gain insight into the latest cloud computing technologies and their implementation in industry, cloud-based infrastructure management, and the role of the cloud in modern application development.
+
+                            Participants will also gain practical insights into best practices in the technology industry, such as scalability, reliability, security, and the use of cloud services in software development and AI/ML-based systems.
+
                           </p>
                         </div>
 
-                        <div className="relative pl-[28px] md:pl-[38px] xl:pl-[59px] flex flex-col gap-4 xl:gap-6 py-1 w-full text-[#0F4A6D]" style={{ fontFamily: "var(--font-body)" }}>
-                          <img src="/Icons/TechDetail4.png" alt="Timeline" className="absolute left-[5px] md:left-[10px] xl:left-[15px] top-[5px] xl:top-[10px] w-[15px] md:w-[20px] xl:w-[32.5px] h-[55px] md:h-[70px] xl:h-[108px] object-contain" />
-                          <p className="text-[14px] md:text-[16px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">First Session: Rising Through Interactions for The Future</p>
-                          <p className="text-[14px] md:text-[16px] xl:text-[24px] font-normal leading-[1.4] tracking-normal">Second Session: From Cloud to Crowd: Creating Technopreneurs of Tomorrow</p>
-                        </div>
-
-                        <div className="hidden lg:flex flex-col w-full mt-10 xl:mt-12 mb-8 text-[#0F4A6D]">
-                          <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                        {/* Location di Desktop */}
+                        <div className="hidden lg:flex flex-col flex-1 gap-2 w-full mt-10 xl:mt-12 text-[#0F4A6D]">
+                          <div className="flex w-full items-center gap-2 xl:gap-4 mb-1">
                             <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                            <h3 className="text-[24px] xl:text-[36px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: To be Announced</h3>
+                            <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Sinarmas MSIG Tower, Lantai 16</h3>
                           </div>
-                          <div className="flex gap-[15px] xl:gap-[20px] pl-[28px] md:pl-[38px] xl:pl-[59px] mt-2 xl:mt-4">
-                            {['More info', 'Guidebook'].map((text) => (
-                              <button key={text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                          <div className="flex gap-[15px] xl:gap-[20px] mt-2 xl:mt-4">
+                            {InfoButton.map((item) => (
+                              item.link.STDN && (
+                                <button key={item.text} className="w-[150px] xl:w-[209px] h-[50px] xl:h-[71px] rounded-[30px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-solid border-[#F9FEFE] shadow-lg text-white text-[18px] xl:text-[24px] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.STDN, "_blank")}>{item.text}</button>
+                              )
                             ))}
                           </div>
                         </div>
                       </div>
-                      
-                      {/* Right Column */}
-                      <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-10 xl:pt-12 w-full lg:w-1/2 min-w-0">
-                        <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
-                          <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                            <img src="/Icons/QuestionCard.svg" alt="Place" className="w-full h-full object-cover" />
-                          </div>
-                          <div className="absolute bottom-0 left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-1 md:px-2 xl:px-4 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Surprise Place</h4>
-                            <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>it's a surprise</p>
-                          </div>
-                        </div>
 
-                        <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
-                          <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                            <img src="/Icons/QuestionCard.svg" alt="Speaker" className="w-full h-full object-cover" />
+                      {/* Right Column */}
+                      <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
+                        <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
+                          <div className="w-[55%] lg:w-[70%] mx-auto mb-[8%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md md:max-h-[300px] lg:max-h-[500px]">
+                            <img src="/Speaker/MSIGTower.jpeg" alt="Name of Company" className="w-full h-full object-cover" />
                           </div>
-                          <div className="absolute bottom-0 left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-1 md:px-2 xl:px-4 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[10px] md:text-[12px] lg:text-[14px] xl:text-[36px] font-normal leading-[1.1] tracking-[0.12em] text-center mb-1 [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>Speaker Speaker</h4>
-                            <p className="text-white text-[7px] md:text-[8px] lg:text-[10px] xl:text-[24px] font-normal leading-[1.1] tracking-[0.12em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>it's a surprise</p>
+                          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] lg:w-[85%] h-[20%] lg:h-[25%] xl:h-[20%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
+                            <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Amazon Web Services</h4>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex flex-col lg:hidden w-full mt-10 px-2 text-[#0F4A6D]">
+                    {/* Lokasi di Mobile */}
+                    <div className="flex flex-col lg:hidden w-full mt-14 px-2 text-[#0F4A6D]">
                       <div className="flex items-center gap-2 md:gap-4 mb-2">
                         <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] shrink-0 object-contain" />
-                        <h3 className="text-[14px] sm:text-[20px] md:text-[28px] leading-[1.4] whitespace-nowrap" style={{ fontFamily: "'Days One', sans-serif" }}>Location: TBA</h3>
+                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Sinarmas MSIG Tower, Lantai 16</h3>
                       </div>
-                      <div className="flex justify-start gap-[15px] pl-[28px] md:pl-[38px]">
-                        {['More info', 'Guidebook'].map((text) => (
-                          <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] md:text-[14px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
+                      <div className="flex justify-start gap-[15px]">
+                        {InfoButton.map((item) => (
+                          item.link.STDN && (
+                            <button key={item.text} className="w-[150px] sm:w-[180px] h-fit rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[16px] py-[1px] sm:py-[2px] sm:text-[18px] transition-all duration-200 active:scale-95 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }} onClick={() => window.open(item.link.STDN, "_blank")}>{item.text}</button>
+                          )
                         ))}
                       </div>
                     </div>
                   </div>
+
                 )}
               </div>
             )}
@@ -443,20 +435,20 @@ const Events = () => {
             {/* ======================= GLOBAL STUDY TOUR ======================= */}
             {activeTab === 'global' && (
               <div className="w-full flex flex-col gap-14 xl:gap-20 px-1 md:px-6">
-                
+
                 {/* Bagian pertama Global */}
                 <div className="w-full flex flex-col">
                   <div className="w-full max-w-[1525px] mx-auto mb-6 xl:mb-10 px-0 xl:px-4 overflow-visible">
-                    <h2 className="text-[#FFFFFF] text-center text-[32px] xl:text-[48px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]" 
-                        style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
+                    <h2 className="text-[#FFFFFF] text-center text-[32px] xl:text-[48px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
+                      style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
                       To be Announced
                     </h2>
                   </div>
-                  
+
                   {false && (
                     <div className="w-full flex flex-col">
                       <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
-                        
+
                         {/* Left Column */}
                         <div className="flex flex-col w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
                           <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
@@ -480,7 +472,7 @@ const Events = () => {
                               ))}
                             </div>
                           </div>
-                        </div> 
+                        </div>
 
                         {/* Right Column */}
                         <div className="flex flex-row justify-center lg:justify-end items-start gap-[15px] xl:gap-[30px] pt-0 lg:pt-10 xl:pt-12 w-full lg:w-1/2 min-w-0">
@@ -516,7 +508,7 @@ const Events = () => {
                             <button key={text} className="w-[100px] md:w-[140px] h-[30px] md:h-[45px] rounded-[15px] md:rounded-[25px] border-[2px] border-[#F9FEFE] shadow-sm text-white text-[10px] md:text-[14px] transition-all duration-200 hover:scale-105 cursor-pointer" style={{ fontFamily: "'Days One', sans-serif", backgroundColor: currentTheme.color }}>{text}</button>
                           ))}
                         </div>
-                      </div> 
+                      </div>
                     </div>
                   )}
                 </div>
@@ -526,7 +518,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
