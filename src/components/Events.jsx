@@ -20,6 +20,7 @@ const Events = () => {
         seminar: "https://drive.google.com/file/d/1e7zxLHxOflNAy_JNAbGm_HP-Qlh9Cyrw/view?usp=drive_link",
         workshop1: "https://link.himtibinus.or.id/PosterRegisWorkshop12026",
         workshop2: "https://drive.google.com/file/d/1cueU9wp0LT8GnGq_njfrn6I-rq-_0ZAJ/view?usp=sharing",
+        STDN: "https://drive.google.com/drive/folders/1klvjD5_9RPXqyQ5PDwaEwAj71UWAktdE?usp=sharing",
       },
       isHidden: false
     },
@@ -357,11 +358,11 @@ const Events = () => {
             {activeTab === 'local' && (
               <div className="w-full flex flex-col px-1 md:px-6">
                 <div className="w-full max-w-[1525px] mx-auto px-2 xl:px-4 mb-4 xl:mb-6 overflow-visible">
-                    <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
-                      style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
-                      Above the Clouds: Cloud Technology in Enterprise Practice
-                    </h2>
-                  </div>
+                  <h2 className="text-[#FFFFFF] text-[32px] md:text-[36px] xl:text-[40px] font-normal leading-[1.2] tracking-[0.12em] whitespace-normal break-words [text-shadow:3px_3px_2px_rgba(0,0,0,0.3),_0px_0px_10px_var(--glow)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3),_0px_0px_20.6px_var(--glow)]"
+                    style={{ fontFamily: "'Days One', sans-serif", WebkitTextStroke: '1px var(--glow)' }}>
+                    Above the Clouds: Cloud Technology in Enterprise Practice
+                  </h2>
+                </div>
 
                 {true && (
                   <div className="w-full flex flex-col">
@@ -399,29 +400,13 @@ const Events = () => {
                       </div>
 
                       {/* Right Column */}
-                      <div className="flex flex-1 flex-row justify-center gap-[15px] xl:gap-[30px] pt-0 lg:pt-4 w-full lg:w-1/2 h-full min-w-0">
-                        {/* Speaker 1 */}
-                        <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
-                          <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
-                            <img src="/Speaker/MSIGTower.jpeg
-                        " alt="Speaker 1" className="w-full h-full  object-cover scale-[1.4] translate-y-[20%]" />
+                      <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
+                        <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
+                          <div className="w-[55%] lg:w-[70%] mx-auto mb-[8%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md md:max-h-[300px] lg:max-h-[500px]">
+                            <img src="/Speaker/MSIGTower.jpeg" alt="Name of Company" className="w-full h-full object-cover" />
                           </div>
-                          <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[11.5px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
-                              Amazon Web Services Indonesia
-                            </h4>
-                          </div>
-                        </div>
-
-                        {/* Speaker 2 */}
-                        <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
-                          <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#dedcdc]">
-                            <img src="/Icons/QuestionCard.svg" alt="Speaker 2" className="w-full h-full object-cover scale-[1] -translate-y-[7%]" />
-                          </div>
-                          <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[11.5px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
-                              Surprise Speaker
-                            </h4>
+                          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] lg:w-[85%] h-[20%] lg:h-[25%] xl:h-[20%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
+                            <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Amazon Web Services</h4>
                           </div>
                         </div>
                       </div>
