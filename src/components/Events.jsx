@@ -30,6 +30,7 @@ const Events = () => {
         seminar: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
         workshop1: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
         workshop2: "https://link.himtibinus.or.id/RegistrationGuidebookHISHOT2026",
+        STDN: "https://drive.google.com/file/d/1sCwfzwvXUR7Duaagp2CVYveNExXVpG1A/view?usp=drive_link",
       },
       isHidden: false
     }
@@ -366,25 +367,32 @@ const Events = () => {
 
                 {true && (
                   <div className="w-full flex flex-col">
-                    <div className="flex flex-col lg:flex-row justify-between items-start w-full max-w-[1525px] mx-auto gap-0 md:gap-4 lg:gap-8 px-2 xl:px-4 text-[#0F4A6D] min-w-0">
+                    <div className="mb-0 text-[#0F4A6D]">
+                      <div className="flex items-center gap-2 xl:gap-4 mb-1">
+                        <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
+                        <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
+                      </div>
+                      <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "var(--font-body)" }}>
+                        Explore the intersection of Artificial Intelligence, cloud computing, and digital entrepreneurship. Through engaging discussions and interactive sessions, participants will gain insights into technologies shaping the future.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col lg:flex-row justify-between w-full max-w-[1525px] mx-auto text-[#0F4A6D] min-w-0 items-start gap-4">
+
+                      {/* Left Column */}
                       <div className="flex flex-col flex-1 w-full lg:w-1/2 pt-0 lg:pt-4 min-w-0">
 
-                        {/* Details */}
+                        {/* Information */}
                         <div className="mb-6 lg:mb-8 text-[#0F4A6D]">
-                          <div className="flex items-center gap-2 xl:gap-4 mb-1">
-                            <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
-                            <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-none" style={{ fontFamily: "'Days One', sans-serif" }}>Details</h3>
-                          </div>
-                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Work Sans', sans-serif" }}>
-                            Participants will gain insight into the latest cloud computing technologies and their implementation in industry, cloud-based infrastructure management, and the role of the cloud in modern application development.
 
+                          <p className="pl-[28px] md:pl-[38px] xl:pl-[59px] pr-2 xl:pr-10 text-[#0F4A6D] text-[14px] md:text-[18px] xl:text-[24px] font-normal tracking-normal w-full leading-[1.4] text-justify" style={{ fontFamily: "'Work Sans', sans-serif" }}>
                             Participants will also gain practical insights into best practices in the technology industry, such as scalability, reliability, security, and the use of cloud services in software development and AI/ML-based systems.
 
                           </p>
                         </div>
 
                         {/* Location di Desktop */}
-                        <div className="hidden lg:flex flex-col flex-1 gap-2 w-full mt-10 xl:mt-12 text-[#0F4A6D]">
+                        <div className="hidden lg:flex flex-col flex-1 gap-2 w-full text-[#0F4A6D]">
                           <div className="flex w-full items-center gap-2 xl:gap-4 mb-1">
                             <img src="/Icons/StarInfo.svg" alt="Star" className="w-[20px] h-[28px] md:w-[30px] md:h-[40px] xl:w-[45.7px] xl:h-[63.17px] shrink-0 object-contain" />
                             <h3 className="text-[20px] md:text-[24px] xl:text-[32px] leading-[1.4] break-words" style={{ fontFamily: "'Days One', sans-serif" }}>Location: Sinarmas MSIG Tower, Lantai 16</h3>
@@ -400,13 +408,31 @@ const Events = () => {
                       </div>
 
                       {/* Right Column */}
-                      <div className="flex flex-row justify-center lg:justify-end items-start w-full lg:w-1/2 pt-0 lg:pt-10 xl:pt-12 min-w-0">
-                        <div className="relative w-full max-w-[450px] xl:max-w-[690px] shrink-0">
-                          <div className="w-[55%] lg:w-[70%] mx-auto mb-[8%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A] shadow-md md:max-h-[300px] lg:max-h-[500px]">
-                            <img src="/Speaker/MSIGTower.jpeg" alt="Name of Company" className="w-full h-full object-cover" />
+                      <div className="flex flex-1 flex-row justify-center gap-[15px] xl:gap-[30px] pt-0 lg:pt-4 w-full lg:w-1/2 h-full min-w-0">
+                        {/* Company */}
+                        <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
+                          <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#8B898A]">
+                            <img src="/Speaker/MSIGTower.jpeg" alt="Company" className="w-full h-full  object-cover scale-[1.4] translate-y-[20%]" />
                           </div>
-                          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] lg:w-[85%] h-[20%] lg:h-[25%] xl:h-[20%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] shadow-lg flex flex-col justify-center items-center px-4 z-10" style={{ backgroundColor: currentTheme.color }}>
-                            <h4 className="text-white text-[12px] sm:text-[15px] md:text-[19px] lg:text-[19px] xl:text-[24px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>Amazon Web Services</h4>
+                          <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
+                            <h4 className="text-white text-[11.5px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
+                              Amazon Web Services
+                            </h4>
+                          </div>
+                        </div>
+
+                        {/* Speaker */}
+                        <div className="relative flex-1 max-w-[200px] xl:max-w-[335px] shrink-0">
+                          <div className="w-[90%] mx-auto mb-[15%] aspect-[5/7] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[5px] border-[#F9FEFE] overflow-hidden bg-[#dedcdc]">
+                            <img src="/Speaker/HendryAnwar.jpeg" alt="Speaker" className="w-full h-full object-cover scale-[1] -translate-y-[7%]" />
+                          </div>
+                          <div className="absolute -bottom-[1rem] left-0 w-full h-[35%] rounded-[20px] xl:rounded-[40px] border-[3px] xl:border-[4px] border-[#F9FEFE] flex flex-col justify-center items-center px-2 xl:px-6 shadow-lg z-10" style={{ backgroundColor: currentTheme.color }}>
+                            <h4 className="text-white text-[11.5px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] font-normal leading-[1.1] tracking-normal text-center [text-shadow:2px_2px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)] whitespace-normal" style={{ fontFamily: "'Days One', sans-serif" }}>
+                              Hendry Anwar
+                            </h4>
+                            <p className="text-white text-[9px] sm:text-[12px] lg:text-[12px] xl:text-[16px] font-normal leading-[1.1] tracking-[0.1em] text-center [text-shadow:1px_1px_2px_rgba(0,0,0,0.3)] xl:[text-shadow:6px_6px_4.89px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Days One', sans-serif" }}>
+                              Senior Solution Architect AWS
+                            </p>
                           </div>
                         </div>
                       </div>
